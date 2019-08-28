@@ -1,0 +1,262 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9266,        254]
+NotebookOptionsPosition[      8407,        231]
+NotebookOutlinePosition[      8772,        247]
+CellTagsIndexPosition[      8729,        244]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"monitor", " ", "error", " ", "rates", " ", 
+    RowBox[{"(", "empirical", ")"}], " ", "dependency", " ", "on", " ", 
+    "window"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"generated", " ", "from", " ", "Session", " ", "4"}], ",", " ", 
+    RowBox[{"det1", " ", "in", " ", "the", " ", "data", " ", 
+     RowBox[{"repository", " ", "--"}], " ", "1", "hz"}], ",", " ", 
+    RowBox[{"fpr", " ", "=", " ", 
+     RowBox[{"fnr", " ", "=", " ", "0.1"}]}]}], " ", "*)"}], " "}]], "Input",
+ CellChangeTimes->{{3.776018754010586*^9, 
+  3.7760188343647823`*^9}},ExpressionUUID->"43cc6d4b-cbad-47f3-9783-\
+b284618ef9f5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"monitor", " ", "FPR"}], " ", "*)"}], " ", "\[IndentingNewLine]", 
+  RowBox[{"ListLinePlot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2", ",", " ", "0.010109"}], "}"}], " ", ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", " ", "0.001163"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"4", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"5", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"6", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"7", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"8", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"9", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"10", ",", "0"}], "}"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotLabel", "\[Rule]", "\"\<Empirical FPR of monitor\>\""}], ",",
+     " ", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Monitor window size\>\"", ",", " ", "\"\<FPR\>\""}], 
+      "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.776018885182701*^9, 3.776018937613243*^9}, {
+  3.77601898108661*^9, 3.776019135840952*^9}, {3.776019214193181*^9, 
+  3.7760192739175043`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"67e14257-22a5-4340-9616-84b6097d38ab"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      LineBox[{{2.804996646545942, 0.0029075}, {3., 0.001163}, {4., 0.}, {5., 
+       0.}, {6., 0.}, {7., 0.}, {8., 0.}, {9., 0.}, {10., 0.}}]}}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"Monitor window size\"", TraditionalForm], 
+    FormBox["\"FPR\"", TraditionalForm]},
+  AxesOrigin->{1.8333333333333337`, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox["\"Empirical FPR of monitor\"", TraditionalForm],
+  PlotRange->{{1.8333333333333337`, 10.}, {0, 0.0029075}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.7760190472230587`*^9, 3.776019136258335*^9}, 
+   3.7760192313700047`*^9, {3.776019267090695*^9, 3.776019274545273*^9}},
+ CellLabel->"Out[10]=",ExpressionUUID->"6c58b51f-6be4-4f33-adca-a5cbe6bdf515"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"monitor", " ", "FNR"}], " ", "*)"}], " "}]], "Input",
+ CellChangeTimes->{{3.776018942502275*^9, 
+  3.776018942701289*^9}},ExpressionUUID->"db6e9254-8004-4f28-b318-\
+5dcfc21bef5d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", ",", " ", "0.234637"}], "}"}], " ", ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", " ", "0.327485"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "0.404908"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "0.445161"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "0.476190"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "0.503597"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"8", ",", "0.534351"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "0.560976"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", "0.586207"}], "}"}]}], "}"}], ",", " ", 
+   RowBox[{"PlotLabel", "\[Rule]", "\"\<Empirical FNR of monitor\>\""}], ",", 
+   " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Monitor window size\>\"", ",", " ", "\"\<FNR\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.776019039796838*^9, 3.776019043644473*^9}, {
+  3.776019285699132*^9, 3.7760193934185038`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"fd9d4b6f-0b1f-470d-ae05-df74341cd489"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      LineBox[{{2., 0.234637}, {3., 0.327485}, {4., 0.404908}, {5., 
+       0.445161}, {6., 0.47619}, {7., 0.503597}, {8., 0.534351}, {9., 
+       0.560976}, {10., 0.586207}}]}}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"Monitor window size\"", TraditionalForm], 
+    FormBox["\"FNR\"", TraditionalForm]},
+  AxesOrigin->{1.8333333333333337`, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox["\"Empirical FNR of monitor\"", TraditionalForm],
+  PlotRange->{{1.8333333333333337`, 10.}, {0, 0.586207}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.776019394141603*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"40da7bb0-80ed-4e89-a5fe-7e49504618c0"]
+}, Open  ]]
+},
+WindowSize->{800, 841},
+WindowMargins->{{-800, Automatic}, {0, Automatic}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 710, 15, 95, "Input",ExpressionUUID->"43cc6d4b-cbad-47f3-9783-b284618ef9f5"],
+Cell[CellGroupData[{
+Cell[1293, 39, 1332, 35, 151, "Input",ExpressionUUID->"67e14257-22a5-4340-9616-84b6097d38ab"],
+Cell[2628, 76, 2179, 53, 236, "Output",ExpressionUUID->"6c58b51f-6be4-4f33-adca-a5cbe6bdf515"]
+}, Open  ]],
+Cell[4822, 132, 237, 6, 38, "Input",ExpressionUUID->"db6e9254-8004-4f28-b318-5dcfc21bef5d"],
+Cell[CellGroupData[{
+Cell[5084, 142, 1193, 31, 151, "Input",ExpressionUUID->"fd9d4b6f-0b1f-470d-ae05-df74341cd489"],
+Cell[6280, 175, 2111, 53, 250, "Output",ExpressionUUID->"40da7bb0-80ed-4e89-a5fe-7e49504618c0"]
+}, Open  ]]
+}
+]
+*)
+
