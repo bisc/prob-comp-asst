@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    103782,       2474]
-NotebookOptionsPosition[    100512,       2424]
-NotebookOutlinePosition[    100875,       2440]
-CellTagsIndexPosition[    100832,       2437]
+NotebookDataLength[    107655,       2567]
+NotebookOptionsPosition[    104382,       2517]
+NotebookOutlinePosition[    104744,       2533]
+CellTagsIndexPosition[    104701,       2530]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2161,14 +2161,105 @@ Cell[BoxData[
        "]"}]}]}], " ", ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
-     RowBox[{"get", " ", "pairs", " ", "of", " ", 
-      RowBox[{"(", "corresponding", ")"}], " ", "probability", " ", 
-      "expressions", " ", "and", " ", "their", " ", "values", " ", "from", 
-      " ", "a", " ", "colon"}], "-", 
-     RowBox[{"separated", " ", 
-      RowBox[{"file", ".", " ", "\[IndentingNewLine]", "Builds"}], " ", "on", 
-      " ", "the", " ", "previous", " ", "function"}]}], " ", "*)"}], 
+     RowBox[{"returns", " ", "a", " ", "list", " ", "of", " ", "pairs", " ", 
+      RowBox[{"(", 
+       RowBox[{"name", ",", " ", "value"}], ")"}]}], ",", 
+     RowBox[{"where", " ", "the", " ", "values", " ", "are", " ", "numeric"}],
+      ",", " ", 
+     RowBox[{"from", " ", "a", " ", "given", " ", "file", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"home", " ", "dir", " ", "for", " ", "now"}], ")"}], ".", " ",
+        "No"}], " ", "other", " ", "filtering", " ", "is", " ", "done"}]}], 
+    "  ", "*)"}], " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"nameValuePairsFromFile", "[", "filename_", "]"}], " ", ":=", 
+     " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"filePairs", "=", " ", 
+         RowBox[{"ReadList", "[", 
+          RowBox[{"filename", ",", " ", "Word", ",", " ", 
+           RowBox[{"WordSeparators", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\\t\>\"", ",", " ", "\"\< \>\"", ",", "\"\<:\>\""}],
+              "}"}]}]}], "]"}]}], ";", 
+        RowBox[{"Inner", "[", 
+         RowBox[{"List", ",", "  ", 
+          RowBox[{"(*", " ", "names", " ", "*)"}], " ", 
+          RowBox[{"Select", "[", 
+           RowBox[{"filePairs", ",", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Not]", 
+               RowBox[{"NumberQ", "@", 
+                RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", "&"}]}], 
+           "]"}], ",", " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{"probabiity", " ", "values"}], " ", "*)"}], " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{"filePairs", "[", 
+              RowBox[{"[", "#", "]"}], "]"}], "]"}], "&"}], " ", "/@", 
+           RowBox[{"(*", " ", 
+            RowBox[{"indices", " ", "of", " ", "probability", " ", "values"}],
+             " ", "*)"}], 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"FirstPosition", "[", 
+                RowBox[{"filePairs", ",", " ", "#"}], "]"}], " ", "+", "1"}], 
+              " ", "&"}], " ", "/@", " ", 
+             RowBox[{"Select", "[", 
+              RowBox[{"filePairs", ",", " ", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"\[Not]", 
+                  RowBox[{"NumberQ", "@", 
+                   RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", 
+                "&"}]}], "]"}]}], ")"}]}], ",", " ", "List"}], "]"}]}], ")"}], 
+      RowBox[{"(*", " ", 
+       RowBox[{"lower", " ", "the", " ", "nestedness"}], " ", "*)"}], " ", 
+      "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], " ", ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "finds", " ", "a", " ", "value", " ", "from", " ", "a", " ", "list", " ", 
+     "that", " ", "corresponds", " ", "to", " ", "a", " ", "name"}], " ", 
+    "*)"}], " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"getValueFromListOfPairs", "[", 
+      RowBox[{"pairlist_", ",", " ", "name_"}], "]"}], " ", ":=", " ", 
+     RowBox[{
+      RowBox[{"pairlist", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"FirstPosition", "[", 
+          RowBox[{"pairlist", ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"name", ",", " ", "_"}], "}"}]}], " ", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"get", " ", "pairs", " ", "of", " ", 
+       RowBox[{"(", "corresponding", ")"}], " ", "probability", " ", 
+       "expressions", " ", "and", " ", "their", " ", "values", " ", "from", 
+       " ", "a", " ", "colon"}], "-", 
+      RowBox[{"separated", " ", 
+       RowBox[{"file", ".", " ", "\[IndentingNewLine]", "Builds"}], " ", "on",
+        " ", "the", " ", "previous", " ", "function"}]}], ",", " ", 
+     RowBox[{
+     "this", " ", "is", " ", "a", " ", "bit", " ", "redundant", " ", "with", 
+      " ", "nameValuePairsFromFile"}]}], " ", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"exprValuePairsFromFile", "[", 
@@ -2345,9 +2436,11 @@ Cell[BoxData[
    3.7765364125122643`*^9}, {3.776597084072155*^9, 3.776597089153214*^9}, {
    3.7766003423147287`*^9, 3.776600351737035*^9}, {3.7766006959582243`*^9, 
    3.776600700153708*^9}, {3.776600784636487*^9, 3.776600811313333*^9}, {
-   3.776600849536042*^9, 3.776600912269988*^9}, 3.7766115574264927`*^9},
- CellLabel->
-  "In[606]:=",ExpressionUUID->"89765e4f-5627-4568-bbe7-cd625b534689"],
+   3.776600849536042*^9, 3.776600912269988*^9}, 3.7766115574264927`*^9, {
+   3.776616319694941*^9, 3.776616331080305*^9}, {3.776618011761149*^9, 
+   3.776618064692698*^9}, {3.776619239279039*^9, 
+   3.776619256771635*^9}},ExpressionUUID->"89765e4f-5627-4568-bbe7-\
+cd625b534689"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.774207492836337*^9, 3.774207512931316*^9}},
@@ -2423,7 +2516,7 @@ Cell[BoxData[""], "Input",
   "In[613]:=",ExpressionUUID->"ac220532-5090-4aa3-9276-6abe82729f9c"]
 },
 WindowSize->{648, 709},
-WindowMargins->{{64, Automatic}, {0, Automatic}},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 Magnification:>1.4 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -2463,12 +2556,12 @@ Cell[30628, 758, 2632, 65, 760, "Input",ExpressionUUID->"af14e5cb-bbff-420d-8b74
 Cell[33263, 825, 5860, 151, 1444, "Input",ExpressionUUID->"35027f4f-6c26-4f6d-a1d1-50054405702a"],
 Cell[39126, 978, 11117, 248, 2734, "Input",ExpressionUUID->"d04a056e-79d8-47a4-9c75-ad9fdddf9250"],
 Cell[50246, 1228, 34764, 814, 8870, "Input",ExpressionUUID->"673dbbaf-4375-41b3-a9d4-04730d5e6ab5"],
-Cell[85013, 2044, 12963, 305, 3081, "Input",ExpressionUUID->"89765e4f-5627-4568-bbe7-cd625b534689"],
-Cell[97979, 2351, 175, 3, 44, "Input",ExpressionUUID->"b3ec1ca3-3b85-4286-bb06-fd3554538314"],
-Cell[98157, 2356, 931, 26, 144, "Input",ExpressionUUID->"7d1247dd-6058-4ac3-985c-b63ba4668dcd"],
-Cell[99091, 2384, 599, 14, 78, "Input",ExpressionUUID->"34979e06-f01c-46be-aab8-df161ea5581b"],
-Cell[99693, 2400, 638, 17, 78, "Input",ExpressionUUID->"f1dd641e-5c04-4784-811f-9addd33c607b"],
-Cell[100334, 2419, 174, 3, 44, "Input",ExpressionUUID->"ac220532-5090-4aa3-9276-6abe82729f9c"]
+Cell[85013, 2044, 16833, 398, 4038, "Input",ExpressionUUID->"89765e4f-5627-4568-bbe7-cd625b534689"],
+Cell[101849, 2444, 175, 3, 44, "Input",ExpressionUUID->"b3ec1ca3-3b85-4286-bb06-fd3554538314"],
+Cell[102027, 2449, 931, 26, 144, "Input",ExpressionUUID->"7d1247dd-6058-4ac3-985c-b63ba4668dcd"],
+Cell[102961, 2477, 599, 14, 78, "Input",ExpressionUUID->"34979e06-f01c-46be-aab8-df161ea5581b"],
+Cell[103563, 2493, 638, 17, 78, "Input",ExpressionUUID->"f1dd641e-5c04-4784-811f-9addd33c607b"],
+Cell[104204, 2512, 174, 3, 44, "Input",ExpressionUUID->"ac220532-5090-4aa3-9276-6abe82729f9c"]
 }
 ]
 *)
