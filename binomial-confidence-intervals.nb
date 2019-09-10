@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23819,        613]
-NotebookOptionsPosition[     23179,        594]
-NotebookOutlinePosition[     23542,        610]
-CellTagsIndexPosition[     23499,        607]
+NotebookDataLength[     33137,        789]
+NotebookOptionsPosition[     32491,        770]
+NotebookOutlinePosition[     32858,        786]
+CellTagsIndexPosition[     32815,        783]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,361 +35,394 @@ Cell[BoxData[
   3.777055381726593*^9}},ExpressionUUID->"1c9d7291-0936-44f8-adc7-\
 8e315a1eef08"],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{
-   RowBox[{"b", "[", 
-    RowBox[{"j_", ",", "n_", ",", "p_"}], "]"}], ":=", 
-   RowBox[{"CDF", "[", 
-    RowBox[{
-     RowBox[{"BinomialDistribution", "[", 
-      RowBox[{"n", ",", "p"}], "]"}], ",", "j"}], "]"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"intervals", "[", 
-   RowBox[{"jj_", ",", "nn_", ",", "opts___"}], "]"}], ":=", 
-  RowBox[{"Module", "[", 
+  RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"t025", "=", 
-       RowBox[{"Quantile", "[", 
-        RowBox[{
-         RowBox[{"NormalDistribution", "[", "]"}], ",", "0.975"}], "]"}]}], 
-      ",", "\[IndentingNewLine]", 
-      RowBox[{"blueSquare", "=", 
-       RowBox[{"Graphics", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"Blue", ",", 
-           RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
-         RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", 
-      RowBox[{"redSquare", "=", 
-       RowBox[{"Graphics", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"Red", ",", 
-           RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
-         RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", 
-      RowBox[{"blackSquare", "=", 
-       RowBox[{"Graphics", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"Black", ",", 
-           RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
-         RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", "izq", ",", 
-      "der", ",", "interWald", ",", "interWilson", ",", "nums", ",", "int1", 
-      ",", "int2", ",", "int3", ",", "std", ",", "corrnums", ",", "stimes"}], 
-     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"j", " ", "is", " ", "successes"}], ",", " ", 
+    RowBox[{"n", " ", "is", " ", "trials", " ", 
+     RowBox[{"(", 
+      RowBox[{"attempts", ",", " ", "samples"}], " ", ")"}]}], ",", " ", 
+    RowBox[{"p", " ", "is", " ", "probably", " ", "the", " ", 
+     RowBox[{"confidence", "?"}]}]}], " ", "*)"}], " ", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
     RowBox[{
-     RowBox[{"izq", "=", 
-      RowBox[{"Quiet", "@", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"jj", "\[Equal]", "1"}], ",", "0", ",", 
+     RowBox[{"b", "[", 
+      RowBox[{"j_", ",", "n_", ",", "p_"}], "]"}], ":=", 
+     RowBox[{"CDF", "[", 
+      RowBox[{
+       RowBox[{"BinomialDistribution", "[", 
+        RowBox[{"n", ",", "p"}], "]"}], ",", "j"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"intervals", "[", 
+     RowBox[{"jj_", ",", "nn_", ",", "confLvl_", ",", " ", "opts___"}], "]"}],
+     ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"t025", "=", 
+         RowBox[{"Quantile", "[", 
+          RowBox[{
+           RowBox[{"NormalDistribution", "[", "]"}], ",", 
+           RowBox[{"1", " ", "-", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", "confLvl"}], ")"}], "/", "2"}]}]}], "]"}]}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"blueSquare", "=", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", 
+             RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", 
+        RowBox[{"redSquare", "=", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Red", ",", 
+             RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", 
+        RowBox[{"blackSquare", "=", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Black", ",", 
+             RowBox[{"Rectangle", "[", "]"}]}], "}"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "10"}]}], "]"}]}], ",", "izq", ",",
+         "der", ",", "interWald", ",", "interWilson", ",", "nums", ",", 
+        "int1", ",", "int2", ",", "int3", ",", "std", ",", "corrnums", ",", 
+        "stimes"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"izq", "=", 
+        RowBox[{"Quiet", "@", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"jj", "\[Equal]", "1"}], ",", "0", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"p", "/.", 
+              RowBox[{"NSolve", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "-", 
+                  RowBox[{"b", "[", 
+                   RowBox[{
+                    RowBox[{"jj", "-", "1"}], ",", "nn", ",", "p"}], "]"}]}], 
+                 "\[Equal]", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", "confLvl"}], ")"}], "/", "2"}]}], ",", 
+                "p"}], "]"}]}], ")"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}]}], ";", 
+       RowBox[{"der", "=", 
+        RowBox[{"Quiet", "@", 
          RowBox[{
           RowBox[{"(", 
            RowBox[{"p", "/.", 
             RowBox[{"NSolve", "[", 
              RowBox[{
               RowBox[{
-               RowBox[{"1", "-", 
-                RowBox[{"b", "[", 
-                 RowBox[{
-                  RowBox[{"jj", "-", "1"}], ",", "nn", ",", "p"}], "]"}]}], 
-               "\[Equal]", "0.025"}], ",", "p"}], "]"}]}], ")"}], "[", 
-          RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}]}], ";", 
-     RowBox[{"der", "=", 
-      RowBox[{"Quiet", "@", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"p", "/.", 
-          RowBox[{"NSolve", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"b", "[", 
-              RowBox[{"jj", ",", "nn", ",", "p"}], "]"}], "\[Equal]", 
-             "0.025"}], ",", "p"}], "]"}]}], ")"}], "[", 
-        RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"interWald", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Max", "[", 
-         RowBox[{"0", ",", "#"}], "]"}], "&"}], "/@", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"jj", "/", "nn"}], " ", "-", 
-          RowBox[{"t025", "  ", 
-           SqrtBox[
-            RowBox[{
-             FractionBox["jj", "nn"], " ", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"1", "-", 
-                FractionBox["jj", "nn"]}], ")"}], "/", "nn"}]}]]}]}], ",", 
-         RowBox[{
-          FractionBox["jj", "nn"], " ", "+", 
-          RowBox[{"t025", "  ", 
-           SqrtBox[
-            RowBox[{
-             FractionBox["jj", "nn"], " ", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"1", "-", 
-                FractionBox["jj", "nn"]}], ")"}], "/", "nn"}]}]]}]}]}], 
-        "}"}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"interWilson", "=", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{
-         FractionBox["1", 
-          RowBox[{"1", "+", 
-           FractionBox[
-            SuperscriptBox["t025", "2"], "nn"]}]], 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"jj", "/", "nn"}], "+", 
-           RowBox[{
-            FractionBox["1", 
-             RowBox[{"2", " ", "nn"}]], " ", 
-            SuperscriptBox["t025", "2"]}], "-", 
-           RowBox[{"t025", " ", 
-            SqrtBox[
-             RowBox[{
-              FractionBox[
+               RowBox[{"b", "[", 
+                RowBox[{"jj", ",", "nn", ",", "p"}], "]"}], "\[Equal]", 
                RowBox[{
-                FractionBox["jj", "nn"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "-", "confLvl"}], ")"}], "/", "2"}]}], ",", 
+              "p"}], "]"}]}], ")"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"interWald", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Max", "[", 
+           RowBox[{"0", ",", "#"}], "]"}], "&"}], "/@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"jj", "/", "nn"}], " ", "-", 
+            RowBox[{"t025", "  ", 
+             SqrtBox[
+              RowBox[{
+               FractionBox["jj", "nn"], " ", 
+               RowBox[{
                 RowBox[{"(", 
                  RowBox[{"1", "-", 
-                  FractionBox["jj", "nn"]}], ")"}]}], "nn"], "+", 
-              FractionBox[
-               SuperscriptBox["t025", "2"], 
-               RowBox[{"4", " ", 
-                SuperscriptBox["nn", "2"]}]]}]]}]}], ")"}]}], ",", 
-        RowBox[{
-         FractionBox["1", 
-          RowBox[{"1", "+", 
-           FractionBox[
-            SuperscriptBox["t025", "2"], "nn"]}]], 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"jj", "/", "nn"}], "+", 
+                  FractionBox["jj", "nn"]}], ")"}], "/", "nn"}]}]]}]}], ",", 
            RowBox[{
-            FractionBox["1", 
-             RowBox[{"2", " ", "nn"}]], " ", 
-            SuperscriptBox["t025", "2"]}], "+", 
-           RowBox[{"t025", " ", 
-            SqrtBox[
-             RowBox[{
-              FractionBox[
+            FractionBox["jj", "nn"], " ", "+", 
+            RowBox[{"t025", "  ", 
+             SqrtBox[
+              RowBox[{
+               FractionBox["jj", "nn"], " ", 
                RowBox[{
-                FractionBox["jj", "nn"], " ", 
                 RowBox[{"(", 
                  RowBox[{"1", "-", 
-                  FractionBox["jj", "nn"]}], ")"}]}], "nn"], "+", 
-              FractionBox[
-               SuperscriptBox["t025", "2"], 
-               RowBox[{"4", " ", 
-                SuperscriptBox["nn", "2"]}]]}]]}]}], ")"}]}]}], "}"}]}], ";", 
-     
-     RowBox[{"int1", "=", "interWald"}], ";", "\n", 
-     RowBox[{"int2", "=", "interWilson"}], ";", "\n", 
-     RowBox[{"int3", "=", 
-      RowBox[{"{", 
-       RowBox[{"izq", ",", "der"}], "}"}]}], ";", 
-     RowBox[{"nums", "=", 
-      RowBox[{"{", 
-       RowBox[{"interWald", ",", "interWilson", ",", 
-        RowBox[{"{", 
-         RowBox[{"izq", ",", "der"}], "}"}]}], "}"}]}], ";", "\n", 
-     RowBox[{"std", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"StringDrop", "[", 
-         RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", 
-       RowBox[{"(", 
-        RowBox[{"ToString", "/@", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"PaddedForm", "[", 
-             RowBox[{"#", ",", 
-              RowBox[{"{", 
-               RowBox[{"3", ",", "3"}], "}"}]}], "]"}], "&"}], "/@", 
-           RowBox[{"Flatten", "[", "nums", "]"}]}], ")"}]}], ")"}]}]}], ";", 
-     RowBox[{"difs", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"#", "[", 
-          RowBox[{"[", "2", "]"}], "]"}], "-", 
-         RowBox[{"#", "[", 
-          RowBox[{"[", "1", "]"}], "]"}]}], "&"}], "/@", "nums"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"az", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"StringDrop", "[", 
-         RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", 
-       RowBox[{"(", 
-        RowBox[{"ToString", "/@", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"PaddedForm", "[", 
-             RowBox[{"#", ",", 
-              RowBox[{"{", 
-               RowBox[{"3", ",", "3"}], "}"}]}], "]"}], "&"}], "/@", "difs"}],
-           ")"}]}], ")"}]}]}], ";", "\n", 
-     RowBox[{"corrnums", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"\"\<[\>\"", "<>", 
-         RowBox[{"std", "[", 
-          RowBox[{"[", "j", "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
-         "\"\< \>\"", "<>", 
-         RowBox[{"std", "[", 
-          RowBox[{"[", 
-           RowBox[{"j", "+", "1"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
-        RowBox[{"{", 
-         RowBox[{"j", ",", "1", ",", 
-          RowBox[{
-           RowBox[{"Length", "[", "std", "]"}], "-", "1"}], ",", "2"}], 
-         "}"}]}], "]"}]}], ";", 
-     RowBox[{"stimes", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Text", "[", "#", "]"}], "&"}], "/@", 
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"corrnums", "[", 
-           RowBox[{"[", "j", "]"}], "]"}], "<>", "\"\<      \>\"", "<>", 
-          RowBox[{"az", "[", 
-           RowBox[{"[", "j", "]"}], "]"}]}], ",", 
-         RowBox[{"{", 
-          RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"ListLinePlot", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"jj", "/", "nn"}], ",", "0"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"jj", "/", "nn"}], ",", "0.003"}], "}"}]}], "}"}], ",", 
-       RowBox[{"Axes", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"True", ",", "False"}], "}"}]}], ",", 
-       RowBox[{"AxesOrigin", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"0.25", ",", "0"}], "}"}]}], ",", 
-       RowBox[{"PlotStyle", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"Black", ",", 
-          RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}]}], ",", 
-       RowBox[{"PlotRange", "\[Rule]", 
+                  FractionBox["jj", "nn"]}], ")"}], "/", "nn"}]}]]}]}]}], 
+          "}"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"interWilson", "=", 
         RowBox[{"{", 
          RowBox[{
+          RowBox[{
+           FractionBox["1", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              SuperscriptBox["t025", "2"], "nn"]}]], 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"jj", "/", "nn"}], "+", 
+             RowBox[{
+              FractionBox["1", 
+               RowBox[{"2", " ", "nn"}]], " ", 
+              SuperscriptBox["t025", "2"]}], "-", 
+             RowBox[{"t025", " ", 
+              SqrtBox[
+               RowBox[{
+                FractionBox[
+                 RowBox[{
+                  FractionBox["jj", "nn"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    FractionBox["jj", "nn"]}], ")"}]}], "nn"], "+", 
+                FractionBox[
+                 SuperscriptBox["t025", "2"], 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["nn", "2"]}]]}]]}]}], ")"}]}], ",", 
+          RowBox[{
+           FractionBox["1", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              SuperscriptBox["t025", "2"], "nn"]}]], 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"jj", "/", "nn"}], "+", 
+             RowBox[{
+              FractionBox["1", 
+               RowBox[{"2", " ", "nn"}]], " ", 
+              SuperscriptBox["t025", "2"]}], "+", 
+             RowBox[{"t025", " ", 
+              SqrtBox[
+               RowBox[{
+                FractionBox[
+                 RowBox[{
+                  FractionBox["jj", "nn"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    FractionBox["jj", "nn"]}], ")"}]}], "nn"], "+", 
+                FractionBox[
+                 SuperscriptBox["t025", "2"], 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["nn", "2"]}]]}]]}]}], ")"}]}]}], "}"}]}], 
+       ";", 
+       RowBox[{"int1", "=", "interWald"}], ";", "\n", 
+       RowBox[{"int2", "=", "interWilson"}], ";", "\n", 
+       RowBox[{"int3", "=", 
+        RowBox[{"{", 
+         RowBox[{"izq", ",", "der"}], "}"}]}], ";", 
+       RowBox[{"nums", "=", 
+        RowBox[{"{", 
+         RowBox[{"interWald", ",", "interWilson", ",", 
           RowBox[{"{", 
-           RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"izq", ",", "der"}], "}"}]}], "}"}]}], ";", "\n", 
+       RowBox[{"std", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringDrop", "[", 
+           RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{"ToString", "/@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"PaddedForm", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"3", ",", "3"}], "}"}]}], "]"}], "&"}], "/@", 
+             RowBox[{"Flatten", "[", "nums", "]"}]}], ")"}]}], ")"}]}]}], ";", 
+       RowBox[{"difs", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "-", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "&"}], "/@", "nums"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"az", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringDrop", "[", 
+           RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{"ToString", "/@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"PaddedForm", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"3", ",", "3"}], "}"}]}], "]"}], "&"}], "/@", 
+             "difs"}], ")"}]}], ")"}]}]}], ";", "\n", 
+       RowBox[{"corrnums", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"\"\<[\>\"", "<>", 
+           RowBox[{"std", "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
+           "\"\< \>\"", "<>", 
+           RowBox[{"std", "[", 
+            RowBox[{"[", 
+             RowBox[{"j", "+", "1"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{"j", ",", "1", ",", 
+            RowBox[{
+             RowBox[{"Length", "[", "std", "]"}], "-", "1"}], ",", "2"}], 
+           "}"}]}], "]"}]}], ";", 
+       RowBox[{"stimes", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "[", "#", "]"}], "&"}], "/@", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"corrnums", "[", 
+             RowBox[{"[", "j", "]"}], "]"}], "<>", "\"\<      \>\"", "<>", 
+            RowBox[{"az", "[", 
+             RowBox[{"[", "j", "]"}], "]"}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"jj", "/", "nn"}], ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"jj", "/", "nn"}], ",", "0.003"}], "}"}]}], "}"}], ",", 
+         RowBox[{"Axes", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"True", ",", "False"}], "}"}]}], ",", 
+         RowBox[{"AxesOrigin", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"0.25", ",", "0"}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
-            RowBox[{"-", "0.002"}], ",", "0.009"}], "}"}]}], "}"}]}], ",", 
-       RowBox[{"Epilog", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Text", "[", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{"\"\<j/n\>\"", ",", "Italic", ",", "Medium"}], "]"}], 
-            ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}], ",", 
             RowBox[{"{", 
              RowBox[{
-              RowBox[{"jj", "/", "nn"}], ",", 
-              RowBox[{"-", "0.00075"}]}], "}"}]}], "]"}], ",", 
-          RowBox[{"Inset", "[", 
+              RowBox[{"-", "0.002"}], ",", "0.009"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"Epilog", "\[Rule]", 
+          RowBox[{"{", 
            RowBox[{
-            RowBox[{"Grid", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"Style", "[", 
-                 RowBox[{"\"\<95% confidence intervals\>\"", ",", "Medium"}], 
-                 "]"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<for the probability parameter\>\"", ",", "Medium"}], 
-                 "]"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<in a binomial distribution\>\"", ",", "Medium"}], "]"}],
-                 "}"}]}], "}"}], "]"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"0.5", ",", "0.008"}], "}"}]}], "]"}], ",", 
-          RowBox[{"Inset", "[", 
-           RowBox[{
-            RowBox[{"Grid", "[", 
-             RowBox[{"{", 
-              RowBox[{
+            RowBox[{"Text", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<j/n\>\"", ",", "Italic", ",", "Medium"}], "]"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"jj", "/", "nn"}], ",", 
+                RowBox[{"-", "0.00075"}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"Inset", "[", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"Text", "[", "\"\<method\>\"", "]"}], ",", 
-                 RowBox[{"Text", "[", "\"\<\>\"", "]"}], ",", 
-                 RowBox[{
-                 "Text", "[", "\"\<  interval           length\>\"", "]"}]}], 
-                "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"confLvl", "*", "100"}], "]"}], ",", 
+                    "\"\<% confidence intervals\>\""}], "]"}], ",", 
+                    "Medium"}], "]"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<for the probability parameter\>\"", ",", "Medium"}], 
+                   "]"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<in a binomial distribution\>\"", ",", "Medium"}], 
+                   "]"}], "}"}]}], "}"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", "0.008"}], "}"}]}], "]"}], ",", 
+            RowBox[{"Inset", "[", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"Text", "[", "\"\<conventional\>\"", "]"}], ",", 
-                 "blueSquare", ",", 
-                 RowBox[{"stimes", "[", 
-                  RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "[", "\"\<method\>\"", "]"}], ",", 
+                   RowBox[{"Text", "[", "\"\<\>\"", "]"}], ",", 
+                   RowBox[{
+                   "Text", "[", "\"\<  interval           length\>\"", 
+                    "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "[", "\"\<conventional\>\"", "]"}], ",", 
+                   "blueSquare", ",", 
+                   RowBox[{"stimes", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "[", "\"\<Wilson\>\"", "]"}], ",", 
+                   "redSquare", ",", 
+                   RowBox[{"stimes", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "[", "\"\<Clopper-Pearson\>\"", "]"}], ",",
+                    "blackSquare", ",", 
+                   RowBox[{"stimes", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], "}"}], "]"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", "0.005"}], "}"}]}], "]"}], ",", "Thick", 
+            ",", "Blue", ",", 
+            RowBox[{"Line", "@", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{"List", ",", 
                RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Text", "[", "\"\<Wilson\>\"", "]"}], ",", 
-                 "redSquare", ",", 
-                 RowBox[{"stimes", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+                RowBox[{"int1", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.003", ",", "0.003"}], "}"}]}], "}"}]}], "]"}]}], 
+            ",", "Thick", ",", "Red", ",", 
+            RowBox[{"Line", "@", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{"List", ",", 
                RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Text", "[", "\"\<Clopper-Pearson\>\"", "]"}], ",", 
-                 "blackSquare", ",", 
-                 RowBox[{"stimes", "[", 
-                  RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], "}"}], "]"}], 
-            ",", 
-            RowBox[{"{", 
-             RowBox[{"0.5", ",", "0.005"}], "}"}]}], "]"}], ",", "Thick", ",",
-           "Blue", ",", 
-          RowBox[{"Line", "@", 
-           RowBox[{"MapThread", "[", 
-            RowBox[{"List", ",", 
-             RowBox[{"{", 
-              RowBox[{"int1", ",", 
+                RowBox[{"int2", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.002", ",", "0.002"}], "}"}]}], "}"}]}], "]"}]}], 
+            ",", "Thick", ",", "Black", ",", 
+            RowBox[{"Line", "@", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{"List", ",", 
                RowBox[{"{", 
-                RowBox[{"0.003", ",", "0.003"}], "}"}]}], "}"}]}], "]"}]}], 
-          ",", "Thick", ",", "Red", ",", 
-          RowBox[{"Line", "@", 
-           RowBox[{"MapThread", "[", 
-            RowBox[{"List", ",", 
-             RowBox[{"{", 
-              RowBox[{"int2", ",", 
-               RowBox[{"{", 
-                RowBox[{"0.002", ",", "0.002"}], "}"}]}], "}"}]}], "]"}]}], 
-          ",", "Thick", ",", "Black", ",", 
-          RowBox[{"Line", "@", 
-           RowBox[{"MapThread", "[", 
-            RowBox[{"List", ",", 
-             RowBox[{"{", 
-              RowBox[{"int3", ",", 
-               RowBox[{"{", 
-                RowBox[{"0.001", ",", "0.001"}], "}"}]}], "}"}]}], "]"}]}]}], 
-         "}"}]}], ",", "opts"}], "]"}]}]}], "]"}]}]}], "Input",
- CellLabel->"In[2]:=",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
+                RowBox[{"int3", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.001", ",", "0.001"}], "}"}]}], "}"}]}], 
+              "]"}]}]}], "}"}]}], ",", "opts"}], "]"}]}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7771361032140713`*^9, 3.777136125862668*^9}, 
+   3.777136363879875*^9, {3.777138359799595*^9, 3.777138375223439*^9}, {
+   3.777138445361212*^9, 3.7771384521496077`*^9}, {3.777138507610589*^9, 
+   3.77713852774127*^9}, {3.777138563837175*^9, 3.7771385810117903`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
 
 Cell[CellGroupData[{
 
@@ -399,67 +432,201 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"If", "[", 
      RowBox[{
-      RowBox[{"j", ">", 
-       RowBox[{"n", "-", "2"}]}], ",", 
-      RowBox[{"j", "=", 
-       RowBox[{"n", "-", "2"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"successes", ">", 
+       RowBox[{"tries", "-", "2"}]}], ",", 
+      RowBox[{"successes", "=", 
+       RowBox[{"tries", "-", "2"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
     RowBox[{"intervals", "[", 
-     RowBox[{"j", ",", "n", ",", 
+     RowBox[{"successes", ",", "tries", ",", "confidence", ",", " ", 
       RowBox[{"ImageSize", "\[Rule]", "550"}]}], "]"}]}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"j", ",", "10"}], "}"}], ",", "1", ",", 
-     RowBox[{"n", "-", "2"}], ",", "1", ",", 
+      RowBox[{"successes", ",", "10"}], "}"}], ",", "1", ",", 
+     RowBox[{"tries", "-", "2"}], ",", "1", ",", 
      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"n", ",", "50"}], "}"}], ",", "20", ",", "200", ",", "5", ",", 
+      RowBox[{"tries", ",", "50"}], "}"}], ",", "20", ",", "200", ",", "5", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"confidence", ",", "0.95"}], "}"}], ",", "0.5", ",", "0.99", 
+     ",", "0.01", ",", 
      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
    RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]], "Input",
- CellLabel->"In[4]:=",ExpressionUUID->"7ec58b74-7aa6-4d73-828f-3869a05a619d"],
+ CellChangeTimes->{{3.777138478245244*^9, 3.777138479524736*^9}, {
+  3.777138711261352*^9, 3.777138751012244*^9}, {3.777138786477475*^9, 
+  3.777138823776516*^9}, {3.777138853918501*^9, 3.7771389061020107`*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"7ec58b74-7aa6-4d73-828f-3869a05a619d"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`j$$ = 12, $CellContext`n$$ = 90, 
+   DynamicModuleBox[{$CellContext`confidence$$ = 
+    0.99, $CellContext`successes$$ = 123, $CellContext`tries$$ = 130, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`j$$], 10}, 1, 
-      Dynamic[$CellContext`n$$ - 2], 1}, {{
-       Hold[$CellContext`n$$], 50}, 20, 200, 5}}, Typeset`size$$ = {
-    605., {179., 185.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`j$5442$$ = 
-    0, $CellContext`n$5443$$ = 0}, 
+       Hold[$CellContext`successes$$], 10}, 1, 
+      Dynamic[$CellContext`tries$$ - 2], 1}, {{
+       Hold[$CellContext`tries$$], 50}, 20, 200, 5}, {{
+       Hold[$CellContext`confidence$$], 0.95}, 0.5, 0.99, 0.01}}, 
+    Typeset`size$$ = {605., {179., 185.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`successes$66821$$ = 0, $CellContext`tries$66822$$ = 
+    0, $CellContext`confidence$66823$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`j$$ = 10, $CellContext`n$$ = 50}, 
+      "Variables" :> {$CellContext`confidence$$ = 
+        0.95, $CellContext`successes$$ = 10, $CellContext`tries$$ = 50}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`j$$, $CellContext`j$5442$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$5443$$, 0]}, 
+        Hold[$CellContext`successes$$, $CellContext`successes$66821$$, 0], 
+        Hold[$CellContext`tries$$, $CellContext`tries$66822$$, 0], 
+        Hold[$CellContext`confidence$$, $CellContext`confidence$66823$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
       "Body" :> (
-       If[$CellContext`j$$ > $CellContext`n$$ - 
-          2, $CellContext`j$$ = $CellContext`n$$ - 
-          2]; $CellContext`intervals[$CellContext`j$$, $CellContext`n$$, 
-         ImageSize -> 550]), 
-      "Specifications" :> {{{$CellContext`j$$, 10}, 1, 
-         Dynamic[$CellContext`n$$ - 2], 1, Appearance -> 
-         "Labeled"}, {{$CellContext`n$$, 50}, 20, 200, 5, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{656., {239., 246.}},
+       If[$CellContext`successes$$ > $CellContext`tries$$ - 
+          2, $CellContext`successes$$ = $CellContext`tries$$ - 
+          2]; $CellContext`intervals[$CellContext`successes$$, \
+$CellContext`tries$$, $CellContext`confidence$$, ImageSize -> 550]), 
+      "Specifications" :> {{{$CellContext`successes$$, 10}, 1, 
+         Dynamic[$CellContext`tries$$ - 2], 1, Appearance -> 
+         "Labeled"}, {{$CellContext`tries$$, 50}, 20, 200, 5, Appearance -> 
+         "Labeled"}, {{$CellContext`confidence$$, 0.95}, 0.5, 0.99, 0.01, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{656., {251., 258.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
     Initialization:>({$CellContext`intervals[
+         Pattern[$CellContext`jj$, 
+          Blank[]], 
+         Pattern[$CellContext`nn$, 
+          Blank[]], 
+         Pattern[$CellContext`confLvl$, 
+          Blank[]], 
+         Pattern[$CellContext`opts$, 
+          BlankNullSequence[]]] := Module[{$CellContext`t025$ = Quantile[
+            NormalDistribution[], 1 - (1 - $CellContext`confLvl$)/
+            2], $CellContext`blueSquare$ = Graphics[{Blue, 
+             Rectangle[]}, ImageSize -> 10], $CellContext`redSquare$ = 
+          Graphics[{Red, 
+             Rectangle[]}, ImageSize -> 10], $CellContext`blackSquare$ = 
+          Graphics[{Black, 
+             Rectangle[]}, ImageSize -> 
+            10], $CellContext`izq$, $CellContext`der$, \
+$CellContext`interWald$, $CellContext`interWilson$, $CellContext`nums$, \
+$CellContext`int1$, $CellContext`int2$, $CellContext`int3$, \
+$CellContext`std$, $CellContext`corrnums$, $CellContext`stimes$}, \
+$CellContext`izq$ = Quiet[
+            If[$CellContext`jj$ == 1, 0, 
+             Part[
+              ReplaceAll[$CellContext`p, 
+               NSolve[
+               1 - $CellContext`b[$CellContext`jj$ - 
+                  1, $CellContext`nn$, $CellContext`p] == (
+                  1 - $CellContext`confLvl$)/2, $CellContext`p]], 
+              1]]]; $CellContext`der$ = Quiet[
+            Part[
+             ReplaceAll[$CellContext`p, 
+              
+              NSolve[$CellContext`b[$CellContext`jj$, $CellContext`nn$, \
+$CellContext`p] == (1 - $CellContext`confLvl$)/2, $CellContext`p]], 
+             1]]; $CellContext`interWald$ = 
+          Map[Max[0, #]& , {$CellContext`jj$/$CellContext`nn$ - \
+$CellContext`t025$ 
+             Sqrt[($CellContext`jj$/$CellContext`nn$) ((
+                 1 - $CellContext`jj$/$CellContext`nn$)/$CellContext`nn$)], \
+$CellContext`jj$/$CellContext`nn$ + $CellContext`t025$ 
+              Sqrt[($CellContext`jj$/$CellContext`nn$) ((
+                  1 - $CellContext`jj$/$CellContext`nn$)/$CellContext`nn$)]}]; \
+$CellContext`interWilson$ = {(1/(
+             1 + $CellContext`t025$^2/$CellContext`nn$)) \
+($CellContext`jj$/$CellContext`nn$ + (1/(
+               2 $CellContext`nn$)) $CellContext`t025$^2 - $CellContext`t025$ 
+             Sqrt[(($CellContext`jj$/$CellContext`nn$) (
+                  1 - $CellContext`jj$/$CellContext`nn$))/$CellContext`nn$ + \
+$CellContext`t025$^2/(4 $CellContext`nn$^2)]), (1/(
+             1 + $CellContext`t025$^2/$CellContext`nn$)) \
+($CellContext`jj$/$CellContext`nn$ + (1/(
+               2 $CellContext`nn$)) $CellContext`t025$^2 + $CellContext`t025$ 
+              Sqrt[(($CellContext`jj$/$CellContext`nn$) (
+                   1 - $CellContext`jj$/$CellContext`nn$))/$CellContext`nn$ + \
+$CellContext`t025$^2/(
+                 4 $CellContext`nn$^2)])}; $CellContext`int1$ = \
+$CellContext`interWald$; $CellContext`int2$ = $CellContext`interWilson$; \
+$CellContext`int3$ = {$CellContext`izq$, $CellContext`der$}; \
+$CellContext`nums$ = {$CellContext`interWald$, $CellContext`interWilson$, \
+{$CellContext`izq$, $CellContext`der$}}; $CellContext`std$ = 
+          Map[StringDrop[#, 1]& , 
+            Map[ToString, 
+             Map[PaddedForm[#, {3, 3}]& , 
+              Flatten[$CellContext`nums$]]]]; $CellContext`difs = 
+          Map[Part[#, 2] - Part[#, 1]& , $CellContext`nums$]; $CellContext`az = 
+          Map[StringDrop[#, 1]& , 
+            Map[ToString, 
+             Map[
+             PaddedForm[#, {3, 
+               3}]& , $CellContext`difs]]]; $CellContext`corrnums$ = Table[
+            StringJoin["[", 
+             Part[$CellContext`std$, FE`j$$57], ",", " ", 
+             Part[$CellContext`std$, FE`j$$57 + 1], "]"], {
+            FE`j$$57, 1, Length[$CellContext`std$] - 1, 
+             2}]; $CellContext`stimes$ = Map[Text[#]& , 
+            Table[
+             StringJoin[
+              Part[$CellContext`corrnums$, FE`j$$57], "      ", 
+              Part[$CellContext`az, FE`j$$57]], {FE`j$$57, 1, 3}]]; 
+         ListLinePlot[{{$CellContext`jj$/$CellContext`nn$, 
+             0}, {$CellContext`jj$/$CellContext`nn$, 0.003}}, 
+           Axes -> {True, False}, AxesOrigin -> {0.25, 0}, 
+           PlotStyle -> {Black, 
+             Thickness[0.001]}, PlotRange -> {{0, 1}, {-0.002, 0.009}}, 
+           Epilog -> {
+             Text[
+              Style[
+              "j/n", Italic, 
+               Medium], {$CellContext`jj$/$CellContext`nn$, -0.00075}], 
+             Inset[
+              Grid[{{
+                 Style[
+                  StringJoin[
+                   ToString[$CellContext`confLvl$ 100], 
+                   "% confidence intervals"], Medium]}, {
+                 Style["for the probability parameter", Medium]}, {
+                 Style["in a binomial distribution", Medium]}}], {0.5, 
+              0.008}], 
+             Inset[
+              Grid[{{
+                 Text["method"], 
+                 Text[""], 
+                 Text["  interval           length"]}, {
+                 Text["conventional"], $CellContext`blueSquare$, 
+                 Part[$CellContext`stimes$, 1]}, {
+                 Text["Wilson"], $CellContext`redSquare$, 
+                 Part[$CellContext`stimes$, 2]}, {
+                 Text["Clopper-Pearson"], $CellContext`blackSquare$, 
+                 Part[$CellContext`stimes$, 3]}}], {0.5, 0.005}], Thick, Blue, 
+             Line[
+              MapThread[List, {$CellContext`int1$, {0.003, 0.003}}]], Thick, 
+             Red, 
+             Line[
+              MapThread[List, {$CellContext`int2$, {0.002, 0.002}}]], Thick, 
+             Black, 
+             Line[
+              MapThread[
+              List, {$CellContext`int3$, {0.001, 
+                0.001}}]]}, $CellContext`opts$]], $CellContext`intervals[
          Pattern[$CellContext`jj$, 
           Blank[]], 
          Pattern[$CellContext`nn$, 
@@ -508,7 +675,6 @@ $CellContext`t025$^2/(4 $CellContext`nn$^2)]), (1/(
 ($CellContext`jj$/$CellContext`nn$ + (1/(
                2 $CellContext`nn$)) $CellContext`t025$^2 + $CellContext`t025$ 
               Sqrt[(($CellContext`jj$/$CellContext`nn$) (
-                   
                    1 - $CellContext`jj$/$CellContext`nn$))/$CellContext`nn$ + \
 $CellContext`t025$^2/(
                  4 $CellContext`nn$^2)])}; $CellContext`int1$ = \
@@ -527,15 +693,15 @@ $CellContext`nums$ = {$CellContext`interWald$, $CellContext`interWilson$, \
              PaddedForm[#, {3, 
                3}]& , $CellContext`difs]]]; $CellContext`corrnums$ = Table[
             StringJoin["[", 
-             Part[$CellContext`std$, $CellContext`j$$], ",", " ", 
-             Part[$CellContext`std$, $CellContext`j$$ + 1], 
-             "]"], {$CellContext`j$$, 1, Length[$CellContext`std$] - 1, 
+             Part[$CellContext`std$, FE`j$$25], ",", " ", 
+             Part[$CellContext`std$, FE`j$$25 + 1], "]"], {
+            FE`j$$25, 1, Length[$CellContext`std$] - 1, 
              2}]; $CellContext`stimes$ = Map[Text[#]& , 
             Table[
              StringJoin[
-              Part[$CellContext`corrnums$, $CellContext`j$$], "      ", 
-              Part[$CellContext`az, $CellContext`j$$]], {$CellContext`j$$, 1, 
-              3}]]; ListLinePlot[{{$CellContext`jj$/$CellContext`nn$, 
+              Part[$CellContext`corrnums$, FE`j$$25], "      ", 
+              Part[$CellContext`az, FE`j$$25]], {FE`j$$25, 1, 3}]]; 
+         ListLinePlot[{{$CellContext`jj$/$CellContext`nn$, 
              0}, {$CellContext`jj$/$CellContext`nn$, 0.003}}, 
            Axes -> {True, False}, AxesOrigin -> {0.25, 0}, 
            PlotStyle -> {Black, 
@@ -571,7 +737,11 @@ $CellContext`nums$ = {$CellContext`interWald$, $CellContext`interWilson$, \
              Line[
               MapThread[
               List, {$CellContext`int3$, {0.001, 
-                0.001}}]]}, $CellContext`opts$]], $CellContext`b[
+                0.001}}]]}, $CellContext`opts$]], 
+       Attributes[$CellContext`jj$] = {Temporary}, 
+       Attributes[$CellContext`nn$] = {Temporary}, 
+       Attributes[$CellContext`confLvl$] = {Temporary}, 
+       Attributes[$CellContext`opts$] = {Temporary}, $CellContext`b[
          Pattern[$CellContext`j, 
           Blank[]], 
          Pattern[$CellContext`n, 
@@ -579,7 +749,10 @@ $CellContext`nums$ = {$CellContext`interWald$, $CellContext`interWilson$, \
          Pattern[$CellContext`p, 
           Blank[]]] := CDF[
          BinomialDistribution[$CellContext`n, $CellContext`p], \
-$CellContext`j], Attributes[PlotRange] = {ReadProtected}}; 
+$CellContext`j], $CellContext`difs = {0.1482751003992846, 
+        0.14714759615158562`, 0.16632186127455525`}, $CellContext`az = {
+        "0.148", "0.147", "0.166"}, FE`j$$57 = -1.9, 
+       Attributes[PlotRange] = {ReadProtected}, FE`j$$25 = 137}; 
      Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
@@ -588,12 +761,15 @@ $CellContext`j], Attributes[PlotRange] = {ReadProtected}};
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.777055342703031*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"3689e17a-ca8d-485c-a36c-468a533f86a0"]
+ CellChangeTimes->{
+  3.777055342703031*^9, 3.777138479896234*^9, {3.777138742415206*^9, 
+   3.777138752534237*^9}, {3.7771387954787903`*^9, 3.7771388253269978`*^9}, 
+   3.777138855547716*^9, 3.7771389072066517`*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"9280d629-a89d-4ac8-b18a-76b5f833ee1c"]
 }, Open  ]]
 },
-WindowSize->{1301, 713},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowSize->{975, 525},
+WindowMargins->{{-934, Automatic}, {Automatic, -53}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -610,14 +786,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 594, 15, 64, "Input",ExpressionUUID->"1c9d7291-0936-44f8-adc7-8e315a1eef08"],
-Cell[1155, 37, 12853, 354, 960, "Input",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
+Cell[1155, 37, 14914, 387, 1231, "Input",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
 Cell[CellGroupData[{
-Cell[14033, 395, 1044, 27, 145, "Input",ExpressionUUID->"7ec58b74-7aa6-4d73-828f-3869a05a619d"],
-Cell[15080, 424, 8083, 167, 506, "Output",ExpressionUUID->"3689e17a-ca8d-485c-a36c-468a533f86a0"]
+Cell[16094, 428, 1562, 37, 172, "Input",ExpressionUUID->"7ec58b74-7aa6-4d73-828f-3869a05a619d"],
+Cell[17659, 467, 14816, 300, 530, "Output",ExpressionUUID->"9280d629-a89d-4ac8-b18a-76b5f833ee1c"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
