@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    166744,       4003]
-NotebookOptionsPosition[    162518,       3939]
-NotebookOutlinePosition[    162883,       3955]
-CellTagsIndexPosition[    162840,       3952]
+NotebookDataLength[    320431,       7004]
+NotebookOptionsPosition[    314868,       6920]
+NotebookOutlinePosition[    315230,       6936]
+CellTagsIndexPosition[    315187,       6933]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -819,9 +819,8 @@ Cell[BoxData[
                  FractionBox["jj", "nn"]}], ")"}], "/", "nn"}]}]]}]}]}], 
          "}"}]}], "]"}]}], "]"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.777653596999877*^9, 3.777653640376882*^9}, {
-  3.7776555131948013`*^9, 
-  3.777655517971884*^9}},ExpressionUUID->"e84da01b-9a42-4d80-b32e-\
-93ff29d91d39"],
+  3.7776555131948013`*^9, 3.777655517971884*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"e84da01b-9a42-4d80-b32e-93ff29d91d39"],
 
 Cell[BoxData[
  RowBox[{
@@ -900,9 +899,8 @@ Cell[BoxData[
       "]"}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.7772018557685413`*^9, 3.777201865958498*^9}, {
   3.77720198552839*^9, 3.7772019995652514`*^9}, {3.7772020306313457`*^9, 
-  3.777202033246058*^9}, {3.777653623851453*^9, 
-  3.7776536242891397`*^9}},ExpressionUUID->"37c62761-98d9-443f-9842-\
-1b539a085f1b"],
+  3.777202033246058*^9}, {3.777653623851453*^9, 3.7776536242891397`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"37c62761-98d9-443f-9842-1b539a085f1b"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -926,7 +924,7 @@ Cell[BoxData[
 Nocontroller_8Aug2019/\>\""}], ";"}]}]], "Input",
  CellChangeTimes->{{3.777200133191486*^9, 3.777200152639188*^9}, {
   3.777201869257559*^9, 3.777201869430025*^9}},
- CellLabel->"In[57]:=",ExpressionUUID->"749fe121-b072-45b6-82d9-9532a71955d6"],
+ CellLabel->"In[8]:=",ExpressionUUID->"749fe121-b072-45b6-82d9-9532a71955d6"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1070,7 +1068,7 @@ Cell[BoxData[{
     ")"}]}]}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.777205754726466*^9, 3.7772057629620733`*^9}, 
    3.7772058032478533`*^9, {3.777650057587607*^9, 3.777650117672563*^9}},
- CellLabel->"In[58]:=",ExpressionUUID->"cee2c8f5-0dfd-4cc7-b974-e9752ec96a0e"],
+ CellLabel->"In[9]:=",ExpressionUUID->"cee2c8f5-0dfd-4cc7-b974-e9752ec96a0e"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -1136,8 +1134,7 @@ Cell[BoxData[
     ";"}], "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.7776520172527227`*^9, 3.7776520805910797`*^9}, {
   3.777653919740531*^9, 3.7776539328595877`*^9}},
- CellLabel->
-  "In[155]:=",ExpressionUUID->"9694fef6-7728-4ddc-b4d3-6cd27ebec4fb"],
+ CellLabel->"In[14]:=",ExpressionUUID->"9694fef6-7728-4ddc-b4d3-6cd27ebec4fb"],
 
 Cell[BoxData[
  RowBox[{
@@ -1218,8 +1215,7 @@ Cell[BoxData[
       RowBox[{"1", ",", " ", "24"}], "]"}]}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.777652171777667*^9, 3.77765219206903*^9}, {
   3.7776539357125397`*^9, 3.777653943012064*^9}},
- CellLabel->
-  "In[157]:=",ExpressionUUID->"e87c2a07-0a2a-431f-9838-8fdc4151fa37"],
+ CellLabel->"In[16]:=",ExpressionUUID->"e87c2a07-0a2a-431f-9838-8fdc4151fa37"],
 
 Cell[BoxData[
  RowBox[{"generateDetFPRGtSuccessCountsPerSubsetSizeWilson", "[", "1000", 
@@ -1352,7 +1348,7 @@ Cell[BoxData[
   RowBox[{
    RowBox[{
     RowBox[{
-     RowBox[{"generateDetFNRvsCISampleWilson", "[", "sampleCt_", "]"}], ":=", 
+     RowBox[{"generateDetFPRvsCISampleWilson", "[", "sampleCt_", "]"}], ":=", 
      " ", 
      RowBox[{"(", 
       RowBox[{
@@ -1418,7 +1414,7 @@ Cell[BoxData[
        "}"}]}], " ", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"tallyUpDetFNRvsCISample", "[", "sample_", "]"}], ":=", " ", 
+     RowBox[{"tallyUpDetFPRvsCISample", "[", "sample_", "]"}], ":=", " ", 
      RowBox[{
       RowBox[{
        RowBox[{"With", "[", " ", 
@@ -1457,7 +1453,7 @@ Cell[BoxData[
    
    RowBox[{
     RowBox[{
-     RowBox[{"generateDetFNRvsCIOutcomesWilson", "[", "sampleCt_", "]"}], ":=", 
+     RowBox[{"generateDetFPRvsCIOutcomesWilson", "[", "sampleCt_", "]"}], ":=", 
      RowBox[{
       RowBox[{
        RowBox[{"{", 
@@ -1516,8 +1512,8 @@ Cell[BoxData[
          "filtering", " ", "it"}], "*)"}], 
       RowBox[{"Select", "[", 
        RowBox[{
-        RowBox[{"tallyUpDetFNRvsCISample", "[", 
-         RowBox[{"generateDetFNRvsCISampleWilson", "[", "sampleCt", "]"}], 
+        RowBox[{"tallyUpDetFPRvsCISample", "[", 
+         RowBox[{"generateDetFPRvsCISampleWilson", "[", "sampleCt", "]"}], 
          "]"}], ",", " ", 
         RowBox[{
          RowBox[{
@@ -1532,15 +1528,15 @@ Cell[BoxData[
     ";"}]}]}]], "Input",
  CellChangeTimes->{{3.77765227673988*^9, 3.777652359900626*^9}, {
   3.77765322908156*^9, 3.77765323052829*^9}, {3.7776539540373173`*^9, 
-  3.777653969908761*^9}},
- CellLabel->
-  "In[158]:=",ExpressionUUID->"193bf899-1469-48ce-be9f-582f1fd45d75"],
+  3.777653969908761*^9}, {3.778847676662121*^9, 
+  3.778847691224041*^9}},ExpressionUUID->"193bf899-1469-48ce-be9f-\
+582f1fd45d75"],
 
 Cell[BoxData[
- RowBox[{"generateDetFNRvsCIOutcomes", "[", "10000", "]"}]], "Input",
- CellChangeTimes->{3.777653348853633*^9},
- CellLabel->
-  "In[147]:=",ExpressionUUID->"6d6e96ce-c4ab-487e-a662-29174d0a4659"],
+ RowBox[{"generateDetFPRvsCIOutcomes", "[", "10000", "]"}]], "Input",
+ CellChangeTimes->{3.777653348853633*^9, 
+  3.778847692962146*^9},ExpressionUUID->"6d6e96ce-c4ab-487e-a662-\
+29174d0a4659"],
 
 Cell[BoxData[
  RowBox[{
@@ -2210,10 +2206,10 @@ yZvD+QCl3VIf
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{"generateDetFNRvsCIOutcomes", "[", "100000", "]"}]], "Input",
- CellChangeTimes->{3.777653475011714*^9},
- CellLabel->
-  "In[150]:=",ExpressionUUID->"6b689663-3004-45e9-9b49-fd334b5a6d5e"],
+ RowBox[{"generateDetFPRvsCIOutcomes", "[", "100000", "]"}]], "Input",
+ CellChangeTimes->{3.777653475011714*^9, 
+  3.7788477007448597`*^9},ExpressionUUID->"6b689663-3004-45e9-9b49-\
+fd334b5a6d5e"],
 
 Cell[BoxData[
  RowBox[{
@@ -3935,10 +3931,2995 @@ Ymqr+yd9gPFN0MLDFI1vBucDAPOtU3A=
 Cell[BoxData[""], "Input",
  CellChangeTimes->{
   3.778597203353904*^9},ExpressionUUID->"9153ceb0-e061-4ffa-9bc4-\
-2412519b3eb2"]
+2412519b3eb2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"**", " ", "TESTING"}], " ", "DETECTOR", " ", "WITH", " ", 
+    "REPLACEMENT"}], " ", "***)"}], " ", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"fpr1000sampleChartDataWilson", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.839","0.023","0.023"},
+           "AroundAsym"],
+          Around[0.839, {0.022779385769606364`, 0.022779385769606364`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.942","0.014","0.014"},
+           "AroundAsym"],
+          Around[0.942, {0.014487302858967488`, 0.014487302858967488`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.951","0.013","0.013"},
+           "AroundAsym"],
+          Around[0.951, {0.013379392347394825`, 0.013379392347394825`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.945","0.014","0.014"},
+           "AroundAsym"],
+          Around[0.945, {0.014130103403923844`, 0.014130103403923844`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.949","0.014","0.014"},
+           "AroundAsym"],
+          Around[0.949, {0.013635349847465505`, 0.013635349847465505`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"6", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.948","0.014","0.014"},
+           "AroundAsym"],
+          Around[0.948, {0.013761124736915264`, 0.013761124736915264`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"7", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.937","0.015","0.015"},
+           "AroundAsym"],
+          Around[0.937, {0.015058723572879518`, 0.015058723572879518`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"8", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.933","0.015","0.015"},
+           "AroundAsym"],
+          Around[0.933, {0.015496239296694303`, 0.015496239296694303`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"9", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.916","0.017","0.017"},
+           "AroundAsym"],
+          Around[0.916, {0.01719235898588356, 0.01719235898588356}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"10", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.922","0.017","0.017"},
+           "AroundAsym"],
+          Around[0.922, {0.016621141734220357`, 0.016621141734220357`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"11", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.916","0.017","0.017"},
+           "AroundAsym"],
+          Around[0.916, {0.01719235898588356, 0.01719235898588356}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"12", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.905","0.018","0.018"},
+           "AroundAsym"],
+          Around[0.905, {0.018173316211115176`, 0.018173316211115176`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"13", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.904","0.018","0.018"},
+           "AroundAsym"],
+          Around[0.904, {0.018258618849604225`, 0.018258618849604225`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"14", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.912","0.018","0.018"},
+           "AroundAsym"],
+          Around[0.912, {0.017558477129683836`, 0.017558477129683836`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"15", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.899","0.019","0.019"},
+           "AroundAsym"],
+          Around[0.899, {0.01867620463210362, 0.01867620463210362}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"16", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.875","0.020","0.020"},
+           "AroundAsym"],
+          Around[0.875, {0.02049779399138907, 0.02049779399138907}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"17", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.877","0.020","0.020"},
+           "AroundAsym"],
+          Around[0.877, {0.02035637503209009, 0.02035637503209009}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"18", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.882","0.020","0.020"},
+           "AroundAsym"],
+          Around[0.882, {0.019995091103132467`, 0.019995091103132467`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"19", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.879","0.020","0.020"},
+           "AroundAsym"],
+          Around[0.879, {0.020213206542016304`, 0.020213206542016304`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"20", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.864","0.021","0.021"},
+           "AroundAsym"],
+          Around[0.864, {0.021245864945133364`, 0.021245864945133364`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"21", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.857","0.022","0.022"},
+           "AroundAsym"],
+          Around[0.857, {0.021697341310282448`, 0.021697341310282448`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"22", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.861","0.021","0.021"},
+           "AroundAsym"],
+          Around[0.861, {0.02144159392866718, 0.02144159392866718}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"23", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.857","0.022","0.022"},
+           "AroundAsym"],
+          Around[0.857, {0.021697341310282448`, 0.021697341310282448`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"24", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.865","0.021","0.021"},
+           "AroundAsym"],
+          Around[0.865, {0.021179857265490765`, 0.021179857265490765`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"25", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.837","0.023","0.023"},
+           "AroundAsym"],
+          Around[0.837, {0.02289310089013996, 0.02289310089013996}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"26", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.851","0.022","0.022"},
+           "AroundAsym"],
+          Around[0.851, {0.02207018661011273, 0.02207018661011273}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"27", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.839","0.023","0.023"},
+           "AroundAsym"],
+          Around[0.839, {0.022779385769606364`, 0.022779385769606364`}]]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"28", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.846","0.022","0.022"},
+           "AroundAsym"],
+          Around[0.846, {0.02237142420578797, 0.02237142420578797}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"29", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.842","0.023","0.023"},
+           "AroundAsym"],
+          Around[0.842, {0.02260646623578899, 0.02260646623578899}]]}], "}"}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"30", ",", 
+         InterpretationBox[
+          TemplateBox[{"0.811","0.024","0.024"},
+           "AroundAsym"],
+          Around[0.811, {0.024265509814903496`, 0.024265509814903496`}]]}], 
+        "}"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "[", 
+      RowBox[{"fpr1000sampleChartDataWilson", ",", " ", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"PointSize", "[", "Medium", "]"}]}]}], "]"}], ",", " ", 
+     RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], "\n", 
+   GraphicsBox[{{{{
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{1., 0.8162206142303936}, {1., 0.839}}], 
+            LineBox[{{1., 0.839}, {1., 0.8617793857696063}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{2., 0.9275126971410325}, {2., 0.942}}], 
+            LineBox[{{2., 0.942}, {2., 0.9564873028589674}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{3., 0.9376206076526051}, {3., 0.951}}], 
+            LineBox[{{3., 0.951}, {3., 0.9643793923473948}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{4., 0.9308698965960761}, {4., 0.945}}], 
+            LineBox[{{4., 0.945}, {4., 0.9591301034039238}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{5., 0.9353646501525344}, {5., 0.949}}], 
+            LineBox[{{5., 0.949}, {5., 0.9626353498474655}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{6., 0.9342388752630847}, {6., 0.948}}], 
+            LineBox[{{6., 0.948}, {6., 0.9617611247369152}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{7., 0.9219412764271205}, {7., 0.937}}], 
+            LineBox[{{7., 0.937}, {7., 0.9520587235728796}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{8., 0.9175037607033057}, {8., 0.933}}], 
+            LineBox[{{8., 0.933}, {8., 0.9484962392966944}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{9., 0.8988076410141165}, {9., 0.916}}], 
+            LineBox[{{9., 0.916}, {9., 0.9331923589858836}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{10., 0.9053788582657797}, {10., 0.922}}], 
+            LineBox[{{10., 0.922}, {10., 0.9386211417342204}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{11., 0.8988076410141165}, {11., 0.916}}], 
+            LineBox[{{11., 0.916}, {11., 0.9331923589858836}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{12., 0.8868266837888849}, {12., 0.905}}], 
+            LineBox[{{12., 0.905}, {12., 0.9231733162111152}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{13., 0.8857413811503958}, {13., 0.904}}], 
+            LineBox[{{13., 0.904}, {13., 0.9222586188496043}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{14., 0.8944415228703162}, {14., 0.912}}], 
+            LineBox[{{14., 0.912}, {14., 0.9295584771296839}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{15., 0.8803237953678964}, {15., 0.899}}], 
+            LineBox[{{15., 0.899}, {15., 0.9176762046321036}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{16., 0.8545022060086109}, {16., 0.875}}], 
+            LineBox[{{16., 0.875}, {16., 0.8954977939913891}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{17., 0.8566436249679099}, {17., 0.877}}], 
+            LineBox[{{17., 0.877}, {17., 0.8973563750320901}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{18., 0.8620049088968675}, {18., 0.882}}], 
+            LineBox[{{18., 0.882}, {18., 0.9019950911031325}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{19., 0.8587867934579837}, {19., 0.879}}], 
+            LineBox[{{19., 0.879}, {19., 0.8992132065420163}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{20., 0.8427541350548666}, {20., 0.864}}], 
+            LineBox[{{20., 0.864}, {20., 0.8852458649451334}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{21., 0.8353026586897175}, {21., 0.857}}], 
+            LineBox[{{21., 0.857}, {21., 0.8786973413102824}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{22., 0.8395584060713328}, {22., 0.861}}], 
+            LineBox[{{22., 0.861}, {22., 0.8824415939286672}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{23., 0.8353026586897175}, {23., 0.857}}], 
+            LineBox[{{23., 0.857}, {23., 0.8786973413102824}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{24., 0.8438201427345092}, {24., 0.865}}], 
+            LineBox[{{24., 0.865}, {24., 0.8861798572654908}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{25., 0.81410689910986}, {25., 0.837}}], 
+            LineBox[{{25., 0.837}, {25., 0.8598931008901399}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{26., 0.8289298133898872}, {26., 0.851}}], 
+            LineBox[{{26., 0.851}, {26., 0.8730701866101127}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{27., 0.8162206142303936}, {27., 0.839}}], 
+            LineBox[{{27., 0.839}, {27., 0.8617793857696063}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{28., 0.823628575794212}, {28., 0.846}}], 
+            LineBox[{{28., 0.846}, {28., 0.868371424205788}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{29., 0.819393533764211}, {29., 0.842}}], 
+            LineBox[{{29., 0.842}, {29., 0.864606466235789}}]}},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{{}, {LineBox[{{30., 0.7867344901850966}, {30., 0.811}}], 
+            LineBox[{{30., 0.811}, {30., 0.8352655098149036}}]}},
+          Antialiasing->False]}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{1., 0.8617793857696063}, 
+               Offset[{3, 0}, {1., 0.8617793857696063}]}, {{1., 
+               0.8617793857696063}, 
+               Offset[{-3, 0}, {1., 0.8617793857696063}]}, {{1., 
+               0.8162206142303936}, 
+               Offset[{3, 0}, {1., 0.8162206142303936}]}, {{1., 
+               0.8162206142303936}, 
+               Offset[{-3, 0}, {1., 0.8162206142303936}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{2., 0.9564873028589674}, 
+               Offset[{3, 0}, {2., 0.9564873028589674}]}, {{2., 
+               0.9564873028589674}, 
+               Offset[{-3, 0}, {2., 0.9564873028589674}]}, {{2., 
+               0.9275126971410325}, 
+               Offset[{3, 0}, {2., 0.9275126971410325}]}, {{2., 
+               0.9275126971410325}, 
+               Offset[{-3, 0}, {2., 0.9275126971410325}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{3., 0.9643793923473948}, 
+               Offset[{3, 0}, {3., 0.9643793923473948}]}, {{3., 
+               0.9643793923473948}, 
+               Offset[{-3, 0}, {3., 0.9643793923473948}]}, {{3., 
+               0.9376206076526051}, 
+               Offset[{3, 0}, {3., 0.9376206076526051}]}, {{3., 
+               0.9376206076526051}, 
+               Offset[{-3, 0}, {3., 0.9376206076526051}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{4., 0.9591301034039238}, 
+               Offset[{3, 0}, {4., 0.9591301034039238}]}, {{4., 
+               0.9591301034039238}, 
+               Offset[{-3, 0}, {4., 0.9591301034039238}]}, {{4., 
+               0.9308698965960761}, 
+               Offset[{3, 0}, {4., 0.9308698965960761}]}, {{4., 
+               0.9308698965960761}, 
+               Offset[{-3, 0}, {4., 0.9308698965960761}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{5., 0.9626353498474655}, 
+               Offset[{3, 0}, {5., 0.9626353498474655}]}, {{5., 
+               0.9626353498474655}, 
+               Offset[{-3, 0}, {5., 0.9626353498474655}]}, {{5., 
+               0.9353646501525344}, 
+               Offset[{3, 0}, {5., 0.9353646501525344}]}, {{5., 
+               0.9353646501525344}, 
+               Offset[{-3, 0}, {5., 0.9353646501525344}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{6., 0.9617611247369152}, 
+               Offset[{3, 0}, {6., 0.9617611247369152}]}, {{6., 
+               0.9617611247369152}, 
+               Offset[{-3, 0}, {6., 0.9617611247369152}]}, {{6., 
+               0.9342388752630847}, 
+               Offset[{3, 0}, {6., 0.9342388752630847}]}, {{6., 
+               0.9342388752630847}, 
+               Offset[{-3, 0}, {6., 0.9342388752630847}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{7., 0.9520587235728796}, 
+               Offset[{3, 0}, {7., 0.9520587235728796}]}, {{7., 
+               0.9520587235728796}, 
+               Offset[{-3, 0}, {7., 0.9520587235728796}]}, {{7., 
+               0.9219412764271205}, 
+               Offset[{3, 0}, {7., 0.9219412764271205}]}, {{7., 
+               0.9219412764271205}, 
+               Offset[{-3, 0}, {7., 0.9219412764271205}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{8., 0.9484962392966944}, 
+               Offset[{3, 0}, {8., 0.9484962392966944}]}, {{8., 
+               0.9484962392966944}, 
+               Offset[{-3, 0}, {8., 0.9484962392966944}]}, {{8., 
+               0.9175037607033057}, 
+               Offset[{3, 0}, {8., 0.9175037607033057}]}, {{8., 
+               0.9175037607033057}, 
+               Offset[{-3, 0}, {8., 0.9175037607033057}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{9., 0.9331923589858836}, 
+               Offset[{3, 0}, {9., 0.9331923589858836}]}, {{9., 
+               0.9331923589858836}, 
+               Offset[{-3, 0}, {9., 0.9331923589858836}]}, {{9., 
+               0.8988076410141165}, 
+               Offset[{3, 0}, {9., 0.8988076410141165}]}, {{9., 
+               0.8988076410141165}, 
+               Offset[{-3, 0}, {9., 0.8988076410141165}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{10., 0.9386211417342204}, 
+               Offset[{3, 0}, {10., 0.9386211417342204}]}, {{10., 
+               0.9386211417342204}, 
+               Offset[{-3, 0}, {10., 0.9386211417342204}]}, {{10., 
+               0.9053788582657797}, 
+               Offset[{3, 0}, {10., 0.9053788582657797}]}, {{10., 
+               0.9053788582657797}, 
+               Offset[{-3, 0}, {10., 0.9053788582657797}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{11., 0.9331923589858836}, 
+               Offset[{3, 0}, {11., 0.9331923589858836}]}, {{11., 
+               0.9331923589858836}, 
+               Offset[{-3, 0}, {11., 0.9331923589858836}]}, {{11., 
+               0.8988076410141165}, 
+               Offset[{3, 0}, {11., 0.8988076410141165}]}, {{11., 
+               0.8988076410141165}, 
+               Offset[{-3, 0}, {11., 0.8988076410141165}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{12., 0.9231733162111152}, 
+               Offset[{3, 0}, {12., 0.9231733162111152}]}, {{12., 
+               0.9231733162111152}, 
+               Offset[{-3, 0}, {12., 0.9231733162111152}]}, {{12., 
+               0.8868266837888849}, 
+               Offset[{3, 0}, {12., 0.8868266837888849}]}, {{12., 
+               0.8868266837888849}, 
+               Offset[{-3, 0}, {12., 0.8868266837888849}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{13., 0.9222586188496043}, 
+               Offset[{3, 0}, {13., 0.9222586188496043}]}, {{13., 
+               0.9222586188496043}, 
+               Offset[{-3, 0}, {13., 0.9222586188496043}]}, {{13., 
+               0.8857413811503958}, 
+               Offset[{3, 0}, {13., 0.8857413811503958}]}, {{13., 
+               0.8857413811503958}, 
+               Offset[{-3, 0}, {13., 0.8857413811503958}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{14., 0.9295584771296839}, 
+               Offset[{3, 0}, {14., 0.9295584771296839}]}, {{14., 
+               0.9295584771296839}, 
+               Offset[{-3, 0}, {14., 0.9295584771296839}]}, {{14., 
+               0.8944415228703162}, 
+               Offset[{3, 0}, {14., 0.8944415228703162}]}, {{14., 
+               0.8944415228703162}, 
+               Offset[{-3, 0}, {14., 0.8944415228703162}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{15., 0.9176762046321036}, 
+               Offset[{3, 0}, {15., 0.9176762046321036}]}, {{15., 
+               0.9176762046321036}, 
+               Offset[{-3, 0}, {15., 0.9176762046321036}]}, {{15., 
+               0.8803237953678964}, 
+               Offset[{3, 0}, {15., 0.8803237953678964}]}, {{15., 
+               0.8803237953678964}, 
+               Offset[{-3, 0}, {15., 0.8803237953678964}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{16., 0.8954977939913891}, 
+               Offset[{3, 0}, {16., 0.8954977939913891}]}, {{16., 
+               0.8954977939913891}, 
+               Offset[{-3, 0}, {16., 0.8954977939913891}]}, {{16., 
+               0.8545022060086109}, 
+               Offset[{3, 0}, {16., 0.8545022060086109}]}, {{16., 
+               0.8545022060086109}, 
+               Offset[{-3, 0}, {16., 0.8545022060086109}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{17., 0.8973563750320901}, 
+               Offset[{3, 0}, {17., 0.8973563750320901}]}, {{17., 
+               0.8973563750320901}, 
+               Offset[{-3, 0}, {17., 0.8973563750320901}]}, {{17., 
+               0.8566436249679099}, 
+               Offset[{3, 0}, {17., 0.8566436249679099}]}, {{17., 
+               0.8566436249679099}, 
+               Offset[{-3, 0}, {17., 0.8566436249679099}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{18., 0.9019950911031325}, 
+               Offset[{3, 0}, {18., 0.9019950911031325}]}, {{18., 
+               0.9019950911031325}, 
+               Offset[{-3, 0}, {18., 0.9019950911031325}]}, {{18., 
+               0.8620049088968675}, 
+               Offset[{3, 0}, {18., 0.8620049088968675}]}, {{18., 
+               0.8620049088968675}, 
+               Offset[{-3, 0}, {18., 0.8620049088968675}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{19., 0.8992132065420163}, 
+               Offset[{3, 0}, {19., 0.8992132065420163}]}, {{19., 
+               0.8992132065420163}, 
+               Offset[{-3, 0}, {19., 0.8992132065420163}]}, {{19., 
+               0.8587867934579837}, 
+               Offset[{3, 0}, {19., 0.8587867934579837}]}, {{19., 
+               0.8587867934579837}, 
+               Offset[{-3, 0}, {19., 0.8587867934579837}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{20., 0.8852458649451334}, 
+               Offset[{3, 0}, {20., 0.8852458649451334}]}, {{20., 
+               0.8852458649451334}, 
+               Offset[{-3, 0}, {20., 0.8852458649451334}]}, {{20., 
+               0.8427541350548666}, 
+               Offset[{3, 0}, {20., 0.8427541350548666}]}, {{20., 
+               0.8427541350548666}, 
+               Offset[{-3, 0}, {20., 0.8427541350548666}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{21., 0.8786973413102824}, 
+               Offset[{3, 0}, {21., 0.8786973413102824}]}, {{21., 
+               0.8786973413102824}, 
+               Offset[{-3, 0}, {21., 0.8786973413102824}]}, {{21., 
+               0.8353026586897175}, 
+               Offset[{3, 0}, {21., 0.8353026586897175}]}, {{21., 
+               0.8353026586897175}, 
+               Offset[{-3, 0}, {21., 0.8353026586897175}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{22., 0.8824415939286672}, 
+               Offset[{3, 0}, {22., 0.8824415939286672}]}, {{22., 
+               0.8824415939286672}, 
+               Offset[{-3, 0}, {22., 0.8824415939286672}]}, {{22., 
+               0.8395584060713328}, 
+               Offset[{3, 0}, {22., 0.8395584060713328}]}, {{22., 
+               0.8395584060713328}, 
+               Offset[{-3, 0}, {22., 0.8395584060713328}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{23., 0.8786973413102824}, 
+               Offset[{3, 0}, {23., 0.8786973413102824}]}, {{23., 
+               0.8786973413102824}, 
+               Offset[{-3, 0}, {23., 0.8786973413102824}]}, {{23., 
+               0.8353026586897175}, 
+               Offset[{3, 0}, {23., 0.8353026586897175}]}, {{23., 
+               0.8353026586897175}, 
+               Offset[{-3, 0}, {23., 0.8353026586897175}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{24., 0.8861798572654908}, 
+               Offset[{3, 0}, {24., 0.8861798572654908}]}, {{24., 
+               0.8861798572654908}, 
+               Offset[{-3, 0}, {24., 0.8861798572654908}]}, {{24., 
+               0.8438201427345092}, 
+               Offset[{3, 0}, {24., 0.8438201427345092}]}, {{24., 
+               0.8438201427345092}, 
+               Offset[{-3, 0}, {24., 0.8438201427345092}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{25., 0.8598931008901399}, 
+               Offset[{3, 0}, {25., 0.8598931008901399}]}, {{25., 
+               0.8598931008901399}, 
+               Offset[{-3, 0}, {25., 0.8598931008901399}]}, {{25., 
+               0.81410689910986}, Offset[{3, 0}, {25., 0.81410689910986}]}, {{
+               25., 0.81410689910986}, 
+               Offset[{-3, 0}, {25., 0.81410689910986}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{26., 0.8730701866101127}, 
+               Offset[{3, 0}, {26., 0.8730701866101127}]}, {{26., 
+               0.8730701866101127}, 
+               Offset[{-3, 0}, {26., 0.8730701866101127}]}, {{26., 
+               0.8289298133898872}, 
+               Offset[{3, 0}, {26., 0.8289298133898872}]}, {{26., 
+               0.8289298133898872}, 
+               Offset[{-3, 0}, {26., 0.8289298133898872}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{27., 0.8617793857696063}, 
+               Offset[{3, 0}, {27., 0.8617793857696063}]}, {{27., 
+               0.8617793857696063}, 
+               Offset[{-3, 0}, {27., 0.8617793857696063}]}, {{27., 
+               0.8162206142303936}, 
+               Offset[{3, 0}, {27., 0.8162206142303936}]}, {{27., 
+               0.8162206142303936}, 
+               Offset[{-3, 0}, {27., 0.8162206142303936}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{28., 0.868371424205788}, 
+               Offset[{3, 0}, {28., 0.868371424205788}]}, {{28., 
+               0.868371424205788}, 
+               Offset[{-3, 0}, {28., 0.868371424205788}]}, {{28., 
+               0.823628575794212}, 
+               Offset[{3, 0}, {28., 0.823628575794212}]}, {{28., 
+               0.823628575794212}, 
+               Offset[{-3, 0}, {28., 0.823628575794212}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{29., 0.864606466235789}, 
+               Offset[{3, 0}, {29., 0.864606466235789}]}, {{29., 
+               0.864606466235789}, 
+               Offset[{-3, 0}, {29., 0.864606466235789}]}, {{29., 
+               0.819393533764211}, 
+               Offset[{3, 0}, {29., 0.819393533764211}]}, {{29., 
+               0.819393533764211}, 
+               Offset[{-3, 0}, {29., 0.819393533764211}]}}], {{{1., 0.}, {0., 
+             1.}}, {0., 0.}}]},
+          Antialiasing->False]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         StyleBox[{
+           GeometricTransformationBox[
+            LineBox[{}], {{{1., 0.}, {0., 1.}}, {0., 0.}}], 
+           GeometricTransformationBox[
+            LineBox[{{{30., 0.8352655098149036}, 
+               Offset[{3, 0}, {30., 0.8352655098149036}]}, {{30., 
+               0.8352655098149036}, 
+               Offset[{-3, 0}, {30., 0.8352655098149036}]}, {{30., 
+               0.7867344901850966}, 
+               Offset[{3, 0}, {30., 0.7867344901850966}]}, {{30., 
+               0.7867344901850966}, 
+               Offset[{-3, 0}, {30., 0.7867344901850966}]}}], {{{1., 0.}, {0.,
+              1.}}, {0., 0.}}]},
+          Antialiasing->False]}}}, {
+       {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+        AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7HmYtNvFbr6yhwo47JsvpX9X5R2Uz+Fgfd+/
+d3oejC/gYMt1fXGBLYwv4jDxbY29aRyML+Gwp2SyBEsYjC/jMM25O+f577dQ
+voKDU8LTC0q3YXwlB9moFKAVML6KgzTQdrZGGF8NTV7D4ZtGTP+hr2+gfC0H
+xQ1FGRPfwvg6DifLQD6Aqddz+BH8eOnsIzB5AwcIDeMbOqz6eMk3SQDGN3K4
+DORFWML4xg4hIO0KML6Jw81z34EmvobyTR3YGqcCfQjjmzmAndsL45ujyVs4
+rHN/WCWyDsa3dADZtuUELPytHDjWyACNgMlbO6DGj40DODqEYPK2DqDQXfkR
+Jm/ncPDUQtdtn1/aAwB7YIUf
+         "]]}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         AbsoluteThickness[1.6]}, {}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[Medium], 
+         AbsoluteThickness[1.6]}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+          "]]}}, 
+       {RGBColor[1, 0, 0], PointSize[
+         NCache[
+          Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+        Dashing[{0, Small}]}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->{True, True},
+    AxesLabel->{None, None},
+    AxesOrigin->{0, 0.7768653289538581},
+    DisplayFunction->Identity,
+    Frame->{{False, False}, {False, False}},
+    FrameLabel->{{None, None}, {None, None}},
+    FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    GridLines->{None, None},
+    GridLinesStyle->Directive[
+      GrayLevel[0.5, 0.4]],
+    ImageSize->{497.27272727272674`, Automatic},
+    Method->{
+     "OptimizePlotMarkers" -> True, 
+      "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& )}},
+    PlotRange->{{0, 30.}, {0.7768653289538581, 0.9643793923473948}},
+    PlotRangeClipping->True,
+    PlotRangePadding->{{
+       Scaled[0.02], 
+       Scaled[0.02]}, {
+       Scaled[0.05], 
+       Scaled[0.05]}},
+    Ticks->{Automatic, Automatic}]}]}]], "Input",
+ CellChangeTimes->{{3.7788491274011583`*^9, 
+  3.778849169765613*^9}},ExpressionUUID->"4ed6d4fb-3d89-440d-928f-\
+a72d7a7ab6ca"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "back", " ", "to", " ", "fixed", " ", "attempts", " ", "per", " ", 
+     "subset"}], ",", " ", 
+    RowBox[{
+     RowBox[{"now", " ", "sessions", " ", "4", " ", "and", " ", "5"}], 
+     ":"}]}], " ", "*)"}], " "}]], "Input",
+ CellChangeTimes->{{3.778856742741016*^9, 3.778856764139558*^9}, {
+  3.778860942016288*^9, 
+  3.77886094780886*^9}},ExpressionUUID->"615e7a9f-ea5f-48be-a912-\
+bec80ae01560"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+        RowBox[{"pairingGtDetFPR", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "5"}], "}"}], ",", " ", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"monwin", " ", "size"}], ",", " ", 
+           RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], "*)"}],
+          " ", "10", ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], " ", 
+         "100"}], "]"}], ",", 
+       RowBox[{"(*", " ", 
+        RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+       "20"}], "]"}]}], ",", 
+    RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.77885667003916*^9, 3.77885672562941*^9}, 
+   3.778857537331387*^9, {3.778857963130352*^9, 3.778857963408388*^9}},
+ CellLabel->
+  "In[317]:=",ExpressionUUID->"fc16e36d-adf2-4b5b-bc0e-befabefbda45"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7DVj+g991XhjDxVwKLTlur644C2Uz+Gwzv1h
+lci691C+gANYeQyML4LGl0DjyzikgcE7KF/BAWS6LRdMXgnNfBU0vhqaeRpo
+5mmhqddB4+s5wPwJoQ3Q5A3R5I3Q5I3R+CZofFM0/WZofHM0vgUa3xKNb4XG
+t0bj26DxbdH4dnA+AEUsZ0c=
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7DVj+g991XhjDxVw2CHX+jpwxzson8NBZJ37
+wyoRGF/AAaw85j2UL+JQaMt1fXHBWyhfwgHEs+WCycugqVdA4ys5gI1fB+Or
+oOlXc4C5E0JroPG10PTroPH10OwzQOMboplnhMY3RuOboPFN0fhmaPabo8lb
+oPEt0fhWaHxrNL4NGt8WjW8H5wMAKP9eUA==
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7L9pxPQf+vrCHirgsEOu9XXgjndQPoeDyDr3
+h1UiML6AQxoYwPgiDlzXFxfYcr2H8iXQ1Mug8RUcQLZpxMDUK6HxVRzAytfB
++GpofA00vhaa/TpofD00vgGafkMHWDhAaCM0vjGaehM0eVM0vhka3xyNb4HG
+t0TjW6HxrdH4Nmh8WzS+HZwPAFc7Yd4=
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7I3B4LU9VMBBZJ37wyqRd1A+hwOYu+49lC/g
+wHV9cYEtF4wvgqZewmGHXOvrwB0wvgyaegU0vpJDTP+hrxoxML6KA8xdEFoN
+Tb0GmnotNL4Omnv10MwzQOMboqk3QpM3RuOboPFN0fSbocmbo/Et0PiWaHwr
+NL41Gt8GjW+LxreD8wFPmVqP
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7FtfB+6Qa31tDxVwkAcLvIXyORzSwOAdlC/g
+wHV9cYEt13soX8Th8FeNmP5DMPUSaPIyDiDDA3fA9Cs4rHN/WCWyDiavhMZX
+QeOrOQANB9oA42ug8bXQ+Dpo9uuhyRugyRui2WfkAAsXCG2Mpt4ETd4UjW+G
+Zp45mrwFGt8SjW+FxrdG49ug8W3R+HZwPgBZ/Wic
+        "]]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7N8E7pBrff3SHirgENN/6KtGzHson8NhnfvD
+KpF1ML6AA0h14I53UL4IGl8CTb+MA8weCK2AZp6SA9f1xQW2XDC+Cpp+NTT1
+GmjyWmh8HTS+HhrfAM09hmh8IzT1xmjyJmh8UzS+GRrfHM39Fmjylmh8KzS+
+NRrfBo1vi8a3g/MB6PxkSg==
+        "]]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7PsPfdWI6X9lDxVwOAziHnoL5XM4iKxzf1gl
+8g7KF3DYIdf6OnAHjC/iEAM24D2UL4GmXsYBzF0Hk1dw4Lq+uMCWC8ZXQjNP
+BY2vhqZeA80+LTR5HTR5PTT7DdD4hg6wcIDQRmh8YzT1Jmjypmh8MzS+ORrf
+Ao1vica3QuNbo/Ft0Pi2aHw7OB8A7r1knw==
+        "]]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7PsPfdWI6X9lDxVwOAziHnoL5XM47JBrfR24
+4x2UL+CQBgYwvgiavASafhmHQluu64sLYHwFhxiwhe+hfCUHkKwtF4yv4gBz
+F4RWc1jn/rBKZB1MXgNNvxYaXwdNvR4a3wDNfEM0vhGaemM0eRM0eVM0eTM0
+vjka3wKNb4nGt0LjW6PxbdD4tmh8OzgfABilY44=
+        "]]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7B9Wiaxzf/jKHirgwHV9cYEt13son8Nhh1zr
+68Ad76B8AQeYPggtgiYv4QA0DGgiTL+MQ0z/oa8aMTC+gkMaGMDUKzmIgDXA
++Cpo5qmhuUcDzTwtNPt00OT10OQN0OQN0fhGaP4zRuOboJlniiZvhsY3R+Nb
+oPEt0fhWaHxrNL4NGt8WjW8H5wMAQAxk/Q==
+        "]]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7N8E7pBrff3SHirgkAYG76B8DjS+gIPIOveH
+VSIwvogDzBwILeHAdX1xgS3XeyhfBo2v4ADWvg7GV3KI6T/0VSMGxldxALkm
+cAfMfDU0eQ00vhaaeTpo8npo8gZofEM0vhGafmM0eRM0/5qi8c3Q+OZofAs0
+viUa3wqNb43Gt0Hj26Lx7eB8ABGGZyQ=
+        "]]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7I3B4LU9VMBhh1zr68Ad76B8DodCW67riwve
+QvkCDmlgAJMXcVjn/rBKZN17KF/CAaTalgvGl0GTV0CTV0KTV3GI6T/0VSMG
+xldD42ugqddygPkDQuugqddD4xug8Q3R9BuhmW+MJm+CxjdF45uh8c3R+BZo
+fEs0vhUa3xqNb4PGt0Xj28H5AEdFX4s=
+        "]]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7I3B4LU9VMCB6/riAluu91A+h8MOudbXgTve
+QfkCaHwRhzQwgPEl0ORl0MxTQOMroalXcRBZ5/6wSgTGV3MAc9fB1Gug8bXQ
+zNNxiOk/9FUjBsbXc4D5E0IboOk3RJM3QuMbo/FN0PimaOaZocmbo/Et0PiW
+aHwrNL41Gt8GjW+LxreD8wF48l4Y
+        "]]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7PsPfdWI6X9lDxVwOAziHnoL5XOg8QUcuK4v
+LrDleg/lizikgcE7KF/CYYdc6+vAHTC+DBpfwSEGbCFMvxKafhU09WoOMHdC
+aA00/VoO69wfVomsg/F10NTroak3QJM3RJM3QpM3RuOboPFN0fhmaHxzNL4F
+Gt8SjW+FxrdG49ug8W3R+HZwPgA/H11/
+        "]]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7B9Wiaxzf/jKHirgsEOu9XXgjndQPgcaX8Ah
+pv/QV42Y91C+CJq8BJq8DJq8ggPMXgithMZXcQA6BugimH41NL4GmnotNPt0
+0Ph6aPoN0PQbovGN0PjGaPpN0PimaOrN0PjmaHwLNL4lGt8KjW+NxrdB49ui
+8e3gfAD8KV7q
+        "]]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7PsPfdWI6X9lDxVwKLTlur644C2Uz+Egss79
+YZXIOyhfAI0v4pAGBjC+hMNhkHGHYPplHECm2XK9h/IV0PQrOYC562DyKmjq
+1Rxg7oTQGg4xYAfD5LXQ9Oug6ddD02+AxjdEM88IzTxjNL4JGt8UzTwzNL45
+Gt8CjW+JxrdC41uj8W3Q+LZofDs4HwBX4mIb
+        "]]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7L9pxPQf+vrCHirgcPgrSOAtlM/hAJLViHkP
+5Qs4yLe+DtwhB5MXQZOXcNghB1LwDsqXceC6vrjAlgsmr4CmXskB5g4IrYKm
+Xg1NvQaaei2Hde4Pq0TWweR10OT10OQN0MwzROMboak3RjPPBI1visY3Q+Ob
+o/Et0PiWaHwrNL41Gt8GjW+LxreD8wF7OWBV
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7FtfB+6Qa31tDxVwEFnn/rBK5B2Uz+EAkgzc
+AeMLOKSBAYwv4sB1fXGBLdd7KF8CjS+DZp6CQ0z/oa8aMTB5JTT1Kmh8NTT1
+Gmh8LQew8etgfB00eT009xs4wPwNoQ3R+EZofGM0vgka3xSNb4bmHnM0eQs0
+viUa3wqNb43Gt0Hj26Lx7eB8ADoYXys=
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7PsPfdWI6X9lDxVwSAODd1A+h4N86+vAHXJv
+oXwBB5F17g+rRGDyImjqJRwKbbmuLy6AqZdxACtf9x7KV3AAydpywfhKaPpV
+0OTVHGLADoTxNdDUa6GZr4PG10PTb4DGN0TjG6HxjdH4Jg6wcIPQpmh8MzS+
+ORrfAo1vica3QuNbo/Ft0Pi2aHw7OB8Aq+5ntg==
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7G25ri8usH1lDxVwiOk/9FUj5j2Uz4HGF3DY
+Idf6OnDHOyhfBE1eAk1exiENDGB8BTR5JQew9Vww/Spo5qk5rHN/WCWyDsbX
+QONrofF10PTrockbOMD8DaEN0fhGaOqN0eRN0PimaHwzNL45Gt8CjW+JxrdC
+41uj8W3Q+LZofDs4HwAiy2KH
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7DVj+g991XhjDxVwSAODd1A+h4PIOveHVSIw
+voAD1/XFBbZc76F8EQew9hgYX8IBrHwdjC+DJq+Apl/JYYdc6+vAHTDzVdD4
+amj6NdDM10Lj6zjA/AWh9dD0G6DZb4gmb4RmvzGaeSZofFM0vhka3xyNb4HG
+t0TjW6HxrdH4Nmh8WzS+HZwPAHYjY9Y=
+        "]]}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+        "]]}}, 
+     {RGBColor[1, 0, 0], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      Dashing[{0, Small}]}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.8944444444444445},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 30.}, {0.8944444444444445, 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.778858503063995*^9},
+ CellLabel->
+  "Out[317]=",ExpressionUUID->"2bea9156-f3a3-4a03-94fa-097d0f032527"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+        RowBox[{"pairingGtDetFNR", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "5"}], "}"}], ",", " ", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"monwin", " ", "size"}], ",", " ", 
+           RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], "*)"}],
+          " ", "10", ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], " ", 
+         "100"}], "]"}], ",", 
+       RowBox[{"(*", " ", 
+        RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+       "20"}], "]"}]}], ",", 
+    RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{
+  3.778856870693468*^9, {3.778857519543003*^9, 3.7788575211701307`*^9}, 
+   3.778857965765047*^9},
+ CellLabel->
+  "In[318]:=",ExpressionUUID->"76426006-d3a3-472a-a84a-8cd19a932a42"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7NPA4J09VMBBvvV14A65t1A+h8Phrxox/Ydg
+fAEHVPUiDppA2a8ab6B8CYcdciADYPIyDoW2XNcXF8D0KziAlce8h/KVHETW
+uT+sEoGpV3EAqbblgsmroanXQONrofF1HMDGrYPx9dDMM0BTb4im3sgBFi4Q
+2hiNb4LGN0Xjm6HxzdH4Fmh8SzS+FRrfGo1vg8a3RePbwfkAzNRjLw==
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7A9/1YjpP/TWHirgILLO/WGVyDson8Nhh1zr
+68AdML6AA9f1xQW2XO+hfBGHNDCAyUug8WUcCm1BOmDmK6DJKzkALQe6AGae
+Cpr5amjqNdDktdDcp+MAdv46mLyeA8yfENoAjW+Ipt4ITd4YjW+CxjdF45uh
+8c3R+BZofEs0vhUa3xqNb4PGt0Xj28H5AKaYW0Q=
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7K8vLrDluv7aHirgcPirRkz/obdQPodDtcg6
+94dVb6B8ATR5EYcdcq2vA3e8g/IlHNLAAMaXceACW/AeyldwABsnApNXcgBz
+18HkVdDk1dDkNRyAlgNdAONrodmngyavh+Y+AzTzDNH4Rg6wcIHQxmjmmaDJ
+m6LpN0OTN0fjW6DxLdH4Vmh8azS+DRrfFo1vB+cDABW0asg=
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7M+eAYE39lABB1Q+h4PIOveHVSLvoHwBhzQw
+gPFFHHbItb4O3AHjSzgc/qoR03/oLZQvgyav4MB1fXGBLdd7KF/JAagYqAPG
+V0GTV0PTr4GmXgtNXgdNvx6aegMHmL8htCGaeiM0eWM0vgka3xSNb4bGN0fj
+W6DxLdH4Vmh8azS+DRrfFo1vB+cDAG60ZAU=
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7EXWuT+sEnlnDxVwQOVzoPEFHA5/1YjpP/QW
+yhdx4Lq+uMCW6z2UL+FQaAsSgcnLOJw9AwJvoHwFNHklB6BhQBNh+lXQzFNz
+2CHX+jpwB8x+DTT3aKGp13EAS6+D8fXQzDdAU2+Ipt4IjW/sAAsnCG2CxjdF
+45uh6TdHk7dA41ui8a3Q+NZofBs0vi0a3w7OBwAu4Wi2
+        "]]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7A9/1YjpP/TWHirgkAYG76B8Dgf51teBO+Rg
+8gJo8iIOZ8+AwBsoX8JhhxxIA0xeBk2/App+JTT1Kmh8NTS+hsM694dVIuve
+Q/laaObpOAA9A/QRTF7PAeZPCG2AJm+IJm+EJm+MJm+CxjdF45uh8c3R+BZo
+fEs0vhUa3xqNb4PGt0Xj28H5AHHxY38=
+        "]]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7EXWuT+sEnlnDxVwKLTlur644C2Uz+GwQ671
+deAOmLyAA6p6ETR5CTS+jMPhrxox/Ydg5ik4gEy35XoP5SuhqVdxABu/Diav
+hiavgcbXQlOvg8bXc4D5E0IboPEN0dQbofGN0dSboPFN0fhmaHxzNL4FGt8S
+jW+FxrdG49ug8W3R+HZwPgAI4WMA
+        "]]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7Attua4vLnhrDxVwkG99HbhDDsbncBBZ5/6w
+SuQdlC/gsEMOpADGF0GTl3BANU/GIQ0MYPIKaPqV0PgqDjB3QWg1h5j+Q181
+Yt5D+RpofC00+3UcwNx1MHk9NPMM0OQNHUCuteWC8Y3Q1Buj8U3Q7DdFkzdD
+45uj8S3Q+JZofCs0vjUa3waNb4vGt4PzAaeFX/U=
+        "]]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7Attua4vLnhrDxVwOPxVI6b/EIzP4ZAGBu+g
+fAEHTaDsV403UL6IA1Az0ITXUL4Emn4ZB5F17g+rRGD6FdDMU0LjqzhwgQ18
+D+WroenXcABz18HktdDU6ziAnRcD4+uhqTdA4xui8Y3Q+MYOsHCC0CZofFM0
+vhka3xyNb4HGt0TjW6HxrdH4Nmh8WzS+HZwPAARHZTM=
+        "]]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7HfItb4O3PHOHirggMrncEgDAxhfwOHsGRB4
+A+WLOBTacl1fXPAWypdwEFnn/rBKBKZexuHwV42Y/kMweQUHkGpbrvdQvhKa
++Spo9quhyWs4AA0DmgjTr+UA8weE1kHTr4cmb4DmPkM0eSM09xk7gJWvg/FN
+0NSbovHN0PjmaHwLNL4lGt8KjW+NxrdB49ui8e3gfACIlmFs
+        "]]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7Attua4vLnhrDxVwEFnn/rBK5B2Uz4HGF3BI
+AwMYXwSNL4GmXsYB1XwFh8NfNWL6D8H4Sg475FpfB+6AqVdB46uhmafhANQM
+NOE9lK/lAJZeB+ProOnXQ1NvgMY3dICFA4Q2QuMbo5lvgsY3RVNvhsY3R+Nb
+oPEt0fhWaHxrNL4NGt8WjW8H5wMAp11mew==
+        "]]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7OVbXwfukHtrDxVw2CEHEngH5XM4pIEBjC/g
+cPirRkz/IZh6ETR5CQeRde4Pq0RgfBkHVPMVHICagSa8h/KVHMDK18H4Kmjm
+qTlwXV9cYMsFk9dA42uh8XXQzNdzgPkTQhug2WeIxjdCU2+MxjdB45ui8c3Q
++OZofAs0viUa3wqNb43Gt0Hj26Lx7eB8ABFYXpI=
+        "]]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7OVbXwfukHtrDxVwiOk/9FUj5j2Uz+GQBgbv
+oHwBB1T1ImjyEg475EAKYHwZNL6Cwzr3h1Ui62DmK6HxVdDsV3MQASuA6ddA
+k9dy4Lq+uMCWC8bXQeProZlv4ADzN4Q2RJM3QpM3RuOboKk3RZM3Q+Obo/Et
+0PiWaHwrNL41Gt8GjW+LxreD8wH+bmMA
+        "]]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7LmuLy6w5XpvDxVwSAODd1A+h8Phrxox/Yfe
+QvkCDiLr3B9WicDkRdDkJRx2yLW+DtwBk5dBk1dAk1dCk1dxABu/DuYeNQeg
+JFAFjK/hAHM3hNZCU6/jgOofPTT7DND0G6LxjdDMM0aTN0Hjm6LxzdD45mh8
+CzS+JRrfCo1vjca3QePbovHt4HwAlEpgQQ==
+        "]]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7NPA4J09VMDh7BkQeAPlczjIt74O3CH3FsoX
+cDj8VSOm/xCML+KAql/Cgev64gJbrvdQvoxDoS1IBKZeAU1eyWGHHMgCmH4V
+NHk1NHkNNPu0HNa5P6wSWQdTr+MAdBzQhTC+Hpp5Bg4wf0NoQzS+EZp5xmh8
+EzT1pmjyZmjy5mh8CzS+JRrfCo1vjca3QePbovHt4HwAifJmQA==
+        "]]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7HfItb4O3PHOHirgUGjLdX1xwVsonwONL+CA
+ql7E4fBXjZj+QzB5CTS+jEMaGMDUK6DpV3IAmW7L9R7KV3FY5/6wSmQdjK/m
+ADQMaCKMr4GmXwuNr4OmXg/NPAM0+wzR5I0cYOECoY3RzDNBU2+Kpt4MjW+O
+xrdA41ui8a3Q+NZofBs0vi0a3w7OBwDamGvq
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7A9/1YjpP/TWHirgILLO/WGVyDson8Oh0Jbr
++uICmLyAww651teBO2DyImjqJdDkZRyAhgNteA/lK6DxlRzA2tfB+CpofDU0
+9RoOqO7VQrNPxwHmLwith2aeAZp5hmjyRmj6jdH4JmjqTdHkzdDkzdHkLdD4
+lmh8KzS+NRrfBo1vi8a3g/MBNZBqDg==
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7A9/1YjpP/TWHirgkAYG76B8DodCW67riwtg
+8gJo8iJofAkHVPNk0PQrOAAlgSreQ/lKaPpVHETWuT+sEoHx1RzA3HUw9Rpo
++rUcdsi1vg7cAVOvg6ZezwHmTwhtgMY3ROMboek3RrPPBE29KRrfDI1vjsa3
+QONbovGt0PjWaHwbNL4tGt8OzgcAoAdgzQ==
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7NPA4J09VMDh+uICW67rr6F8DgdUeQE0vohD
+TP+hrxox76F8CYcdcq2vA3fA5GUcDgNl+w+9hfIV0PQroalXQTNPDY2v4SCy
+zv1hlQhMvRaaeTpo6vUcwMrXwfgGaPYZoqk3QlNv7AALJwhtgsY3ReObofHN
+0fgWaHxLNL4VGt8ajW+DxrdF49vB+QAfXWc9
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQDQEf7EXWuT+sEnlnDxVwqAYLvIHyORwKbbmuLy54
+C+ULOKCqF3FIAwMYXwJNXsYhpv/QV42Y91C+Apq8koN86+vAHXIw81XQ1Ks5
+gJWvg/E10OS1HHbIgQyAmafjAPMXhNZDU2+AxjdEM98IjW+MZp4JGt8UjW+G
+xjdH41ug8S3R+FZofGs0vg0a3xaNbwfnAwAav2Mu
+        "]]}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+        "]]}}, 
+     {RGBColor[1, 0, 0], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      Dashing[{0, Small}]}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.862777777777778},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 30.}, {0.862777777777778, 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.778859011717896*^9},
+ CellLabel->
+  "Out[318]=",ExpressionUUID->"fa8a6973-d095-4ed4-8331-310cbc4d7a95"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "now", " ", "only", " ", "on", " ", "datasets", " ", "without", " ", 
+    "redundant", " ", 
+    RowBox[{"detectors", ":"}]}], " ", "*)"}], " ", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+         RowBox[{"pairingGtDetFPR", ",", "fullTripleListNoRedun", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"4", ",", "5"}], "}"}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"monwin", " ", "size"}], ",", " ", 
+            RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], 
+           "*)"}], " ", "10", ",", " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], "100"}],
+          "]"}], ",", 
+        RowBox[{"(*", " ", 
+         RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+        "20"}], "]"}]}], ",", 
+     RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " ", "\n", 
+   GraphicsBox[{{{}, {{
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.66}, {2., 0.86}, {3., 0.92}, {4., 0.94}, {5., 
+          0.96}, {6., 0.99}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.7}, {2., 0.81}, {3., 0.79}, {4., 0.93}, {5., 
+          0.97}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.67}, {2., 0.86}, {3., 0.91}, {4., 0.95}, {5., 
+          0.98}, {6., 0.99}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.63}, {2., 0.79}, {3., 0.85}, {4., 0.95}, {5., 
+          0.99}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.68}, {2., 0.81}, {3., 0.91}, {4., 0.98}, {5., 
+          0.98}, {6., 0.96}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.78}, {2., 0.79}, {3., 0.89}, {4., 0.97}, {5., 
+          0.99}, {6., 0.98}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.78}, {2., 0.79}, {3., 0.89}, {4., 0.97}, {5., 
+          0.93}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.67}, {2., 0.83}, {3., 0.88}, {4., 0.97}, {5., 
+          0.97}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.7}, {2., 0.81}, {3., 0.89}, {4., 0.97}, {5., 
+          0.96}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.75}, {2., 0.85}, {3., 0.85}, {4., 0.95}, {5., 
+          0.97}, {6., 0.98}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.8}, {2., 0.84}, {3., 0.9}, {4., 0.95}, {5., 0.98}, {
+          6., 0.96}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.8}, {2., 0.87}, {3., 0.85}, {4., 0.94}, {5., 1.}, {
+          6., 0.95}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.73}, {2., 0.85}, {3., 0.82}, {4., 0.94}, {5., 
+          0.97}, {6., 0.98}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.66}, {2., 0.78}, {3., 0.86}, {4., 0.91}, {5., 
+          0.99}, {6., 0.99}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.73}, {2., 0.88}, {3., 0.77}, {4., 0.94}, {5., 
+          0.99}, {6., 0.93}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.67}, {2., 0.86}, {3., 0.88}, {4., 0.94}, {5., 
+          0.98}, {6., 0.98}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.63}, {2., 0.78}, {3., 0.88}, {4., 0.95}, {5., 
+          0.97}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.67}, {2., 0.78}, {3., 0.87}, {4., 0.97}, {5., 
+          0.98}, {6., 0.98}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.72}, {2., 0.75}, {3., 0.88}, {4., 0.96}, {5., 
+          0.99}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.79}, {2., 0.9}, {3., 0.89}, {4., 0.95}, {5., 
+          0.98}, {6., 0.97}, {7., 1.}, {8., 1.}, {9., 1.}, {10., 1.}}]}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[
+         1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[
+         1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+          "]]}}, 
+       {RGBColor[1, 0, 0], PointSize[
+         NCache[
+          Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+        Dashing[{0, Small}]}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->{True, True},
+    AxesLabel->{None, None},
+    AxesOrigin->{0, 0.6094444444444447},
+    DisplayFunction->Identity,
+    Frame->{{False, False}, {False, False}},
+    FrameLabel->{{None, None}, {None, None}},
+    FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    GridLines->{None, None},
+    GridLinesStyle->Directive[
+      GrayLevel[0.5, 0.4]],
+    Method->{
+     "OptimizePlotMarkers" -> True, 
+      "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& )}},
+    PlotRange->{{0, 10.}, {0.6094444444444447, 1.}},
+    PlotRangeClipping->True,
+    PlotRangePadding->{{
+       Scaled[0.02], 
+       Scaled[0.02]}, {
+       Scaled[0.05], 
+       Scaled[0.05]}},
+    Ticks->{Automatic, Automatic},
+    ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJzNWFtMlEcU/t1lWbGpSWuf+iI2fe7lQX3zoU1rmtin2qemtZQUQUQMoKJ4
+AQyiMYqi1hsUUdEYYxQRUYNBxQvxfouKxkvxFtcqgtcqejrf+WdmZ3dn/wVT
+k06yl//MmXO+OXNu83+fVpD5e05aQVZ6WurIvLSJmVnp+anf5uYJkr+f4zjp
+4vNVqoP/JP7Kr3QSQ0zafgbzj5/mz59PmZmZlJOT4/j4209z584lOZwUyffw
+4UPMGrQAXbx4kcrKymjmzJk0Z84c6ujo0HPt7e16rrS0lI4fP+70l6s3bdpE
+jY2NSge9ePGCampqaMaMGTR9+nQ6ePCg0BgB89q1azR58mS6ffu2M9ACyRUd
+ZFp+fj7duXOHRZ8+fZqmTp1Kb968EbMuz7Nnzyg3N5chYty/f1+tkTwDYiBu
+2bKFIQo51NnZyVgEv89FmSoRXbhwgaZMmUInTpwQMlxtMAykFxQU8O/YsWP5
+/6NHjzSiffv20YIFC7Q2aMnKyjJ4/HT9+nXWiiefpC1evJja2tr4KVl+RyOH
+UYX11JL169fTrl27+Kmfi36InLp37x4VFxfT7t279THu37+f1qxZw5KkveVc
+kLZt28Z2vHHjBiMWx0aFhYURtn758iUf6alTp1gGeGGFUCgkeWIRZ2dnQ5dC
+vGPHDtq4caOJ+BM59eTJE3awY8eOSVRJfEpAItGmSCUNDQ1UXV1Nq1atYkAw
+961bt9Q+gWvixIls4XHjxtHJkyelT8Xig88Z+DBVV1dn4hssV169epVu3ryp
+Vx45cgRnpqDCOIi1s2fPmlCPHj1KFRUVelVPTw/8Xk0jqlpaWngKEQhnEiYP
+SKHw1EOHDinUPrkKZgIcNeAHO3fu9EUC3rt3Ly1atIhevXrFR7phwwaqra0d
+ILeKSIE/hb0gmZ4/f84nCigY0F1eXq6mxV/lohzEMLKBVvgBe/H48eNNtFu3
+bmW3U+GGoBLKo9C+fv2aPQOQsL8VK1bQ48eP35Noz5w5QxMmTOAndc4iRdG8
+efPYzwENMa/mcFI4DszNnj0b0ax9AAds+gCOTriTD74kVInspmaUD3gl348k
+woyMDL1slDs1CD/fYSZo8gZMXh7iWeaBvs/5pfXNOfH//0aONFAgvu2SJO2v
+qk817Zv47KPeakopaf6puDdKFHtF/ZfR7K7H0blz56ikpITTUWVlJWczjNbW
+VpRMneVF7HN8IK8me2gqL2ywaOru7qa8vDxdERFaSIQYiF2RybQmeDXqjqgE
+Vk3SOiJzI6SXLl2qZjhIEWvAGJAr0VogE5M+vHjSRCLihKQGwh6colLrlahE
+kBhPmrJC3a/VMVYIUlNTk1WDsLmWht0jmV65ciUBXuweJ6aG6kTME0KuR6oW
+SUpjs+H9+7ehMXiT+dSQVVGT1amtW7euv1y0evVqJrlP8YWPbMqxCMdAzUGi
+mzZtGudNYWp3UZAOHDjAu1Ef1GMIf/DggVVZL2Km8g/Hc+Mj4otQVu9LzAS4
+o0JZmDVrFnuNyO3WUxhkMdQwqfGD3sQO/7906RKXKEQBBrpOPMMfvI7n5z/b
+YmhmvpBmSRBvSoPo26iqqoqfVETLXiqClih32NCpeDAzrLKTd/y66IJcXdGJ
+K4+Gl6FoIz68bJRR1q5pvYvnJIkYGpDN0NMhrpHVbD6g+gUzc0RaPl6su7iT
+6enTp2xp0VAyz/bt29FoejncPzUfxhgybtgnST3wOVQC9GEYaOSXLVvmtSlq
+CUfeCK0Hw5IBAtJyop/mKXwWLlwIfZ6WC/04LFqJLZQVu7l3nWiNYx6WWMQv
+JY0xIszC3AsRpkYlwgw+dSpvl3hgVXSw4m7raToz8SgUZmZUKAb2OhnBdyZN
+msROKZzUR2vXrvXyRDP0wyGdOOEE+d6uXBFDhUa8kO5dwVfOjoIPS+KD+w6u
+mgKFTbAyprkVZUzTN8Pb88ofanuXL19mQ969e5fn9+zZw7d3RIMNhc2gtqbx
+8wgje+eWIDU3N+tjxsDbC7ywgWN5oTAjpNcJRrQ+vGVR6nkal7klS5bY3Odj
+STMrglddMx19iMaD4ZGIVDRheuXKlbjd6cuL2IsLaMwYEiGoro7C3V0SPkIy
+j+5uHwhYVVqqTSlYXbLf5HRcWko0K0ts/eJrC28fxL4bVn+YtbXVpbl9qHSH
+JLzlcq3liHowfLi2lqhaTMJHxAQPvmiL40kCZxhAdrZL9puczn/PmlfU9g6k
+hln9YdaaGpcWbayeHtdYIhyoo0MbKxRySfjI/C9YfSBgVUdHGEAo5JL9Jqfj
+0lKiWVli5+jPLLyuWN2axIoNjR7q9BlBH1j9YdauLpcmraW6H7wkalJWJl0S
+VUU8f/48vwFG5cSrHpGCrBVRJRSzBtsu9raWdYiJ6P0YRGZ5ROFGGcWtGqO+
+vh7XKU9Itoxuo5nQIyD5TUiOumjhRR8sokZXV1dU+o+Eo17Umv2BrcAkVO3n
+zrG2tpaf1L0AVUW2Nda7glJvNk62yutloUS0QGLouObYoKO0xYOuOg8WT5s3
+b6bDhw8r6VJpkNtevP00zwNtfaJ+xpWKkorVaNDDUpPZpCi5aCMw4HCiM/wh
+cqeiCOudquqHnhOVr6ioiJYvX46OzpHLrK8VnX7/Agzixtw=\
+\>"]], "\n", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+         RowBox[{
+         "pairingPredMonFNR", ",", "fullTripleListNoRedun", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"4", ",", "5"}], "}"}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"monwin", " ", "size"}], ",", " ", 
+            RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], 
+           "*)"}], " ", "10", ",", " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], "100"}],
+          "]"}], ",", 
+        RowBox[{"(*", " ", 
+         RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+        "20"}], "]"}]}], ",", 
+     RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " ", "\n", 
+   GraphicsBox[{{{}, {{
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.61}, {2., 0.77}, {3., 0.81}, {4., 0.72}, {5., 
+          0.76}, {6., 0.76}, {7., 0.83}, {8., 0.73}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.64}, {2., 0.78}, {3., 0.8}, {4., 0.82}, {5., 
+          0.83}, {6., 0.8}, {7., 0.86}, {8., 0.76}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.58}, {2., 0.84}, {3., 0.78}, {4., 0.78}, {5., 
+          0.75}, {6., 0.86}, {7., 0.85}, {8., 0.82}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.68}, {2., 0.87}, {3., 0.79}, {4., 0.78}, {5., 
+          0.78}, {6., 0.77}, {7., 0.85}, {8., 0.79}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.6}, {2., 0.84}, {3., 0.73}, {4., 0.83}, {5., 
+          0.76}, {6., 0.78}, {7., 0.76}, {8., 0.85}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.54}, {2., 0.75}, {3., 0.79}, {4., 0.82}, {5., 
+          0.79}, {6., 0.78}, {7., 0.84}, {8., 0.79}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.65}, {2., 0.77}, {3., 0.83}, {4., 0.83}, {5., 
+          0.8}, {6., 0.83}, {7., 0.87}, {8., 0.84}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.67}, {2., 0.81}, {3., 0.76}, {4., 0.8}, {5., 
+          0.82}, {6., 0.81}, {7., 0.82}, {8., 0.81}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.63}, {2., 0.79}, {3., 0.85}, {4., 0.78}, {5., 
+          0.78}, {6., 0.72}, {7., 0.82}, {8., 0.85}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.68}, {2., 0.8}, {3., 0.81}, {4., 0.87}, {5., 
+          0.71}, {6., 0.8}, {7., 0.8}, {8., 0.84}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.62}, {2., 0.85}, {3., 0.8}, {4., 0.73}, {5., 
+          0.71}, {6., 0.72}, {7., 0.7}, {8., 0.76}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.61}, {2., 0.85}, {3., 0.86}, {4., 0.77}, {5., 
+          0.73}, {6., 0.78}, {7., 0.76}, {8., 0.73}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.57}, {2., 0.76}, {3., 0.73}, {4., 0.8}, {5., 
+          0.83}, {6., 0.79}, {7., 0.81}, {8., 0.85}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.59}, {2., 0.76}, {3., 0.76}, {4., 0.75}, {5., 
+          0.81}, {6., 0.83}, {7., 0.78}, {8., 0.82}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.63}, {2., 0.84}, {3., 0.81}, {4., 0.76}, {5., 
+          0.75}, {6., 0.84}, {7., 0.82}, {8., 0.78}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.61}, {2., 0.8}, {3., 0.73}, {4., 0.79}, {5., 
+          0.81}, {6., 0.78}, {7., 0.8}, {8., 0.83}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.64}, {2., 0.8}, {3., 0.79}, {4., 0.86}, {5., 
+          0.86}, {6., 0.83}, {7., 0.8}, {8., 0.89}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.56}, {2., 0.74}, {3., 0.79}, {4., 0.87}, {5., 
+          0.78}, {6., 0.73}, {7., 0.83}, {8., 0.88}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.66}, {2., 0.83}, {3., 0.77}, {4., 0.75}, {5., 
+          0.87}, {6., 0.72}, {7., 0.83}, {8., 0.85}, {9., 1.}, {10., 1.}}]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6], 
+         PointBox[{{1., 0.61}, {2., 0.72}, {3., 0.85}, {4., 0.78}, {5., 
+          0.82}, {6., 0.8}, {7., 0.81}, {8., 0.84}, {9., 1.}, {10., 
+          1.}}]}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[
+         1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}}, {
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
+         AbsoluteThickness[1.6]}, 
+        {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142],
+          PointSize[0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+         0.009166666666666668], AbsoluteThickness[1.6]}, 
+        {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+         0.009166666666666668], AbsoluteThickness[
+         1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+          "]]}}, 
+       {RGBColor[1, 0, 0], PointSize[
+         NCache[
+          Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+        Dashing[{0, Small}]}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}, {
+        {RGBColor[1, 0, 0], PointSize[
+          NCache[
+           Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+         Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->{True, True},
+    AxesLabel->{None, None},
+    AxesOrigin->{0, 0.5144444444444447},
+    DisplayFunction->Identity,
+    Frame->{{False, False}, {False, False}},
+    FrameLabel->{{None, None}, {None, None}},
+    FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    GridLines->{None, None},
+    GridLinesStyle->Directive[
+      GrayLevel[0.5, 0.4]],
+    Method->{
+     "OptimizePlotMarkers" -> True, 
+      "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& )}},
+    PlotRange->{{0, 10.}, {0.5144444444444447, 1.}},
+    PlotRangeClipping->True,
+    PlotRangePadding->{{
+       Scaled[0.02], 
+       Scaled[0.02]}, {
+       Scaled[0.05], 
+       Scaled[0.05]}},
+    Ticks->{Automatic, Automatic}]}]}]], "Input",
+ CellChangeTimes->{{3.778862184280713*^9, 
+  3.778862195833622*^9}},ExpressionUUID->"6be873f8-2579-4a6f-a657-\
+1adb07f509c7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "same", " ", "as", " ", "above", " ", "for", " ", "6", " ", "sessions"}], 
+   " ", "*)"}], " "}]], "Input",
+ CellChangeTimes->{{3.77887281710007*^9, 
+  3.778872822711336*^9}},ExpressionUUID->"2de28ae7-1b09-45af-9a21-\
+2ecba108a146"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+        RowBox[{"pairingGtDetFPR", ",", "fullTripleListNoRedun", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "5", ",", "6"}], "}"}], ",", " ", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"monwin", " ", "size"}], ",", " ", 
+           RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], "*)"}],
+          " ", "10", ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], "100"}], 
+        "]"}], ",", 
+       RowBox[{"(*", " ", 
+        RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+       "20"}], "]"}]}], ",", 
+    RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.7788633923072453`*^9, 3.778863392409465*^9}},
+ CellLabel->
+  "In[437]:=",ExpressionUUID->"321f3bde-6806-4a5d-ba70-4553307f4df8"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7GfNBIGX9lABh2qRde4Pq95A+RwOZ8+AAIwv
+4HD4q0ZM/6G3UL6Ig3zr68AdcjC+hMMOOZDAOyhfxiENDGB8BTR5JTS+igPY
+ehEYX82h0Jbr+uICmPkaaOq1HECytlzvoXwdB7D2dTC+Hpp7DRyAHKAITN4Q
+Tb0RmnnGaPImDrBwg9CmaHwzNPXmaHwLNPWWaPJWaPLWaO6xQZO3RePbofHt
+0fgOqPwGND6DI5wPAE0Wf6k=
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7IN2yLW+DnxhDxVw0IzpP/RV4w2Uz+FQLbLO
+/WEVjC/gcPYMCMD4Imh8CQewcpF3UL4MGl8BTb2SgzzQ9h1yb6F8FTT1ag5g
+5+2A8TUc0sAAxtdyADs35j2Ur4Mmr4dmngGavCGa+UYOYOXrYOYZo/FNHGDh
+BqFN0eTN0Mw3R3OfBZp+SzS+FZp51mh8GzT1tmh8OzS+PRrfAZXfgMZncITz
+AcsUgxQ=
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7IN2yLW+DnxhDxVwAHJAIlA+h8Phrxox/Yfe
+QvkCDiLr3B9WibyD8kUcuK4vLrDleg/lS6Cpl3E4ewYE3kD5Cg5g63bA9Cs5
+yIMthKlXcUgDA5i8Gpp9Gmh8LTTzdNDco4cmb+AA1r4OJm/oAHQs0MUwvhGa
+vDGafhM0vimafjM095ujyVs4wMIdQlui2WeFJm+NxrdB49ui8e3Q+PZofAdU
+fgMan8ERzgcAS8aCDw==
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7D0eVomsc39pDxVwqAbyHla9gfI5HAptua4v
+LngL5QugyYs4gLki76B8CTT1Mmh8BTT9Sg475FpfB+6A6VdB46s5gI1f9x7K
+13AAmWbLBeNrodmvg8bXc0gDAxjfAM18Q4ezZ0AA5h4jNP3GaPaZoJln6gAL
+RwhthsY3R+NboJlniSZvhca3RuPboPFt0fh2aHx7NL4DKr8Bjc/gCOcDACQF
+c+g=
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7LmuLy6w5XpuDxVwqBZZ5/6w6g2Uz+EA5oq8
+g/IFHDRj+g991YDJizicPQMCML4EGl8Gja/gkAYGMPOUHA5/1QCa+BbKV3GA
+uOc9lK/msEOu9XXgDph6DTT3aKGZp+NQaAsyAWaeHpp6Awcwdx3MfEM0vhGa
+emM095igqTd1AAdHDIxvhiZvjqbfwgEW7hDaEo1vhWaeNZq8DRrfFo1vh8a3
+R+M7oPIb0PgMjnA+AOBOgWc=
+        "]]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7N8E7pBrff3SHirgYAwGr6F8DodqkXXuD6ve
+QPkCDlzXFxfYcr2H8kUczp4BAZi8hMPhrxox/YfeQvkyDppA3lcNmLwCmryS
+A1g6BmaeikMaGLyD8tXQ1GugyWuh6ddxgPkLQus5gHwXuAOm3gBNvSGaf4zQ
+1Bs7gHwvsg4mb4LGN0XTb4Ymb45mnwWa+yzR+FZofGs0vg0a3xaNb4fGt0fj
+O6DyG9D4DI5wPgDTT3t3
+        "]]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7D0eVomsc39pDxVwKLTlur644C2Uz4HGF3AA
+KgbqeAflizhUgwXeQPkSDmfPgACML+OwQ671deAOmHoFNP1KaPIqDmlgAOOr
+ofE1HECuseV6D+VroblPxwHmLwith2afAZp+QzTzjRxi+g991YiByRuj8U0c
+wMatg/FN0ewzQ+Obo/Et0PiWaHwrNL41Gt8GjW+LxrdD49uj8R1Q+Q1ofAZH
+OB8Ar79u4Q==
+        "]]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7HfItb4O3PHMHirgcH1xgS3X9ddQPodDIZC3
+uOAtlC/gIA9SLgfjizhUi6xzf1j1BsqXQJOXcQDJiqx7D+UrOKSBwTsoX8kB
+Yj+Mr4KmXw3Nfg2Hw181YvoPwfhaaObrOICdIwIzT88BqBioAyZvgKbeEM1+
+IwdYuEBoYzT9Jmj6TdHUm6HJm6PxLdDUW6LxrdDUW6PJ26DxbdH4dmh8ezS+
+Ayq/AY3P4AjnAwAkiXsF
+        "]]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7N8E7pBrff3SHirg0PoaLADlczhUi6xzf1j1
+BsoXcCi05bq+uOAtlC/iIA/WAONLoMnLOBz+qhHTfwjGV0CTV3JIA4N3UL6K
+A8jywB0wvhqafg0HmLshtBaavA6afj0HkG22XO+hfAM0viGa/UYOQMOAJsLk
+jdHMM0GTN0VzjxmavDmavIUDKDRF1sHkLdHcY4Wm3xpNvw0a3xaNb4fGt0fj
+O6DyG9D4DI5wPgD4En1o
+        "]]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7JcU2HJdX/zCHirgUC2yzv1h1Rson8Ph7BkQ
+gPEFHMDSIu+gfBE0eQk0eRmHw181YvoPvYXyFRzSwAAmr4SmXsVBvvV14A45
+mHo1B6DjgC58D+VroKnXQuProPH1HHbIgQyE8Q3Q5A3R+EYOsHCB0MZo9ps4
+gJWvg/FN0eTN0PSbo6m3QJO3RJO3QpO3RuPboPFt0fh2aHx7NL4DKr8Bjc/g
+COcDAK0YeH0=
+        "]]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7G25ri8usH1lDxVw0IzpP/RV4w2Uz+FQCFbw
+FsoXcDj8VQOoAsYXcagWWef+sAqmXgJNvYxDGhi8g/IV0PQrOYBs57r+GspX
+cQA7h+s9lK/msEOu9XXgDph+DTR5LQew9SIweR00vp4DmLsOpt7AAeZvCG2I
+Jm+ExjdG45ug8U3RzDND45uj8S3Q+JZofCs0vjUa3waNb4vGt0Pj26PxHVD5
+DWh8Bkc4HwCZ8W+5
+        "]]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7JcU2HJdX/zCHirgUAjiFryF8jkcDn/ViOk/
+BOMLODysElnn/vAVlC/iIN/6OnCHHExewgGoGKjjPZQvg6ZfwQGku0rkHZSv
+5AC0DGjjayhfxYELLADTr+aQBgYw9RoOZ8+AwBsoXwvNfB00/XpofAMHsPXr
+YHxDNPcaockbO+yQA3kQZr+JAyzcILQpGt8MTb85mrwFGt8SjW+Fpt8aTd4G
+jW+LxrdD49uj8R1Q+Q1ofAZHOB8ARp548w==
+        "]]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7IN2yLW+DnxhDxVw0IzpP/RV4w2Uz+EgD5Td
+IfcWyhdwOPxVA6gCxhdBUy/hUGjLdX1xAUxexgFs/I53UL4CGl/JIQ0MYHwV
+NHk1B5F17g+rRGB8DQcwd917KF/LAWx9DIyvg2aeHpq8ARrf0AHkWlsuGN8I
+Td7YARZOENoEjW+KxjdD02+O5h8LNPdboum3QpO3RpO3QePbovHt0PTbo8k7
+oPIb0PgMjnA+ANDMfg4=
+        "]]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7G25ri8usH1lDxVwaH0duEOu9TWUz+Egss79
+YZXIOyhfwEEzpv/QV403UL6IQzVYAYwv4QDSHLgDpl7GQR5s4FsoX8EhDQxg
+8koOYONi3kP5Kmj61dD4Gg5g53LB1Gs5gJ23DsbXQVOvh2afAZp9hmjqjdDM
+N3aAhROENkGTN0UzzwzNPeZofAs0/ZZo5luhqbdG49ugqbdF49uh8e3R+A6o
+/AY0PoMjnA8AHnaBMQ==
+        "]]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7I3B4LU9VMDBluv64gLbV1A+h4NmTP+hrxpv
+oHwBh0KwgrdQvoiDfOvrwB1yML6Ew+GvGkAdML6MQxoYvIPyFRzAxnO9h/KV
+0MxTcRBZ5/6wSgSmXg1NvwYaXwvNPB00vp4D2Lh1ML4BmrwhGt8IjW+Mpt/E
+ARZuENrUARw8MTB5MzS+OZp+CzT9lmjyVmh8azT1Nmh8WzS+HRrfHo3vgMpv
+QOMzOML5ALHWeGQ=
+        "]]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7I3B4LU9VMDh7BkQeAPlczi0vg7cIdcKkxdw
+KLTlur644C2UL+JQLbLO/WEVTL2EA1ja9hWUL4OmXsEhpv/QV42Y91C+kgNY
+OReMr+IAsixwxzsoXw1Nv4YD2DoRmLwWGl/HIQ0MYHw9h8NA2/oPwfQboNln
+iGafEZr7jNH4Jg5g69bB+KZo5pk5wMIVQpuj6bdAk7dEk7dCk7dG49ug8W3R
++HZofHs0vgMqvwGNz+AI5wMAY9t64Q==
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7D0eVomsc39pDxVwOHsGBN5A+RwO8q2vA3fI
+vYXyBRyuLy6w5br+GsoXcdCM6T/0VQOmXsIhDQzeQfkyDoVA1YsLYPoVHA5/
+1QDqgPGVHICWA10AU6+Cpl8Nja/hsEMO5CAYX8uBC+yg91C+Dpp6PTR5AweY
+vyG0oQPY+nUweSM0vjEa3wRNvymavBmavDmavAWavCUa3wqNb43Gt0Hj26Lx
+7dD49mh8B1R+AxqfwRHOBwAuuHMa
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7D0eVomsc39pDxVwOPxVI6b/0Fson8Ph7BkQ
+eAPlCzgU2nJdX1wAkxdB40s4AA0DmvgOypdxSAMDGF8BTb2Sww651teBO2Dy
+Kmj2q6Hp10Dja6Gp10EzTw+Nb4DGN3QAucaW6z2Ub+QANAxoIoxv7AD2zjoY
+3wRNvSmavBmafnM0eQsHWLhDaEs0vhUa3xqNb4PGt0Xj26Hx7dH4Dqj8BjQ+
+gyOcDwAM0H50
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7LmuLy6w5XpuDxVwOHsGBN5A+RwO8q2vA3fI
+vYXyBRwOf9WI6T8E44s4pIHBOyhfAk2/DBpfwaHQFmQjTL8Smn4VB4h73kP5
+ag4i69wfVonA5DXQ9Gs5AB0DdBFMvQ4aXw9NvwGa+YZofCMHWLhAaGMHsPZ1
+MHkTNPWmaPJmaPabo/Et0My3RNNvhSZvjca3QePbovHt0Pj2aHwHVH4DGp/B
+Ec4HALJ3fik=
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7PsPfdWI6X9lDxVwaH0duEOu9TWUz+Egss79
+YZXIOyhfwEEzBqTjDZQv4nAYpP3QWyhfwiENDGDqZRzOngEBmHoFNL4Smvkq
+DiDLA3fA+GpofA2HQluu64sLYPZpodmvg2aeHpp+AweQbluu91C+oQNY+ToY
+3whN3hjNPyYOsHCD0KZofDM088zR5C0cwMEXA5O3RJO3QrPfGk3eBs18WzR5
+OzS+PRrfAZXfgMZncITzAWu4f3c=
+        "]]}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+        "]]}}, 
+     {RGBColor[1, 0, 0], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      Dashing[{0, Small}]}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.7888888888888891},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 34.}, {0.7888888888888891, 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.7788640928809843`*^9},
+ CellLabel->
+  "Out[437]=",ExpressionUUID->"4f1a8fff-dc2c-4643-bfe4-8abbdd02739f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"generateSuccessCtsPerSubsetSizeForCharting", "[", 
+        RowBox[{"pairingGtDetFNR", ",", "fullTripleListNoRedun", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "5", ",", "6"}], "}"}], ",", " ", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"monwin", " ", "size"}], ",", " ", 
+           RowBox[{"ignored", " ", "in", " ", "this", " ", "case"}]}], "*)"}],
+          " ", "10", ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"attempts", " ", "per", " ", "dot"}], " ", "*)"}], "100"}], 
+        "]"}], ",", 
+       RowBox[{"(*", " ", 
+        RowBox[{"number", " ", "of", " ", "series"}], " ", "*)"}], " ", 
+       "20"}], "]"}]}], ",", 
+    RowBox[{"chart95conf", "[", "30", "]"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{3.778863414580978*^9},
+ CellLabel->
+  "In[438]:=",ExpressionUUID->"0a444509-8fee-466b-acc8-c2d3fe75e190"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBoc0MHgH5XM4cF1fXGDL9R7KF3AQWef+
+sEoEJi/iENN/6KtGDExeAo0vg6ZfwQHVPiUHsHHrYPIqaOrV0NyjgaZfC80+
+HTTz9NDMM0DTb4im3whNvzEa3wRNvyka3wyNb47Gt0DjW6LxrdD41mh8GzS+
+LRrfDo1vj8Z3QOU3oPEZHOF8AK2qYsg=
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBod17g+rRNa9h/I50PgCDlzXFxfYcsH4
+Ig4x/Ye+asTA+BJo6mUcdsi1vg7c8Q7KV0CTV0Ljq6Dx1dD4Gmj2aTmgul8H
+TV4PTb8BGt8QTb8RGt8YjW+CZr4pmrwZGt8czT4LNL4lmnorNL41Gt8GjW+L
+xrdD49uj8R1Q+Q1ofAZHOB8AmzRtpA==
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBocdcq2vA3e8g/I5HNa5P6wSWfceyhdw
+4Lq+uMCWC8YXcYjpP/RVIwbGl0DTL+NwGCjbf+gtlK+Apl4JzXwVNPPVHFDd
+p4GmXwuNr4PG10PTb4Amb4hmvxGaemM0vgka3xSNb4bGN0fjW6DxLdH4Vmh8
+azS+DRrfFo1vh8a3R+M7oPIb0PgMjnA+ADIYZHc=
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgeu64sLbLneQ/kcDjH9h75qxMD4Ag4i
+69wfVom8g/JFHNLAAMaXQFMv47BDrvV14A6YvAIaXwmNr+IANn4dTL8amnka
+aHwtNL6OA6p/9ND4Bmh8QzS+ERrfGI1vgsY3RbPfDE3eHI1vgca3RONbofGt
+0fg2aHxbNL4dGt8eje+Aym9A4zM4wvkAt4hgtg==
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBoeY/kNfNWLeQ/kcDuvcH1aJrIPxBdD4
+ImjqJRy4ri8usOWC8WXQ1CugySs5oNqv4pAGBu+gfDU08zXQ1Guhma+DJq+H
+Jm+AxjdE4xuh6TdG45ug8U3R9JuhyZuj8S3Q+JZofCs0vjUa3waNb4vGt0Pj
+26PxHVD5DWh8Bkc4HwDnhGKb
+        "]]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPodDGhi8g/IFHGL6D33ViHkP5Ys4
+rHN/WCWyDsaXQNMv48B1fXGBLRdMXgGNr4SmXwWNr4Zmngaafi00vg6afj00
+vgGa+w3R5I3Q+MZofBM095iiyZuh8c3R1Fug8S3R+FZofGs0vg0a3xaNb4fG
+t0fjO6DyG9D4DI5wPgCR6WoM
+        "]]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBod17g+rRNa9h/I5HHbItb4O3PEOyhdw
+iOk/9FUjBiYvgiYvgSYvgyavgGa+kgPX9cUFtlwwvgqavBqavAaavBaafTpo
+8noOqP4zQJM3RNNvhCZvjKbfBI1visY3Q+Obo/Et0PiWaHwrNL41Gt8GjW+L
+xrdD49uj8R1Q+Q1ofAZHOB8AgzFqNA==
+        "]]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBocdcq2vA3e8g/I50PgCDjH9h75qxLyH
+8kUc1rk/rBJZB+NLOKSBAUy9DJp6BQeu64sLbLlgfCU0eRU0+9TQ5DXQ7NNC
+4+ugma+HxjdwQPWvIRrfCM08YzR5EzR5UzR5MzR5czR5CzS+JRrfCo1vjca3
+QePbovHt0Pj2aHwHVH4DGp/BEc4HAGtla78=
+        "]]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBod17g+rRNa9h/I5HFDlBRwOf9WI6T/0
+FsoXQVMv4SACFngH5cs4ABUDdcDkFdDUKzlwXV9cYMsF46ug2aeGxtdA42uh
+8XXQ7NNDs88AjW+IxjdCM88YjW+CxjdF02+GJm+OxrdA41ui8a3Q+NZofBs0
+vi0a3w6Nb4/Gd0DlN6DxGRzhfACjOl3J
+        "]]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPocD1/XFBbZc76F8AYd17g+rRNbB
++CJo8hJo8jJo5imgySs5xPQf+qoRA+OroMmrofE10PhaaHwdNPP00Ow3QOMb
+ovGN0PjGaHwTNL4pmv/N0OTN0fgWaHxLNL4VGt8ajW+DxrdF49uh8e3R+A6o
+/AY0PoMjnA8AyX1cPQ==
+        "]]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgeu64sLbLneQ/kcaHwBh5j+Q181YmB8
+ETR5CTR5GYd17g+rRNbB+ApofCUHVPtV0PSroZmvgaZfC01eB42vh6beAM0+
+QzT7jNDUG6OpN0GTN0XTb4Ymb46m3wKNb4mm3gpN3hqNb4PGt0Xj26Hx7dH4
+Dqj8BjQ+gyOcDwBiQ29r
+        "]]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBoeY/kNfNWLeQ/kcDuvcH1aJrIPxBdDk
+RRx2yLW+DtzxDsqXQJOXQZNXcEC1TwnNfBU0eTU08zTQ1Guhyeug6ddDU2+A
+pt4QjW+Ept8YTb8JmrwpGt8MjW+OxrdA41ui8a3Q+NZofBs0vi0a3w6Nb4/G
+d0DlN6DxGRzhfADd8mXA
+        "]]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPofDOveHVSLr3kP5Amh8EQeu64sL
+bLlgfAmHmP5DXzViYHwZNPUKaPJKaPapOIiANbyD8tXQ9GugqddCk9dx2CHX
++jpwB0y/Hpp9BmjqDdH4RmjqjdHkTdDsN0Xjm6HxzdH4Fmh8SzS+FRrfGo1v
+g8a3RePbofHt0fgOqPwGND6DI5wPAOPsZuc=
+        "]]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPocD1/XFBbZc76F8AYeY/kNfNWJg
+fBGHde4Pq0TWwfgSaHwZNPUKaHwlNPtU0OTV0MzTQJPXQnOfDpp5emjqDdD4
+hmjmG6HpN0bjm6DpN0WTN0Pjm6PxLdD4lmh8KzS+NRrfBo1vi8a3Q+Pbo/Ed
+UPkNaHwGRzgfAM2+Y64=
+        "]]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBoeY/kNfNWLeQ/kcDuvcH1aJrIPxBdD4
+Ig5c1xcX2HLB+BJo+mXQ+AoOaWDwDspXQpNXQTNfDU1eA42vhaZeB42vh8Y3
+QOMbOqD63wiNb4xmnwmavCka3wyNb47Gt0DjW6LxrdD41mh8GzS+LRrfDo1v
+j8Z3QOU3oPEZHOF8ALAkaeQ=
+        "]]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBod17g+rRNa9h/I5HGL6D33ViIHxBdD4
+Ig5pYPAOypdw2CHX+jpwB4wvg6ZewYHr+uICWy4YXwlNXgXNfjU0vgaaei0H
+VPfroKnXQ7PPAE3eEE2/ERrfGI1vgqbfFE3eDI1vjsa3QONbovGt0PjWaHwb
+NL4tGt8OjW+PxndA5Teg8Rkc4XwApVpmEA==
+        "]]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPocD1/XFBbZc76F8AYeY/kNfNWJg
+fBEHkXXuD6tE3kH5EmjyMg5g6XUwvgIaXwnNPhU0+9TQ1Gug8bXQ1Oug8fXQ
+1Bug8Q3R7DdCkzdGkzdB45uiqTdDkzdHk7dA41uiqbdC41uj8W3Q+LZofDs0
+vj0a3wGV34DGZ3CE8wFsN2og
+        "]]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBod17g+rRNa9h/I5HHbItb4O3PEOyhdw
+4Lq+uMCWCyYv4hDTf+irRgyML4EmL4Mmr4Amr4Qmr4LGV3NAdZ8GmrwWmnt1
+0MzXQ9NvgMY3RNNvhCZvjMY3QeObovHN0PjmaHwLNPss0eSt0PjWaHwbNL4t
+Gt8OjW+PxndA5Teg8Rkc4XwAuZNiAA==
+        "]]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPocD1/XFBbZc76F8AYd17g+rRNbB
++CIOMf2HvmrEwPgSaPIyaPIKDmlg8A7KV0IzXwWNr4amXwPNfVpo9umgyeuh
+8Q3QzDNE4xuhmWeMpt8EjW+KxjdD02+OJm+BxrdE41uh8a3R+DZofFs0vh0a
+3x6N74DKb0DjMzjC+QB6p2Hs
+        "]]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6], 
+       PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAmIQDQEf7FFpBgdUPofDDrnW14E73kH5Ag5c1xcX2HK9
+h/JF0PgSaHwZh5j+Q181YmB8BTTzlNDkVdD0q6G5R8NhnfvDKpF1MHktNHkd
+NHk9NL4Bmn2GaPqN0NQbo8mboMmbosmbofHN0dRboMlbovGt0PjWaHwbNL4t
+Gt8OjW+PxndA5Teg8Rkc4XwAJHRlJQ==
+        "]]}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}, {
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.772079, 0.431554, 0.102387], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.363898, 0.618501, 0.782349], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[1, 0.75, 0], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.647624, 0.37816, 0.614037], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.571589, 0.586483, 0.], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.0055000000000000005`], 
+       AbsoluteThickness[1.6]}, 
+      {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       PointSize[0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.560181, 0.691569, 0.194885], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.922526, 0.385626, 0.209179], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[1.6]}, 
+      {RGBColor[0.528488, 0.470624, 0.701351], PointSize[
+       0.0055000000000000005`], AbsoluteThickness[
+       1.6]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}}}, {{}, {}}}, {{}, {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}], LineBox[CompressedData["
+1:eJxdxzkKg1AARdGPVUoLC4uAAyJBRByjcfquwSUIpnXn4hLiQIR/Lzwex5mW
+cdaEENa+4/99z1Z5aZOqxaD6AeuwAZvwE7ZhF/ZgH37BARzCERzDCZzCGZzD
+BfyGS7iCP3ANN3ALd3B/+wdk732c
+        "]]}}, 
+     {RGBColor[1, 0, 0], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      Dashing[{0, Small}]}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[
+        NCache[
+         Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+       Dashing[{0, Small}]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.9261111111111114},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 34.}, {0.9261111111111114, 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.778864736958395*^9},
+ CellLabel->
+  "Out[438]=",ExpressionUUID->"1fa2c00b-0f0d-453e-aebd-5a5800838f4c"]
+}, Open  ]]
 },
-WindowSize->{800, 872},
-WindowMargins->{{-800, Automatic}, {0, Automatic}},
+WindowSize->{651, 713},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -3954,57 +6935,77 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 594, 15, 91, "Input",ExpressionUUID->"1c9d7291-0936-44f8-adc7-8e315a1eef08"],
-Cell[1155, 37, 14914, 387, 1695, "Input",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
+Cell[558, 20, 594, 15, 118, "Input",ExpressionUUID->"1c9d7291-0936-44f8-adc7-8e315a1eef08"],
+Cell[1155, 37, 14914, 387, 2361, "Input",ExpressionUUID->"7196725b-9ec2-48d5-9d32-9b76c617cd6f"],
 Cell[CellGroupData[{
 Cell[16094, 428, 1562, 37, 199, "Input",ExpressionUUID->"7ec58b74-7aa6-4d73-828f-3869a05a619d"],
 Cell[17659, 467, 14816, 300, 530, "Output",ExpressionUUID->"9280d629-a89d-4ac8-b18a-76b5f833ee1c"]
 }, Open  ]],
-Cell[32490, 770, 1809, 53, 218, "Input",ExpressionUUID->"e84da01b-9a42-4d80-b32e-93ff29d91d39"],
-Cell[34302, 825, 2772, 79, 291, "Input",ExpressionUUID->"37c62761-98d9-443f-9842-1b539a085f1b"],
-Cell[37077, 906, 360, 9, 91, "Input",ExpressionUUID->"cfe64651-e449-4e44-b56a-0948079efe34"],
-Cell[37440, 917, 489, 11, 118, "Input",ExpressionUUID->"749fe121-b072-45b6-82d9-9532a71955d6"],
-Cell[37932, 930, 5723, 142, 847, "Input",ExpressionUUID->"cee2c8f5-0dfd-4cc7-b974-e9752ec96a0e"],
-Cell[43658, 1074, 633, 14, 118, "Input",ExpressionUUID->"4b7358d4-c274-483d-ac35-6470387dfa1f"],
-Cell[44294, 1090, 2053, 49, 361, "Input",ExpressionUUID->"9694fef6-7728-4ddc-b4d3-6cd27ebec4fb"],
-Cell[46350, 1141, 3285, 80, 442, "Input",ExpressionUUID->"e87c2a07-0a2a-431f-9838-8fdc4151fa37"],
-Cell[49638, 1223, 209, 5, 36, "Input",ExpressionUUID->"8a6a506f-d133-4639-ba4d-04fd90ca8f1a"],
-Cell[49850, 1230, 622, 13, 91, "Input",ExpressionUUID->"1ef4a52e-0336-43fc-a53a-e3ec7312fdc5"],
+Cell[32490, 770, 1827, 52, 218, "Input",ExpressionUUID->"e84da01b-9a42-4d80-b32e-93ff29d91d39"],
+Cell[34320, 824, 2790, 78, 291, "Input",ExpressionUUID->"37c62761-98d9-443f-9842-1b539a085f1b"],
+Cell[37113, 904, 360, 9, 91, "Input",ExpressionUUID->"cfe64651-e449-4e44-b56a-0948079efe34"],
+Cell[37476, 915, 488, 11, 118, "Input",ExpressionUUID->"749fe121-b072-45b6-82d9-9532a71955d6"],
+Cell[37967, 928, 5722, 142, 1009, "Input",ExpressionUUID->"cee2c8f5-0dfd-4cc7-b974-e9752ec96a0e"],
+Cell[43692, 1072, 633, 14, 145, "Input",ExpressionUUID->"4b7358d4-c274-483d-ac35-6470387dfa1f"],
+Cell[44328, 1088, 2049, 48, 469, "Input",ExpressionUUID->"9694fef6-7728-4ddc-b4d3-6cd27ebec4fb"],
+Cell[46380, 1138, 3281, 79, 496, "Input",ExpressionUUID->"e87c2a07-0a2a-431f-9838-8fdc4151fa37"],
+Cell[49664, 1219, 209, 5, 64, "Input",ExpressionUUID->"8a6a506f-d133-4639-ba4d-04fd90ca8f1a"],
+Cell[49876, 1226, 622, 13, 118, "Input",ExpressionUUID->"1ef4a52e-0336-43fc-a53a-e3ec7312fdc5"],
 Cell[CellGroupData[{
-Cell[50497, 1247, 1136, 30, 172, "Input",ExpressionUUID->"abba7c5c-0ed0-4067-84f4-43a41ae5fa75"],
-Cell[51636, 1279, 2160, 54, 319, "Output",ExpressionUUID->"10bd5387-2c27-4449-bb4b-a863d2845fe8"]
+Cell[50523, 1243, 1136, 30, 253, "Input",ExpressionUUID->"abba7c5c-0ed0-4067-84f4-43a41ae5fa75"],
+Cell[51662, 1275, 2160, 54, 319, "Output",ExpressionUUID->"10bd5387-2c27-4449-bb4b-a863d2845fe8"]
 }, Open  ]],
-Cell[53811, 1336, 7697, 200, 955, "Input",ExpressionUUID->"193bf899-1469-48ce-be9f-582f1fd45d75"],
-Cell[61511, 1538, 208, 4, 36, "Input",ExpressionUUID->"6d6e96ce-c4ab-487e-a662-29174d0a4659"],
-Cell[61722, 1544, 6171, 182, 356, "Input",ExpressionUUID->"c0a600ab-af60-4d1f-a3b0-93c383402fa3"],
+Cell[53837, 1332, 7720, 200, 1063, "Input",ExpressionUUID->"193bf899-1469-48ce-be9f-582f1fd45d75"],
+Cell[61560, 1534, 207, 4, 36, "Input",ExpressionUUID->"6d6e96ce-c4ab-487e-a662-29174d0a4659"],
+Cell[61770, 1540, 6171, 182, 443, "Input",ExpressionUUID->"c0a600ab-af60-4d1f-a3b0-93c383402fa3"],
 Cell[CellGroupData[{
-Cell[67918, 1730, 786, 17, 91, "Input",ExpressionUUID->"dfd07788-1818-47f7-9ff8-5147dbaee8e9"],
-Cell[68707, 1749, 21857, 459, 435, "Output",ExpressionUUID->"fbb44899-b6d4-4930-a429-c6f8e7712262"]
+Cell[67966, 1726, 786, 17, 145, "Input",ExpressionUUID->"dfd07788-1818-47f7-9ff8-5147dbaee8e9"],
+Cell[68755, 1745, 21857, 459, 435, "Output",ExpressionUUID->"fbb44899-b6d4-4930-a429-c6f8e7712262"]
 }, Open  ]],
-Cell[90579, 2211, 209, 4, 36, "Input",ExpressionUUID->"6b689663-3004-45e9-9b49-fd334b5a6d5e"],
-Cell[90791, 2217, 5817, 175, 269, "Input",ExpressionUUID->"a60da277-b241-4210-820f-f4fe0a67512f"],
+Cell[90627, 2207, 210, 4, 36, "Input",ExpressionUUID->"6b689663-3004-45e9-9b49-fd334b5a6d5e"],
+Cell[90840, 2213, 5817, 175, 327, "Input",ExpressionUUID->"a60da277-b241-4210-820f-f4fe0a67512f"],
 Cell[CellGroupData[{
-Cell[96633, 2396, 697, 16, 118, "Input",ExpressionUUID->"a3373d03-3e85-4135-b52f-437dd6c6c182"],
-Cell[97333, 2414, 21209, 444, 440, "Output",ExpressionUUID->"ab743435-1d87-41da-9f71-ab96e53c308b"]
+Cell[96682, 2392, 697, 16, 145, "Input",ExpressionUUID->"a3373d03-3e85-4135-b52f-437dd6c6c182"],
+Cell[97382, 2410, 21209, 444, 440, "Output",ExpressionUUID->"ab743435-1d87-41da-9f71-ab96e53c308b"]
 }, Open  ]],
-Cell[118557, 2861, 425, 9, 91, "Input",ExpressionUUID->"4790b443-1055-43f3-a2ee-bee811432245"],
-Cell[118985, 2872, 2094, 50, 361, "Input",ExpressionUUID->"cd9852db-cf30-4c9b-b648-608ce7fb7195"],
-Cell[121082, 2924, 3329, 81, 442, "Input",ExpressionUUID->"1cbe5628-d7c3-47d1-8b71-3d0862de02a1"],
-Cell[124414, 3007, 252, 5, 36, "Input",ExpressionUUID->"1bc2027b-71a4-4685-8944-2ada2acf13e6"],
-Cell[124669, 3014, 591, 11, 91, "Input",ExpressionUUID->"fee4a1f0-f6c6-4677-9240-734631c244d2"],
+Cell[118606, 2857, 425, 9, 91, "Input",ExpressionUUID->"4790b443-1055-43f3-a2ee-bee811432245"],
+Cell[119034, 2868, 2094, 50, 469, "Input",ExpressionUUID->"cd9852db-cf30-4c9b-b648-608ce7fb7195"],
+Cell[121131, 2920, 3329, 81, 496, "Input",ExpressionUUID->"1cbe5628-d7c3-47d1-8b71-3d0862de02a1"],
+Cell[124463, 3003, 252, 5, 64, "Input",ExpressionUUID->"1bc2027b-71a4-4685-8944-2ada2acf13e6"],
+Cell[124718, 3010, 591, 11, 118, "Input",ExpressionUUID->"fee4a1f0-f6c6-4677-9240-734631c244d2"],
 Cell[CellGroupData[{
-Cell[125285, 3029, 883, 22, 172, "Input",ExpressionUUID->"b9007c56-5530-4479-9d13-5ba69c939efc"],
-Cell[126171, 3053, 2161, 53, 319, "Output",ExpressionUUID->"ebc3664e-de71-4224-8e60-5f979bc0dd95"]
+Cell[125334, 3025, 883, 22, 199, "Input",ExpressionUUID->"b9007c56-5530-4479-9d13-5ba69c939efc"],
+Cell[126220, 3049, 2161, 53, 319, "Output",ExpressionUUID->"ebc3664e-de71-4224-8e60-5f979bc0dd95"]
 }, Open  ]],
-Cell[128347, 3109, 7804, 201, 928, "Input",ExpressionUUID->"8ea9325c-9af0-44c3-a4e0-5bd8003c7c58"],
-Cell[136154, 3312, 262, 5, 36, "Input",ExpressionUUID->"647d3263-6599-4e79-9731-41dd81f10433"],
-Cell[136419, 3319, 5844, 175, 247, "Input",ExpressionUUID->"fac20df5-beda-4580-8995-dee39cfb81d1"],
-Cell[142266, 3496, 277, 5, 36, "Input",ExpressionUUID->"d1731df8-6029-4e7a-94d5-dd0d2e018736"],
+Cell[128396, 3105, 7804, 201, 1036, "Input",ExpressionUUID->"8ea9325c-9af0-44c3-a4e0-5bd8003c7c58"],
+Cell[136203, 3308, 262, 5, 36, "Input",ExpressionUUID->"647d3263-6599-4e79-9731-41dd81f10433"],
+Cell[136468, 3315, 5844, 175, 369, "Input",ExpressionUUID->"fac20df5-beda-4580-8995-dee39cfb81d1"],
+Cell[142315, 3492, 277, 5, 36, "Input",ExpressionUUID->"d1731df8-6029-4e7a-94d5-dd0d2e018736"],
 Cell[CellGroupData[{
-Cell[142568, 3505, 677, 14, 64, "Input",ExpressionUUID->"65c84f34-27ba-42a9-8085-28d994bdadd3"],
-Cell[143248, 3521, 19123, 410, 427, "Output",ExpressionUUID->"3df29555-91a4-404e-b6b5-f8f4f88f900c"]
+Cell[142617, 3501, 677, 14, 118, "Input",ExpressionUUID->"65c84f34-27ba-42a9-8085-28d994bdadd3"],
+Cell[143297, 3517, 19123, 410, 427, "Output",ExpressionUUID->"3df29555-91a4-404e-b6b5-f8f4f88f900c"]
 }, Open  ]],
-Cell[162386, 3934, 128, 3, 36, "Input",ExpressionUUID->"9153ceb0-e061-4ffa-9bc4-2412519b3eb2"]
+Cell[162435, 3930, 128, 3, 36, "Input",ExpressionUUID->"9153ceb0-e061-4ffa-9bc4-2412519b3eb2"],
+Cell[162566, 3935, 40350, 866, 788, "Input",ExpressionUUID->"4ed6d4fb-3d89-440d-928f-a72d7a7ab6ca"],
+Cell[202919, 4803, 496, 13, 91, "Input",ExpressionUUID->"615e7a9f-ea5f-48be-a912-bec80ae01560"],
+Cell[CellGroupData[{
+Cell[203440, 4820, 1085, 26, 199, "Input",ExpressionUUID->"fc16e36d-adf2-4b5b-bc0e-befabefbda45"],
+Cell[204528, 4848, 17537, 333, 258, "Output",ExpressionUUID->"2bea9156-f3a3-4a03-94fa-097d0f032527"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[222102, 5186, 1068, 27, 199, "Input",ExpressionUUID->"76426006-d3a3-472a-a84a-8cd19a932a42"],
+Cell[223173, 5215, 17699, 333, 258, "Output",ExpressionUUID->"fa8a6973-d095-4ed4-8331-310cbc4d7a95"]
+}, Open  ]],
+Cell[240887, 5551, 35521, 607, 1132, "Input",ExpressionUUID->"6be873f8-2579-4a6f-a657-1adb07f509c7"],
+Cell[276411, 6160, 293, 8, 36, "Input",ExpressionUUID->"2de28ae7-1b09-45af-9a21-2ecba108a146"],
+Cell[CellGroupData[{
+Cell[276729, 6172, 1051, 25, 199, "Input",ExpressionUUID->"321f3bde-6806-4a5d-ba70-4553307f4df8"],
+Cell[277783, 6199, 18515, 353, 258, "Output",ExpressionUUID->"4f1a8fff-dc2c-4643-bfe4-8abbdd02739f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[296335, 6557, 1025, 25, 199, "Input",ExpressionUUID->"0a444509-8fee-466b-acc8-c2d3fe75e190"],
+Cell[297363, 6584, 17489, 333, 258, "Output",ExpressionUUID->"1fa2c00b-0f0d-453e-aebd-5a5800838f4c"]
+}, Open  ]]
 }
 ]
 *)
