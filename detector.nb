@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    108423,       2585]
-NotebookOptionsPosition[    105148,       2535]
-NotebookOutlinePosition[    105511,       2551]
-CellTagsIndexPosition[    105468,       2548]
+NotebookDataLength[    101740,       2415]
+NotebookOptionsPosition[     98949,       2370]
+NotebookOutlinePosition[     99312,       2386]
+CellTagsIndexPosition[     99269,       2383]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2168,99 +2168,6 @@ Cell[BoxData[
        "]"}]}]}], " ", ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
-     RowBox[{"returns", " ", "a", " ", "list", " ", "of", " ", "pairs", " ", 
-      RowBox[{"(", 
-       RowBox[{"name", ",", " ", "value"}], ")"}]}], ",", 
-     RowBox[{"where", " ", "the", " ", "values", " ", "are", " ", "numeric"}],
-      ",", " ", 
-     RowBox[{"from", " ", "a", " ", "given", " ", "file", " ", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"home", " ", "dir", " ", "for", " ", "now"}], ")"}], ".", " ",
-        "No"}], " ", "other", " ", "filtering", " ", "is", " ", "done"}]}], 
-    "  ", "*)"}], " ", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"nameValuePairsFromFile", "[", "filename_", "]"}], " ", ":=", 
-     " ", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"With", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"filePairs", "=", " ", 
-           RowBox[{"ReadList", "[", 
-            RowBox[{"filename", ",", " ", "Word", ",", " ", 
-             RowBox[{"WordSeparators", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-               "\"\<\\t\>\"", ",", " ", "\"\< \>\"", ",", "\"\<:\>\""}], 
-               "}"}]}]}], "]"}]}], "}"}], ",", 
-         RowBox[{"Inner", "[", 
-          RowBox[{"List", ",", "  ", 
-           RowBox[{"(*", " ", "names", " ", "*)"}], " ", 
-           RowBox[{"Select", "[", 
-            RowBox[{"filePairs", ",", " ", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"\[Not]", 
-                RowBox[{"NumberQ", "@", 
-                 RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", "&"}]}], 
-            "]"}], ",", " ", 
-           RowBox[{"(*", " ", 
-            RowBox[{"probabiity", " ", "values"}], " ", "*)"}], " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"filePairs", "[", 
-               RowBox[{"[", "#", "]"}], "]"}], "]"}], "&"}], " ", "/@", 
-            RowBox[{"(*", " ", 
-             RowBox[{
-             "indices", " ", "of", " ", "probability", " ", "values"}], " ", 
-             "*)"}], 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"FirstPosition", "[", 
-                 RowBox[{"filePairs", ",", " ", "#"}], "]"}], " ", "+", "1"}],
-                " ", "&"}], " ", "/@", " ", 
-              RowBox[{"Select", "[", 
-               RowBox[{"filePairs", ",", " ", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"\[Not]", 
-                   RowBox[{"NumberQ", "@", 
-                    RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", 
-                 "&"}]}], "]"}]}], ")"}]}], ",", " ", "List"}], "]"}]}], 
-        "]"}], ")"}], 
-      RowBox[{"(*", " ", 
-       RowBox[{"lower", " ", "the", " ", "nestedness"}], " ", "*)"}], " ", 
-      "[", 
-      RowBox[{"[", "1", "]"}], "]"}]}], " ", ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-    "finds", " ", "a", " ", "value", " ", "from", " ", "a", " ", "list", " ", 
-     "that", " ", "corresponds", " ", "to", " ", "a", " ", "name"}], " ", 
-    "*)"}], " ", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"getValueFromListOfPairs", "[", 
-      RowBox[{"pairlist_", ",", " ", "name_"}], "]"}], " ", ":=", " ", 
-     RowBox[{
-      RowBox[{"pairlist", "[", 
-       RowBox[{"[", 
-        RowBox[{
-         RowBox[{"FirstPosition", "[", 
-          RowBox[{"pairlist", ",", " ", 
-           RowBox[{"{", 
-            RowBox[{"name", ",", " ", "_"}], "}"}]}], " ", "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}], " ", "]"}], "]"}], "[", 
-      RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
      RowBox[{
       RowBox[{"get", " ", "pairs", " ", "of", " ", 
        RowBox[{"(", "corresponding", ")"}], " ", "probability", " ", 
@@ -2457,81 +2364,9 @@ Cell[BoxData[
    3.776616319694941*^9, 3.776616331080305*^9}, {3.776618011761149*^9, 
    3.776618064692698*^9}, {3.776619239279039*^9, 3.776619256771635*^9}, {
    3.7797963073976173`*^9, 3.7797963321814013`*^9}, {3.779796390599578*^9, 
-   3.77979640067127*^9}},ExpressionUUID->"89765e4f-5627-4568-bbe7-\
-cd625b534689"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.774207492836337*^9, 3.774207512931316*^9}},
- CellLabel->
-  "In[609]:=",ExpressionUUID->"b3ec1ca3-3b85-4286-bb06-fd3554538314"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dAnd", "[", 
-      RowBox[{
-       RowBox[{"Repeated", "[", 
-        RowBox[{"d_Association", ",", 
-         RowBox[{"{", "1", "}"}]}], "]"}], " ", "/;", " ", 
-       RowBox[{"isDet", "[", "d", "]"}]}], "]"}], " ", ":=", " ", "d"}], 
-    ";"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dAnd", "[", 
-      RowBox[{"Repeated", "[", 
-       RowBox[{
-        RowBox[{"x", ":", 
-         RowBox[{"Except", "[", "_dAnd", "]"}]}], ",", 
-        RowBox[{"{", "1", "}"}]}], "]"}], "]"}], "  ", ":=", " ", "x"}], 
-    ";"}], "*)"}]}]], "Input",
- CellChangeTimes->{{3.774207568817657*^9, 3.774207577287088*^9}, 
-   3.77420761987784*^9, {3.774207796607231*^9, 3.774207798015183*^9}, {
-   3.774208003712928*^9, 3.774208064686112*^9}},
- CellLabel->
-  "In[610]:=",ExpressionUUID->"7d1247dd-6058-4ac3-985c-b63ba4668dcd"],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"dAnd", "[", 
-     RowBox[{"Longest", "[", "z__Association", "]"}], "]"}], " ", "/;", 
-    RowBox[{
-     RowBox[{"Length", "@", 
-      RowBox[{"List", "@", "z"}]}], " ", "\[LessEqual]", "1"}]}], " ", ":=", 
-   " ", "z"}], "*)"}]], "Input",
- CellChangeTimes->{{3.774208332281884*^9, 3.774208358263132*^9}, {
-  3.774208394995558*^9, 3.774208409215247*^9}, {3.774208525765877*^9, 
-  3.774208528236451*^9}, {3.774208566709785*^9, 3.7742085684678097`*^9}},
- CellLabel->
-  "In[611]:=",ExpressionUUID->"34979e06-f01c-46be-aab8-df161ea5581b"],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"dAnd", "[", 
-     RowBox[{"Longest", "[", 
-      RowBox[{"x", ":", 
-       RowBox[{"Except", "[", "__dAnd", "]"}]}], "]"}], "]"}], " ", "/;", 
-    RowBox[{
-     RowBox[{"Length", "@", 
-      RowBox[{"List", "@", "x"}]}], " ", "\[LessEqual]", "1"}]}], " ", ":=", 
-   " ", 
-   RowBox[{"Hold", "@@", "x"}]}], "*)"}]], "Input",
- CellChangeTimes->{{3.774208578519925*^9, 3.774208592697238*^9}, {
-  3.774208630596558*^9, 3.7742086568135643`*^9}, {3.774208885941577*^9, 
-  3.774208887871113*^9}},
- CellLabel->
-  "In[612]:=",ExpressionUUID->"f1dd641e-5c04-4784-811f-9addd33c607b"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.77420913604146*^9, 3.774209169941187*^9}},
- CellLabel->
-  "In[613]:=",ExpressionUUID->"ac220532-5090-4aa3-9276-6abe82729f9c"]
+   3.77979640067127*^9}, 3.7797967205830717`*^9, {3.779797023588846*^9, 
+   3.779797044612331*^9}},ExpressionUUID->"89765e4f-5627-4568-bbe7-\
+cd625b534689"]
 },
 WindowSize->{648, 709},
 WindowMargins->{{Automatic, 67}, {0, Automatic}},
@@ -2574,12 +2409,7 @@ Cell[30984, 765, 2632, 65, 760, "Input",ExpressionUUID->"af14e5cb-bbff-420d-8b74
 Cell[33619, 832, 5860, 151, 1444, "Input",ExpressionUUID->"35027f4f-6c26-4f6d-a1d1-50054405702a"],
 Cell[39482, 985, 11117, 248, 2734, "Input",ExpressionUUID->"d04a056e-79d8-47a4-9c75-ad9fdddf9250"],
 Cell[50602, 1235, 34764, 814, 8870, "Input",ExpressionUUID->"673dbbaf-4375-41b3-a9d4-04730d5e6ab5"],
-Cell[85369, 2051, 17243, 409, 4170, "Input",ExpressionUUID->"89765e4f-5627-4568-bbe7-cd625b534689"],
-Cell[102615, 2462, 175, 3, 44, "Input",ExpressionUUID->"b3ec1ca3-3b85-4286-bb06-fd3554538314"],
-Cell[102793, 2467, 931, 26, 144, "Input",ExpressionUUID->"7d1247dd-6058-4ac3-985c-b63ba4668dcd"],
-Cell[103727, 2495, 599, 14, 78, "Input",ExpressionUUID->"34979e06-f01c-46be-aab8-df161ea5581b"],
-Cell[104329, 2511, 638, 17, 78, "Input",ExpressionUUID->"f1dd641e-5c04-4784-811f-9addd33c607b"],
-Cell[104970, 2530, 174, 3, 44, "Input",ExpressionUUID->"ac220532-5090-4aa3-9276-6abe82729f9c"]
+Cell[85369, 2051, 13576, 317, 3180, "Input",ExpressionUUID->"89765e4f-5627-4568-bbe7-cd625b534689"]
 }
 ]
 *)
