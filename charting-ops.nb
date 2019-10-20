@@ -1,0 +1,211 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7696,        203]
+NotebookOptionsPosition[      7377,        189]
+NotebookOutlinePosition[      7741,        205]
+CellTagsIndexPosition[      7698,        202]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Clear", "[", 
+     RowBox[{"chartHorLine", ",", " ", "chartVertLine", ",", "binListsBy"}], 
+     "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"chartHorLine", "[", 
+      RowBox[{"yLineValue_", ",", " ", "maxX_", ",", " ", 
+       RowBox[{"minX_:", "0"}], ",", " ", 
+       RowBox[{"color_:", "Green"}]}], "]"}], " ", ":=", " ", 
+     RowBox[{"ListLinePlot", "[", 
+      RowBox[{
+       RowBox[{"Inner", "[", 
+        RowBox[{"List", ",", " ", 
+         RowBox[{"Range", "[", 
+          RowBox[{"minX", ",", "maxX", ",", " ", 
+           RowBox[{
+            RowBox[{"Abs", "@", "maxX"}], "/", "2"}]}], "]"}], ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{"yLineValue", ",", " ", "3"}], "]"}], ",", " ", "List"}], 
+        "]"}], ",", " ", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"color", ",", " ", "Dotted"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"chartVertLine", "[", 
+      RowBox[{"xLineValue_", ",", " ", "maxY_", " ", ",", 
+       RowBox[{"minY_:", "0"}], ",", " ", 
+       RowBox[{"color_:", "Green"}]}], "]"}], " ", ":=", " ", 
+     RowBox[{"ListLinePlot", "[", 
+      RowBox[{
+       RowBox[{"Inner", "[", 
+        RowBox[{"List", ",", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{"xLineValue", ",", " ", "3"}], "]"}], ",", " ", 
+         RowBox[{"Range", "[", 
+          RowBox[{"minY", ",", "maxY", ",", " ", 
+           RowBox[{
+            RowBox[{"Abs", "@", "maxY"}], "/", "2"}]}], "]"}], ",", "List"}], 
+        "]"}], ",", " ", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"color", ",", " ", "Dotted"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "bins", " ", "lists", " ", "by", " ", "a", " ", "function", " ", "and", 
+      " ", "constraints"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "allowing", " ", "to", " ", "isolate", " ", "the", " ", "dimensions"}], 
+      ";", "  ", 
+      RowBox[{
+       RowBox[{"taken", " ", "from", " ", 
+        RowBox[{"https", ":"}]}], "//", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"community", ".", "wolfram", ".", "com"}], "/", 
+            "groups"}], "/", "-"}], "/", "m"}], "/", "t"}], "/", 
+        "1081009"}]}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"binListsBy", "[", 
+     RowBox[{"data_List", ",", "binspecs__List"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"fs", ",", "idata", ",", "len", ",", "out"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"len", "=", 
+        RowBox[{"Length", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"fs", "=", 
+        RowBox[{"{", "binspecs", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"AllTrue", "[", 
+          RowBox[{"fs", ",", 
+           RowBox[{
+            RowBox[{"MatchQ", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"_", ",", 
+                 RowBox[{"_", "?", "NumericQ"}], ",", 
+                 RowBox[{"_", "?", "NumericQ"}]}], "}"}], "|", 
+               RowBox[{"{", 
+                RowBox[{"_", ",", 
+                 RowBox[{"_", "?", "NumericQ"}], ",", 
+                 RowBox[{"_", "?", "NumericQ"}], ",", 
+                 RowBox[{"_", "?", "NumericQ"}]}], "}"}]}]}], "]"}], "&"}]}], 
+          "]"}], ",", 
+         RowBox[{
+          RowBox[{"idata", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Map", "[", 
+              RowBox[{"f", ",", "data"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"f", ",", 
+               RowBox[{"fs", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"idata", ",", 
+            RowBox[{"Range", "[", "len", "]"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"out", "=", 
+           RowBox[{"BinLists", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", "idata", "]"}], ",", 
+             RowBox[{"Sequence", "@@", 
+              RowBox[{"(", 
+               RowBox[{"Rest", "/@", "fs"}], ")"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"len", "+", "1"}], ",", 
+               RowBox[{"len", "+", "1"}]}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"out", "=", 
+           RowBox[{"Part", "[", 
+            RowBox[{"out", ",", 
+             RowBox[{"Sequence", "@@", 
+              RowBox[{"ConstantArray", "[", 
+               RowBox[{"All", ",", 
+                RowBox[{"Length", "[", "fs", "]"}]}], "]"}]}], ",", "1", ",", 
+             "All", ",", 
+             RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Map", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"data", "[", 
+              RowBox[{"[", "#", "]"}], "]"}], "&"}], ",", "out", ",", 
+            RowBox[{"{", 
+             RowBox[{"Length", "[", "fs", "]"}], "}"}]}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{
+          "Print", "[", "\"\<Your specification is incorrect\[Ellipsis]\>\"", 
+           "]"}], ";"}]}], "]"}]}]}], "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"BinListsBy", "::", "usage"}], "=", 
+     RowBox[{"Evaluate", "[", 
+      RowBox[{
+      "Uncompress", "@", 
+       "\"\<1:eJztlctqwkAUhn2DvsLpPoUYobelha66qkt1McmcmFPMTHDGSxBfuE/\
+RXKiSRCSOgyi6mTAXPv6f85+cR19+D34fOp0+iS9SWvXT4Xr0/\
+vny0S3Wt2J9Hcx9Fcwo0X25GpYXq+LjOlBuy+\
+fuuHJ6JMOzwOg1GJ7rPW8cWIctgVQFxiRMZNUpbFWhbMbgk1BGFqlCAhKg5kGAStECs53GCc5Kuo96\
+iSis+AYmuBXr4DOFHKQAHSEs2HSOCjiGJLJTP4WYJQmJCYSgJSALIpBh/\
+jQeuV3vHtOzxtQBTnajWqCygnKCJXEd3TN6fRltBVMJBhZ8NTFNa7ksMOZVIzQG8cQpRqFICjbN8yr\
+ySmf1tdAA21j9B6gVMzzIbKus6bwGCuWszPLWfz3N54tzeoixcYyEGPVEeohhKKTZWMcL6dWEXMEAs\
+ZEeC+G5wSl0IX27GyEX0r8nCrLfxztBtz5sjQryY6EgTUZRiL29mOm8xEGe/Q1ykZxptmeo/\
+wEBvbZm\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7798045196925383`*^9, 3.779804531140089*^9}, {
+  3.779804564867461*^9, 3.779804578991938*^9}, {3.779807851847736*^9, 
+  3.7798078575852547`*^9}, {3.779813771029497*^9, 3.779813793722501*^9}, {
+  3.779813871479425*^9, 3.779813873182148*^9}, {3.779814239779872*^9, 
+  3.779814240438325*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+},
+WindowSize->{651, 711},
+WindowMargins->{{150, Automatic}, {0, Automatic}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6815, 167, 1524, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+}
+]
+*)
+

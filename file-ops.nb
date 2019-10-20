@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     20486,        519]
-NotebookOptionsPosition[     19694,        500]
-NotebookOutlinePosition[     20056,        516]
-CellTagsIndexPosition[     20013,        513]
+NotebookDataLength[     35795,        892]
+NotebookOptionsPosition[     35089,        874]
+NotebookOutlinePosition[     35451,        890]
+CellTagsIndexPosition[     35408,        887]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,22 +34,25 @@ Cell[BoxData[
         RowBox[{"StringJoin", "[", 
          RowBox[{
           RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-          "\"\<file-generic-ops.nb\>\""}], "]"}], "]"}], "]"}]}]}], ";"}], 
+          "\"\<file-ops.nb\>\""}], "]"}], "]"}], "]"}]}]}], ";"}], 
    "*)"}]}]], "Input",
  CellChangeTimes->{{3.779796517594421*^9, 3.7797965283309097`*^9}, {
-  3.7797966217198763`*^9, 3.779796625172078*^9}, {3.779796732085595*^9, 
-  3.7797967413330793`*^9}, {3.779797138093191*^9, 
-  3.779797139732355*^9}},ExpressionUUID->"8aeb13c7-0371-42f5-b096-\
-7bfbd1422600"],
+   3.7797966217198763`*^9, 3.779796625172078*^9}, {3.779796732085595*^9, 
+   3.7797967413330793`*^9}, {3.779797138093191*^9, 3.779797139732355*^9}, {
+   3.7798003138088837`*^9, 3.779800314143165*^9}, 3.780500691626165*^9},
+ CellLabel->
+  "In[430]:=",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{"Clear", "[", 
    RowBox[{
-   "nameValuePairsFromFile", ",", "getValueFromListOfPairs", ",", " ", 
-    "monFilenames", ",", "  ", "allMonFilenames", ",", " ", "detFilenames", 
-    ",", " ", "allDetFilenames", ",", " ", "iterationDirName", ",", " ", 
-    "countFromFiles"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "nameValuePairsFromFile", ",", "getValueFromListOfPairs", ",", 
+    "tallyInfoInTriplesets", ",", " ", "subsetCt", ",", "subsetCtOfSize", ",",
+     " ", "monFilenames", ",", "  ", "allMonFilenames", ",", " ", 
+    "detFilenames", ",", " ", "allDetFilenames", ",", " ", "iterationDirName",
+     ",", " ", "countFromFiles"}], "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"returns", " ", "a", " ", "list", " ", "of", " ", "pairs", " ", 
@@ -65,72 +68,70 @@ Cell[BoxData[{
    "  ", "*)"}], " "}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"nameValuePairsFromFile", "[", "filename_", "]"}], " ", ":=", " ", 
-   
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{"With", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"filePairs", "=", " ", 
-         RowBox[{"ReadList", "[", 
-          RowBox[{"filename", ",", " ", "Word", ",", " ", 
-           RowBox[{"WordSeparators", "\[Rule]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<\\t\>\"", ",", " ", "\"\< \>\"", ",", "\"\<:\>\""}],
-              "}"}]}]}], "]"}]}], "}"}], ",", 
-       RowBox[{"Inner", "[", 
-        RowBox[{"List", ",", "  ", 
-         RowBox[{"(*", " ", "names", " ", "*)"}], " ", 
-         RowBox[{"Select", "[", 
-          RowBox[{"filePairs", ",", " ", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"\[Not]", 
-              RowBox[{"NumberQ", "@", 
-               RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", "&"}]}], 
-          "]"}], ",", " ", 
-         RowBox[{"(*", " ", 
-          RowBox[{"probabiity", " ", "values"}], " ", "*)"}], " ", 
+    RowBox[{"nameValuePairsFromFile", "[", "filename_", "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
          RowBox[{
-          RowBox[{
-           RowBox[{"ToExpression", "[", 
-            RowBox[{"filePairs", "[", 
-             RowBox[{"[", "#", "]"}], "]"}], "]"}], "&"}], " ", "/@", 
-          RowBox[{"(*", " ", 
-           RowBox[{"indices", " ", "of", " ", "probability", " ", "values"}], 
-           " ", "*)"}], 
-          RowBox[{"(", 
+          RowBox[{"filePairs", "=", " ", 
+           RowBox[{"ReadList", "[", 
+            RowBox[{"filename", ",", " ", "Word", ",", " ", 
+             RowBox[{"WordSeparators", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\\t\>\"", ",", " ", "\"\< \>\"", ",", "\"\<:\>\""}], 
+               "}"}]}]}], "]"}]}], ",", " ", 
+          RowBox[{"numberTest", " ", "=", " ", 
            RowBox[{
             RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Not]", 
+               RowBox[{"NumberQ", "@", 
+                RowBox[{"ToExpression", "@", "#"}]}]}], " ", ")"}], "\[And]", 
+             " ", 
+             RowBox[{"(", 
+              RowBox[{"\"\<noinfo\>\"", "\[NotEqual]", " ", "#"}], ")"}]}], 
+            " ", "&"}]}]}], "}"}], ",", 
+        RowBox[{"Inner", "[", 
+         RowBox[{"List", ",", "  ", 
+          RowBox[{"(*", " ", "names", " ", "*)"}], " ", 
+          RowBox[{"Select", "[", 
+           RowBox[{"filePairs", ",", " ", "numberTest"}], "]"}], ",", " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{"numbers", " ", "or", " ", "probabiity", " ", "values"}], 
+           " ", "*)"}], " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{"filePairs", "[", 
+              RowBox[{"[", "#", "]"}], "]"}], "]"}], "&"}], " ", "/@", 
+           RowBox[{"(*", " ", 
+            RowBox[{"indices", " ", "of", " ", 
+             RowBox[{"numbers", "/", "probability"}], " ", "values"}], " ", 
+            "*)"}], 
+           RowBox[{"(", 
+            RowBox[{
              RowBox[{
-              RowBox[{"FirstPosition", "[", 
-               RowBox[{"filePairs", ",", " ", "#"}], "]"}], " ", "+", "1"}], 
-             " ", "&"}], " ", "/@", " ", 
-            RowBox[{"Select", "[", 
-             RowBox[{"filePairs", ",", " ", 
               RowBox[{
-               RowBox[{"(", 
-                RowBox[{"\[Not]", 
-                 RowBox[{"NumberQ", "@", 
-                  RowBox[{"ToExpression", "@", "#"}]}]}], ")"}], " ", "&"}]}],
-              "]"}]}], ")"}]}], ",", " ", "List"}], "]"}]}], "]"}], ")"}], 
-    RowBox[{"(*", " ", 
-     RowBox[{"lower", " ", "the", " ", "nestedness"}], " ", "*)"}], " ", "[", 
-    
-    RowBox[{"[", "1", "]"}], "]"}]}], " ", ";"}]}], "Input",
- CellChangeTimes->{{3.779796723959072*^9, 3.779796724159404*^9}, {
-  3.779797297250906*^9, 
-  3.779797308620996*^9}},ExpressionUUID->"c767961d-4183-41aa-bf0d-\
-96ce59653f50"],
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
+               RowBox[{"FirstPosition", "[", 
+                RowBox[{"filePairs", ",", " ", "#"}], "]"}], " ", "+", "1"}], 
+              " ", "&"}], " ", "/@", " ", 
+             RowBox[{"Select", "[", 
+              RowBox[{"filePairs", ",", " ", "numberTest"}], "]"}]}], ")"}]}],
+           ",", " ", "List"}], "]"}]}], "]"}], ")"}], 
+     RowBox[{"(*", " ", 
+      RowBox[{"lower", " ", "the", " ", "nestedness"}], " ", "*)"}], " ", "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], " ", ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
    "finds", " ", "a", " ", "value", " ", "from", " ", "a", " ", "list", " ", 
     "that", " ", "corresponds", " ", "to", " ", "a", " ", "name"}], " ", 
-   "*)"}], " ", "\[IndentingNewLine]", 
+   "*)"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
    RowBox[{
     RowBox[{"getValueFromListOfPairs", "[", 
@@ -144,359 +145,732 @@ Cell[BoxData[
           RowBox[{"{", 
            RowBox[{"name", ",", " ", "_"}], "}"}]}], " ", "]"}], "[", 
         RowBox[{"[", "1", "]"}], "]"}], " ", "]"}], "]"}], "[", 
-     RowBox[{"[", "2", "]"}], "]"}]}], ";"}]}]], "Input",
- CellChangeTimes->{{3.7797970272177887`*^9, 
-  3.779797028635058*^9}},ExpressionUUID->"f7454907-edc0-47d0-966b-\
-bf93f2b4b936"],
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
     RowBox[{
      RowBox[{"**", " ", "Monitoring"}], " ", "pipeline", " ", "dataset"}], 
     "-", 
-    RowBox[{"specific", " ", "operations"}]}], " ", "***)"}]}]], "Input",
- CellChangeTimes->{{3.779797153948929*^9, 3.779797172453755*^9}, {
-  3.779797226929915*^9, 
-  3.779797227097899*^9}},ExpressionUUID->"4093273c-d1dc-4a1a-8ffb-\
-b3a1a2802c6f"],
-
-Cell[BoxData[
- RowBox[{
+    RowBox[{"specific", " ", "operations"}]}], " ", "***)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"session", " ", "number"}], " ", "\[Rule]", " ", 
+   "number", " ", "of", " ", "subsets", " ", "excluding", " ", "the", " ", 
+    "empty", " ", "one"}], " ", "*)"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"subsetCt", "[", "set_", "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"2", "^", 
+     RowBox[{"(", 
+      RowBox[{"Length", "@", "set"}], ")"}]}], "-", "1"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"subsetCtOfSize", "[", 
+     RowBox[{"set_", ",", " ", "subsetSize_"}], "]"}], ":=", " ", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{
+      RowBox[{"Length", "@", "set"}], ",", " ", "subsetSize"}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"allSubsetCt", " ", "=", " ", 
+     RowBox[{"subsetCt", "@", 
+      RowBox[{"fullTripleList", "[", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", "5"}], "}"}], "]"}]}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"BEFORE", " ", 
+     RowBox[{"CORRECTION", ":", " ", 
+      RowBox[{"session", " ", "number"}]}]}], " ", "\[Rule]", " ", 
     RowBox[{"data", " ", "directory", " ", "for", " ", "it"}]}], " ", "*)"}], 
-  " ", "\[IndentingNewLine]", 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dataDirPathForSeshNumPreCorr", "[", "seshNum_", "]"}], ":=", " ", 
+    RowBox[{"Switch", "[", 
+     RowBox[{
+     "seshNum", ",", " ", "All", ",", 
+      "\"\</home/ivan/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", 
+      ",", " ", "4", ",", " ", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_4_Sonar_\
+Nocontroller_8Aug2019/\>\"", ",", " ", "5", ",", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_5_Sonar_\
+Nocontroller_9Sept_2019/\>\"", ",", "6", ",", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_6_Sonar_\
+Nocontroller_23Sept_2019/\>\"", ",", "7", ",", " ", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_7_Sonar_\
+Nocontroller_3Oct_2019/\>\"", ",", "\[IndentingNewLine]", " ", "_", " ", ",", 
+      " ", 
+      RowBox[{"Throw", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"\"\<Unknown session number: \>\"", ",", " ", 
+         RowBox[{"ToString", "[", "seshNum", "]"}]}], "]"}], " ", "]"}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dataDirPathForSeshNumPostCorr", "[", "seshNum_", "]"}], ":=", 
+    " ", 
+    RowBox[{"Switch", "[", 
+     RowBox[{
+     "seshNum", ",", " ", "All", ",", 
+      "\"\</home/ivan/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", 
+      ",", " ", "4", ",", " ", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_4_Sonar_\
+Nocontroller_8Aug2019/\>\"", ",", " ", "5", ",", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_5_Sonar_\
+Nocontroller_9Sept_2019_corrected/\>\"", ",", "6", ",", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_6_Sonar_\
+Nocontroller_23Sept_2019_corrected/\>\"", ",", "7", ",", " ", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_7_Sonar_\
+Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_", 
+      " ", ",", " ", 
+      RowBox[{"Throw", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"\"\<Unknown session number: \>\"", ",", " ", 
+         RowBox[{"ToString", "[", "seshNum", "]"}]}], "]"}], " ", "]"}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "a", " ", "hack", " ", "to", " ", "determine", " ", "different", " ", 
+     "spellings", " ", "of", " ", "Iteration_", "1", " ", "or", " ", 
+     "Iteration1"}], ",", " ", 
+    RowBox[{"given", " ", "session", " ", "info"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"iterationDirName", "[", "seshNum_", "]"}], ":=", " ", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"seshNum", " ", "\[Equal]", " ", "4"}], ",", " ", 
+      "\"\<Iteration_\>\"", ",", " ", "\"\<Iteration\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "a", " ", "hack", " ", "to", " ", "determine", " ", "complete", " ", 
+     "pairlists", " ", "for", " ", "each", " ", "session"}], ";", " ", 
+    RowBox[{"the", " ", "triples", " ", "are", " ", 
+     RowBox[{"(", 
+      RowBox[{"seshnum", ",", " ", "iternum", ",", " ", "detnum"}], ")"}], 
+     "\[IndentingNewLine]", "NOT", " ", "INDICATING", " ", "MONITOR", " ", 
+     "NUMBER", "\[IndentingNewLine]", "This", " ", "is", " ", "a", " ", 
+     "triple", " ", "list", " ", "with", " ", "redundancies"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"fullTripleList", "[", "seshNums_", "]"}], ":=", " ", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Switch", "[", 
+         RowBox[{"#", ",", " ", "4", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "4"}], " ", "*)"}], " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "4", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "5"}], "]"}], ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "5"}], "]"}]}], "]"}], ",", " ", "1"}], 
+            "]"}]}], ",", " ", "5", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "5"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "5", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "5"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", "6", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "6"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "6", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "24"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", "\[IndentingNewLine]", "7", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "7"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "7", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "39"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", "\[IndentingNewLine]", " ", "_", ",", " ", 
+          RowBox[{"{", "}"}]}], "]"}], "&"}], " ", "/@", " ", "seshNums"}], 
+      ",", " ", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "This", " ", "is", " ", "a", " ", "triple", " ", "list", " ", "without", 
+    " ", "redundancies", " ", "\[IndentingNewLine]", "NOT", " ", "INDICATING",
+     " ", "MONITOR", " ", "NUMBER"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"fullTripleListNoRedun", "[", "seshNums_", "]"}], ":=", " ", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Switch", "[", 
+         RowBox[{"#", ",", " ", "4", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "4"}], " ", "*)"}], " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "4", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "5"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", " ", "5", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "5"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "5", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "5"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", "6", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "6"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "6", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "24"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", "\[IndentingNewLine]", "7", ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{"for", " ", "session", " ", "7"}], " ", "*)"}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "7", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
+            " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Outer", "[", 
+              RowBox[{"List", ",", " ", 
+               RowBox[{"Range", "[", 
+                RowBox[{"1", ",", "39"}], "]"}], ",", 
+               RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
+          ",", " ", "_", ",", " ", 
+          RowBox[{"{", "}"}]}], "]"}], "&"}], " ", "/@", " ", "seshNums"}], 
+      ",", " ", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "tallies", " ", "up", " ", "the", " ", "amount", " ", "of", " ", 
+     "information", " ", "in", " ", "the", " ", "triplesets"}], ";", " ", 
+    RowBox[{"input", ":", " ", 
+     RowBox[{"list", " ", "of", " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "tripleset", ",", " ", "result1", ",", " ", "result2", ",", " ", 
+        "..."}], ")"}], " ", "out"}], ":", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+       "infomeasure", ",", " ", "result1", ",", " ", "result2", ",", " ", 
+        "..."}], ")"}], "while", " ", "preserving", " ", "the", " ", 
+      "results"}]}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"tallyInfoInTriplesets", "[", 
+     RowBox[{
+     "tripleSetList_", ",", " ", "fieldName_", ",", " ", 
+      "detOrMonfilenameFn_", ",", " ", 
+      RowBox[{"detOrMonfilenameFnArg1_:", "Null"}], ",", " ", 
+      RowBox[{"detOrMonfilenameFnArg2_:", "Null"}]}], "]"}], ":=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Join", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"countFromFiles", "[", 
+          RowBox[{"fieldName", ",", " ", 
+           RowBox[{"detOrMonfilenameFn", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", "detOrMonfilenameFnArg1", 
+             ",", " ", "detOrMonfilenameFnArg2"}], "]"}]}], "]"}], "}"}], ",",
+         " ", 
+        RowBox[{"Drop", "[", 
+         RowBox[{"#", ",", " ", "1"}], "]"}]}], "]"}], " ", "&"}], " ", "/@", 
+     " ", "tripleSetList"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "monitor", " ", "and", " ", "detector", " ", "file", " ", 
+    "manipulations"}], " ", "***)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"monFilenames", "[", 
+     RowBox[{"idtriplelist_", ",", " ", "winSize_", ",", " ", "monNum_"}], 
+     "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+        RowBox[{"dataDirPathForSeshNumPostCorr", "@", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"iterationDirName", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\</mon\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", "monNum", 
+         RowBox[{"(*", 
+          RowBox[{"was", " ", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], "*)"}], "]"}], ",", " ", 
+        "\"\<_\>\"", ",", 
+        RowBox[{"ToString", "[", "winSize", "]"}], ",", " ", "\"\</iter\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\<_mondet\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", "monNum", 
+         RowBox[{"(*", " ", 
+          RowBox[{"was", " ", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], "*)"}], "]"}], ",", " ", 
+        "\"\<_\>\"", ",", 
+        RowBox[{"ToString", "@", "winSize"}], ",", " ", 
+        "\"\<_estrates.txt\>\""}], "]"}], " ", "&"}], " ", "/@", 
+     "idtriplelist"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"detFilenames", "[", 
+     RowBox[{"idtriplelist_", ",", " ", 
+      RowBox[{"dummyArg1_:", "Null"}], ",", " ", 
+      RowBox[{"dummyArg2_:", "Null"}]}], "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+        RowBox[{"dataDirPathForSeshNumPostCorr", "@", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"iterationDirName", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\</det\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", " ", "\"\</iter\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", 
+        "\"\<_both_det_estrates.txt\>\""}], "]"}], " ", "&"}], " ", "/@", 
+     "idtriplelist"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"allMonFilenames", "[", 
+     RowBox[{"seshNums_", ",", " ", "winSize_", ",", " ", "monNum_"}], "]"}], 
+    " ", ":=", " ", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"monFilenames", "[", 
+        RowBox[{
+         RowBox[{"fullTripleList", "[", 
+          RowBox[{"{", "#", "}"}], "]"}], ",", " ", "winSize", ",", 
+         "monNum"}], "]"}], " ", "&"}], " ", "/@", " ", "seshNums"}], "]"}]}],
+    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"allDetFilenames", "[", 
+     RowBox[{"seshNums_", ",", " ", 
+      RowBox[{"dummyArg1_:", "Null"}], ",", "  ", 
+      RowBox[{"dummyArg2_:", "Null"}]}], "]"}], " ", ":=", " ", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"detFilenames", "[", 
+        RowBox[{"fullTripleList", "[", 
+         RowBox[{"{", "#", "}"}], "]"}], "]"}], " ", "&"}], " ", "/@", " ", 
+      "seshNums"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"add", " ", "up", " ", "a", " ", "given", " ", 
+    RowBox[{"field", "'"}], "s", " ", "values", " ", "over", " ", 
+    "filenames"}], " ", "*)"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"countFromFiles", "[", 
+   RowBox[{"fieldName_", ",", " ", "filenames_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Plus", "@@", 
+   RowBox[{"(*", 
+    RowBox[{
+    "list", " ", "of", " ", "frame", " ", "numbers", " ", "from", " ", 
+     "each"}], "*)"}], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"getValueFromListOfPairs", "[", 
+       RowBox[{"#", ",", "fieldName"}], "]"}], "&"}], " ", "/@", " ", 
+     RowBox[{"(*", 
+      RowBox[{"list", " ", "of", " ", "all", " ", "stat", " ", "dicts"}], 
+      "*)"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"nameValuePairsFromFile", "/@", "filenames"}], 
+      RowBox[{"(*", 
+       RowBox[{"list", " ", "of", " ", "filenames"}], "*)"}], ")"}]}], 
+    ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.779797197687359*^9, 3.7797972112947607`*^9}, {
+  3.7797972691434107`*^9, 3.779797284839778*^9}, {3.779799957214439*^9, 
+  3.779799967431944*^9}, {3.7798006810191*^9, 3.779800700867865*^9}, {
+  3.779802818945931*^9, 3.779802833821684*^9}, {3.7798031940221357`*^9, 
+  3.7798031948972483`*^9}, {3.779803232360642*^9, 3.779803248470253*^9}, {
+  3.779803366295106*^9, 3.779803378318677*^9}, {3.779803422757595*^9, 
+  3.7798034243781424`*^9}, {3.779803972922091*^9, 3.779804068965845*^9}, {
+  3.78048868235128*^9, 3.7804887705263853`*^9}, {3.780488830026553*^9, 
+  3.780488832269253*^9}, {3.780494438378046*^9, 3.780494514247542*^9}, {
+  3.7804945553545523`*^9, 3.7804945994824257`*^9}, {3.780500921553327*^9, 
+  3.780501020899859*^9}, {3.780509468104968*^9, 3.780509586309216*^9}, {
+  3.780509642505625*^9, 3.780509740744244*^9}, {3.78051143902398*^9, 
+  3.780511445398732*^9}},
+ CellLabel->
+  "In[431]:=",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "get", " ", "estimated", " ", "monitor", " ", "numbers", " ", "from", " ", 
+    "precomputed", " ", "files"}], " ", "*)"}], " ", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{
-     RowBox[{"dataDirPathForSeshNum", "[", "seshNum_", "]"}], ":=", " ", 
-     RowBox[{"Switch", "[", 
-      RowBox[{
-      "seshNum", ",", " ", "All", ",", 
-       "\"\</home/ivan/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", 
-       ",", " ", "4", ",", " ", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_4_Sonar_\
-Nocontroller_8Aug2019/\>\"", ",", " ", "5", ",", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_5_Sonar_\
-Nocontroller_9Sept_2019/\>\"", ",", "6", ",", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_6_Sonar_\
-Nocontroller_23Sept_2019/\>\"", ",", "7", ",", " ", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_7_Sonar_\
-Nocontroller_3Oct_2019/\>\"", ",", "\[IndentingNewLine]", " ", "_", " ", ",", 
-       " ", 
-       RowBox[{"Throw", "[", 
-        RowBox[{"StringJoin", "[", 
-         RowBox[{"\"\<Unknown session number: \>\"", ",", " ", 
-          RowBox[{"ToString", "[", "seshNum", "]"}]}], "]"}], " ", "]"}]}], 
-      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-     RowBox[{
-     "a", " ", "hack", " ", "to", " ", "determine", " ", "different", " ", 
-      "spellings", " ", "of", " ", "Iteration_", "1", " ", "or", " ", 
-      "Iteration1"}], ",", " ", 
-     RowBox[{"given", " ", "session", " ", "info"}]}], " ", "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"iterationDirName", "[", "seshNum_", "]"}], ":=", " ", 
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{"seshNum", " ", "\[Equal]", " ", "4"}], ",", " ", 
-       "\"\<Iteration_\>\"", ",", " ", "\"\<Iteration\>\""}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-     RowBox[{
-     "a", " ", "hack", " ", "to", " ", "determine", " ", "complete", " ", 
-      "pairlists", " ", "for", " ", "each", " ", "session"}], ";", " ", 
-     RowBox[{"the", " ", "triples", " ", "are", " ", 
-      RowBox[{"(", 
-       RowBox[{"seshnum", ",", " ", "iternum", ",", " ", "detnum"}], 
-       ")"}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"fullTripleList", "[", "seshNums_", "]"}], ":=", " ", 
-     RowBox[{"Flatten", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"Switch", "[", 
-          RowBox[{"#", ",", " ", "4", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "4"}], " ", "*)"}], " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "4", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}]}], "]"}], ",", " ", "1"}], 
-             "]"}]}], ",", " ", "5", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "5"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "5", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "6", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "6"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "6", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "24"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "\[IndentingNewLine]", "7", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "7"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "7", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "39"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "\[IndentingNewLine]", " ", "_", ",", " ", 
-           RowBox[{"{", "}"}]}], "]"}], "&"}], " ", "/@", " ", "seshNums"}], 
-       ",", " ", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"fullTripleListNoRedun", "[", "seshNums_", "]"}], ":=", " ", 
-     RowBox[{"Flatten", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"Switch", "[", 
-          RowBox[{"#", ",", " ", "4", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "4"}], " ", "*)"}], " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "4", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", " ", "5", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "5"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "5", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "6", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "6"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "6", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "24"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "\[IndentingNewLine]", "7", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "7"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "7", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "39"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", " ", "_", ",", " ", 
-           RowBox[{"{", "}"}]}], "]"}], "&"}], " ", "/@", " ", "seshNums"}], 
-       ",", " ", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{
-    "*", " ", "monitor", " ", "and", " ", "detector", " ", "file", " ", 
-     "manipulations"}], " ", "***)"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"monFilenames", "[", 
-      RowBox[{"idtriplelist_", ",", " ", "winSize_"}], "]"}], " ", ":=", " ", 
-     
-     RowBox[{
-      RowBox[{
-       RowBox[{"StringJoin", "[", 
-        RowBox[{
-         RowBox[{"dataDirPathForSeshNum", "@", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-         RowBox[{"iterationDirName", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\</mon\>\"", 
-         ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", " ", "\"\<_\>\"", ",", 
-         
-         RowBox[{"ToString", "[", "winSize", "]"}], ",", " ", "\"\</iter\>\"",
-          ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\<_mondet\>\"",
-          ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", " ", "\"\<_\>\"", ",", 
-         
-         RowBox[{"ToString", "@", "winSize"}], ",", " ", 
-         "\"\<_estrates.txt\>\""}], "]"}], " ", "&"}], " ", "/@", 
-      "idtriplelist"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"detFilenames", "[", 
-      RowBox[{"idtriplelist_", ",", " ", 
-       RowBox[{"dummyArg_:", "Null"}]}], "]"}], " ", ":=", " ", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"StringJoin", "[", 
-        RowBox[{
-         RowBox[{"dataDirPathForSeshNum", "@", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-         RowBox[{"iterationDirName", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\</det\>\"", 
-         ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", " ", "\"\</iter\>\"", 
-         ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", 
-         "\"\<_both_det_estrates.txt\>\""}], "]"}], " ", "&"}], " ", "/@", 
-      "idtriplelist"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"allMonFilenames", "[", 
-      RowBox[{"seshNums_", ",", " ", "winSize_"}], "]"}], " ", ":=", " ", 
-     RowBox[{"Flatten", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"monFilenames", "[", 
-         RowBox[{
-          RowBox[{"fullTripleList", "[", 
-           RowBox[{"{", "#", "}"}], "]"}], ",", " ", "winSize"}], "]"}], " ", 
-        "&"}], " ", "/@", " ", "seshNums"}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"allDetFilenames", "[", 
-      RowBox[{"seshNums_", ",", " ", 
-       RowBox[{"dummyArg_:", "Null"}]}], "]"}], " ", ":=", " ", 
-     RowBox[{"Flatten", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"detFilenames", "[", 
-         RowBox[{"fullTripleList", "[", 
-          RowBox[{"{", "#", "}"}], "]"}], "]"}], " ", "&"}], " ", "/@", " ", 
-       "seshNums"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{"add", " ", "up", " ", "a", " ", "given", " ", 
-     RowBox[{"field", "'"}], "s", " ", "values", " ", "over", " ", 
-     "filenames"}], " ", "*)"}], " ", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"countFromFiles", "[", 
-     RowBox[{"fieldName_", ",", " ", "filenames_"}], "]"}], " ", ":=", " ", 
-    RowBox[{"Plus", "@@", 
-     RowBox[{"(*", 
-      RowBox[{
-      "list", " ", "of", " ", "frame", " ", "numbers", " ", "from", " ", 
-       "each"}], "*)"}], 
+     RowBox[{"getMonValues", "[", 
+      RowBox[{"dirPath_", ",", " ", "fieldName_", ",", 
+       RowBox[{"monNum_:", "1"}]}], "]"}], ":=", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{
         RowBox[{"getValueFromListOfPairs", "[", 
          RowBox[{"#", ",", "fieldName"}], "]"}], "&"}], " ", "/@", " ", 
-       RowBox[{"(*", 
-        RowBox[{"list", " ", "of", " ", "all", " ", "stat", " ", "dicts"}], 
-        "*)"}], " ", 
        RowBox[{"(", 
-        RowBox[{"nameValuePairsFromFile", "/@", "filenames"}], 
-        RowBox[{"(*", 
-         RowBox[{"list", " ", "of", " ", "filenames"}], "*)"}], ")"}]}], 
-      ")"}]}]}]}]}]], "Input",
- CellChangeTimes->{{3.779797197687359*^9, 3.7797972112947607`*^9}, {
-  3.7797972691434107`*^9, 
-  3.779797284839778*^9}},ExpressionUUID->"33d198df-caee-4fb1-a933-\
-723c9412c073"],
+        RowBox[{"nameValuePairsFromFile", "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringJoin", "[", 
+             RowBox[{"dirPath", ",", "\"\<mon\>\"", ",", " ", 
+              RowBox[{"ToString", "@", "monNum"}], ",", "\"\<_\>\"", ",", " ", 
+              RowBox[{"ToString", "@", "#"}], ",", " ", 
+              "\"\<_estrate_stats.txt\>\""}], "]"}], "&"}], " ", "/@", " ", 
+           RowBox[{"Range", "[", 
+            RowBox[{"(*", 
+             RowBox[{
+              RowBox[{"hack", ":", " ", 
+               RowBox[{"mon11", " ", "starts", " ", "from", " ", "1"}]}], ",",
+               " ", 
+              RowBox[{"mon1", " ", "starts", " ", "from", " ", "2"}]}], 
+             "*)"}], " ", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"monNum", "\[Equal]", "11"}], ",", " ", "1", ",", 
+               "2"}], "]"}], ",", " ", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"monNum", "\[Equal]", "11"}], ",", "29", ",", "30"}], 
+              "]"}]}], "]"}]}], ")"}]}], " ", ")"}]}], ")"}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7803456759578114`*^9, 3.780345695874979*^9}, {
+   3.780501041100082*^9, 3.780501071110568*^9}, 3.780505947001453*^9, {
+   3.780506205941003*^9, 3.780506255179936*^9}, {3.78050950030315*^9, 
+   3.780509501790839*^9}, {3.780578111043647*^9, 3.7805781293754597`*^9}, 
+   3.780580175919327*^9},ExpressionUUID->"6670363b-e9ad-4531-a3e8-\
+3f46b12cd9dc"],
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.7797972389015207`*^9, 
-  3.779797239961187*^9}},ExpressionUUID->"ea4b679a-312a-4e4c-9ed8-\
-170b82588652"]
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"**", " ", "PREDICTION"}], "-", "RELATED"}], " ", "***)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Clear", "[", 
+     RowBox[{"predFNRfromData", ",", "predFPRfromData"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"generic", " ", "prediction", " ", "functions"}], " ", "*)"}], 
+   "  ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"predFNRfromData", "[", 
+      RowBox[{"tripleIdList_", ",", "detOrMonfilenameFn_", ",", " ", 
+       RowBox[{"monWinSize_:", "-", "1"}], ",", " ", 
+       RowBox[{"monNum_:", "-", "1"}]}], " ", "]"}], ":=", " ", 
+     RowBox[{
+      RowBox[{"countFromFiles", "[", " ", 
+       RowBox[{"\"\<FNcount\>\"", ",", 
+        RowBox[{"detOrMonfilenameFn", "[", 
+         RowBox[{"tripleIdList", ",", " ", "monWinSize", ",", "monNum"}], 
+         "]"}]}], "]"}], "/", " ", 
+      RowBox[{"countFromFiles", "[", " ", 
+       RowBox[{"\"\<h1count\>\"", ",", 
+        RowBox[{"detOrMonfilenameFn", "[", 
+         RowBox[{"tripleIdList", ",", "monWinSize", ",", "monNum"}], "]"}]}], 
+       "]"}]}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"predFPRfromData", "[", 
+      RowBox[{"tripleIdList_", ",", "detOrMonfilenameFn_", ",", " ", 
+       RowBox[{"monWinSize_:", "-", "1"}], ",", " ", 
+       RowBox[{"monNum_:", "-", "1"}]}], " ", "]"}], ":=", " ", 
+     RowBox[{
+      RowBox[{"countFromFiles", "[", " ", 
+       RowBox[{"\"\<FPcount\>\"", ",", 
+        RowBox[{"detOrMonfilenameFn", "[", 
+         RowBox[{"tripleIdList", ",", " ", "monWinSize", ",", "monNum"}], 
+         "]"}]}], "]"}], "/", " ", 
+      RowBox[{"countFromFiles", "[", " ", 
+       RowBox[{"\"\<h0count\>\"", ",", 
+        RowBox[{"detOrMonfilenameFn", "[", 
+         RowBox[{"tripleIdList", ",", "monWinSize", ",", "monNum"}], "]"}]}], 
+       "]"}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.780509835994439*^9, 3.7805098522289762`*^9}, {
+   3.780509935552655*^9, 3.780509939221133*^9}, {3.7805108146155977`*^9, 
+   3.7805108433346453`*^9}, 3.7805119263246*^9},
+ CellLabel->
+  "In[472]:=",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"**", " ", 
+    RowBox[{"SAMPLING", ":", " ", 
+     RowBox[{
+     "WITH", " ", "REPLACEMENT", " ", "FOR", " ", "EACH", " ", "SUBSET"}]}]}],
+    " ", "***)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Clear", "[", 
+     RowBox[{
+     "randomTripleSample", ",", " ", "randomTripleSampleSubsetSize", ",", " ",
+       "sampleAcrossAllSubsets"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "returns", " ", "totalSampleCt", " ", "of", " ", "random", " ", "triple", 
+     " ", "lists", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"unique", " ", "within", " ", "each", " ", "list"}], ",", " ", 
+       
+       RowBox[{
+        RowBox[{"aka", " ", "without"}], "-", "replacement"}]}], ")"}], " ", 
+     "triples", " ", "from", " ", "the", " ", "specified", " ", "sessions", 
+     " ", 
+     RowBox[{"(", 
+      RowBox[{"with", "-", 
+       RowBox[{"replacement", " ", "across", " ", "lists"}]}], ")"}]}], " ", 
+    "*)"}], " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"randomTripleSample", "[", 
+     RowBox[{"seshNums_", ",", " ", "totalSampleCt_"}], "]"}], ":=", " ", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tripleList", " ", "=", 
+        RowBox[{"fullTripleListNoRedun", "[", "seshNums", "]"}]}], " ", "}"}],
+       ",", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "list", " ", "of", " ", "lists", " ", "of", " ", "subsets", " ", "of",
+          " ", "possible", " ", "sets", " ", "of", " ", "pairs", 
+         "\[IndentingNewLine]", 
+         RowBox[{"aka", ":", " ", 
+          RowBox[{"{", "   ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"subsetsize", ",", " ", "triplelist"}], "}"}], ",", " ", 
+            
+            RowBox[{"{", 
+             RowBox[{"subsetsize", ",", " ", "triplelist", ",", " ", "..."}], 
+             "}"}]}], "   ", "}"}]}]}], " ", "*)"}], " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Subsets", "[", 
+           RowBox[{"tripleList", ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", " ", 
+              RowBox[{"Length", "@", "tripleList"}]}], "}"}], ",", 
+            RowBox[{"{", "#", "}"}]}], "]"}], " ", "&"}], "/@", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"getting", " ", "random", " ", "subsets"}], " ", "*)"}], 
+         "  ", 
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", 
+             RowBox[{"(*", 
+              RowBox[{"all", " ", "subsets"}], " ", "*)"}], 
+             RowBox[{"subsetCt", "[", "tripleList", "]"}]}], 
+            "\[IndentingNewLine]", "}"}], ",", "totalSampleCt"}], "]"}]}], 
+        ",", "1"}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"returns", " ", "totalSampleCt", " ", "samples"}], ",", " ", 
+     RowBox[{
+     "with", " ", "subsetSize", " ", "triples", " ", "in", " ", "each"}]}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"randomTripleSampleSubsetSize", "[", 
+      RowBox[{
+      "seshNums_", ",", " ", "totalSampleCt_", ",", " ", "subsetSize_"}], 
+      "]"}], " ", ":=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subsets", "[", 
+        RowBox[{
+         RowBox[{"fullTripleListNoRedun", "@", "seshNums"}], ",", " ", 
+         RowBox[{"{", "subsetSize", "}"}], ",", 
+         RowBox[{"{", "#", "}"}]}], "]"}], " ", "&"}], "/@", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "getting", " ", "samplesPerSubsetSize", " ", "random", " ", 
+        "subsets"}], " ", "*)"}], "  ", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", 
+          RowBox[{"(*", 
+           RowBox[{"counting", " ", "subsets"}], " ", "*)"}], 
+          RowBox[{"subsetCtOfSize", "[", 
+           RowBox[{
+            RowBox[{"fullTripleListNoRedun", "@", "seshNums"}], ",", " ", 
+            "subsetSize"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+        "totalSampleCt"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"a", " ", "list", " ", "of", " ", "samples"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "from", " ", "min", " ", "to", " ", "max", " ", "subset", " ", "size", 
+       " ", "in", " ", "seshnums"}], ";", " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "without", " ", "creating", " ", "an", " ", "extra", " ", "layer", " ",
+         "to", " ", "differentiate", " ", "the", " ", "sizes"}], ")"}]}]}], 
+    " ", "*)"}], " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sampleAcrossAllSubsets", "[", 
+      RowBox[{"seshNums_", ",", " ", "sampleCtPerSubset_"}], "]"}], ":=", " ", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"randomTripleSampleSubsetSize", "[", 
+          RowBox[{"seshNums", ",", "sampleCtPerSubset", ",", " ", "#"}], 
+          "]"}], " ", "&"}], " ", "/@", " ", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", " ", 
+          RowBox[{"Length", "@", 
+           RowBox[{"fullTripleListNoRedun", "@", "seshNums"}]}]}], "]"}]}], 
+       " ", ",", "2"}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.779800350689307*^9, 3.7798003768729477`*^9}, {
+   3.7798004738101053`*^9, 3.7798005362425613`*^9}, 3.779800582123877*^9, 
+   3.779800720450501*^9, {3.7798009346915607`*^9, 3.7798009377273197`*^9}, {
+   3.7798009880382013`*^9, 3.779801023559744*^9}, {3.779801097302924*^9, 
+   3.77980110550618*^9}, {3.7798015863480663`*^9, 3.779801591111887*^9}, {
+   3.779801807724401*^9, 3.77980181528013*^9}, {3.7798019206587963`*^9, 
+   3.779801939850236*^9}, 3.779801977985067*^9},
+ CellLabel->
+  "In[451]:=",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
 },
 WindowSize->{651, 713},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -515,12 +889,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 926, 22, 207, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
-Cell[1487, 44, 3274, 80, 655, "Input",ExpressionUUID->"c767961d-4183-41aa-bf0d-96ce59653f50"],
-Cell[4764, 126, 916, 23, 179, "Input",ExpressionUUID->"f7454907-edc0-47d0-966b-bf93f2b4b936"],
-Cell[5683, 151, 446, 11, 123, "Input",ExpressionUUID->"4093273c-d1dc-4a1a-8ffb-b3a1a2802c6f"],
-Cell[6132, 164, 13401, 329, 2783, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
-Cell[19536, 495, 154, 3, 38, "Input",ExpressionUUID->"ea4b679a-312a-4e4c-9ed8-170b82588652"]
+Cell[558, 20, 1017, 23, 207, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
+Cell[1578, 45, 23107, 571, 5163, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
+Cell[24688, 618, 2165, 50, 403, "Input",ExpressionUUID->"6670363b-e9ad-4531-a3e8-3f46b12cd9dc"],
+Cell[26856, 670, 2285, 52, 627, "Input",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
+Cell[29144, 724, 5941, 148, 1355, "Input",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
 }
 ]
 *)
