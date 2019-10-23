@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7696,        203]
-NotebookOptionsPosition[      7377,        189]
-NotebookOutlinePosition[      7741,        205]
-CellTagsIndexPosition[      7698,        202]
+NotebookDataLength[      8015,        210]
+NotebookOptionsPosition[      7698,        196]
+NotebookOutlinePosition[      8060,        212]
+CellTagsIndexPosition[      8017,        209]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,7 +30,10 @@ Cell[BoxData[
      RowBox[{"chartHorLine", "[", 
       RowBox[{"yLineValue_", ",", " ", "maxX_", ",", " ", 
        RowBox[{"minX_:", "0"}], ",", " ", 
-       RowBox[{"color_:", "Green"}]}], "]"}], " ", ":=", " ", 
+       RowBox[{"color_:", 
+        RowBox[{"Darker", "@", "Green"}]}], ",", " ", 
+       RowBox[{"extraStyle_:", 
+        RowBox[{"{", " ", "Dashed", "}"}]}]}], "]"}], " ", ":=", " ", 
      RowBox[{"ListLinePlot", "[", 
       RowBox[{
        RowBox[{"Inner", "[", 
@@ -43,9 +46,10 @@ Cell[BoxData[
           RowBox[{"yLineValue", ",", " ", "3"}], "]"}], ",", " ", "List"}], 
         "]"}], ",", " ", 
        RowBox[{"PlotStyle", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"color", ",", " ", "Dotted"}], "}"}]}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", "color", "}"}], ",", " ", "extraStyle"}], "]"}]}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"chartVertLine", "[", 
@@ -66,7 +70,7 @@ Cell[BoxData[
        RowBox[{"PlotStyle", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{"color", ",", " ", "Dotted"}], "}"}]}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{
@@ -181,14 +185,17 @@ ySmf1tdAA21j9B6gVMzzIbKus6bwGCuWszPLWfz3N54tzeoixcYyEGPVEeohhKKTZWMcL6dWEXMEAs\
 ZEeC+G5wSl0IX27GyEX0r8nCrLfxztBtz5sjQryY6EgTUZRiL29mOm8xEGe/Q1ykZxptmeo/\
 wEBvbZm\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.7798045196925383`*^9, 3.779804531140089*^9}, {
-  3.779804564867461*^9, 3.779804578991938*^9}, {3.779807851847736*^9, 
-  3.7798078575852547`*^9}, {3.779813771029497*^9, 3.779813793722501*^9}, {
-  3.779813871479425*^9, 3.779813873182148*^9}, {3.779814239779872*^9, 
-  3.779814240438325*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+   3.779804564867461*^9, 3.779804578991938*^9}, {3.779807851847736*^9, 
+   3.7798078575852547`*^9}, {3.779813771029497*^9, 3.779813793722501*^9}, {
+   3.779813871479425*^9, 3.779813873182148*^9}, {3.779814239779872*^9, 
+   3.779814240438325*^9}, {3.780829096376368*^9, 3.7808290972707787`*^9}, {
+   3.780831458013773*^9, 3.780831482062237*^9}, 3.780831971273*^9, {
+   3.780832342598769*^9, 
+   3.780832376806381*^9}},ExpressionUUID->"7f0a5505-5452-4953-b962-\
+bab1f8893ec8"]
 },
-WindowSize->{651, 711},
-WindowMargins->{{150, Automatic}, {0, Automatic}},
+WindowSize->{651, 713},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -204,7 +211,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6815, 167, 1524, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+Cell[558, 20, 7136, 174, 1524, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
 }
 ]
 *)
