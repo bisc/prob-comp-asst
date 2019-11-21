@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     35795,        892]
-NotebookOptionsPosition[     35089,        874]
-NotebookOutlinePosition[     35451,        890]
-CellTagsIndexPosition[     35408,        887]
+NotebookDataLength[     37285,        936]
+NotebookOptionsPosition[     36576,        918]
+NotebookOutlinePosition[     36941,        934]
+CellTagsIndexPosition[     36898,        931]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,36 +23,42 @@ Cell[BoxData[
   RowBox[{"(*", " ", 
    RowBox[{
    "This", " ", "notebook", " ", "contains", " ", "file", " ", "operations", 
-    " ", "and", " ", "constants"}], " ", "*)"}], " ", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", 
+    " ", "and", " ", 
+    RowBox[{"constants", ".", " ", "Primarily"}], " ", "focused", " ", "on", 
+    " ", "interactions", " ", "with", " ", 
+    RowBox[{"analysis", "/", "statistics"}], " ", "files"}], " ", "*)"}], " ",
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"TO", " ", "ADD", " ", "TO", " ", "OTHER", " ", 
+    RowBox[{"TO", " ", "INCLUDE", " ", "IN", " ", "OTHER", " ", 
      RowBox[{"PLACES", ":", " ", 
       RowBox[{"NotebookEvaluate", "[", 
        RowBox[{"NotebookOpen", "[", 
         RowBox[{"StringJoin", "[", 
          RowBox[{
           RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-          "\"\<file-ops.nb\>\""}], "]"}], "]"}], "]"}]}]}], ";"}], 
+          "\"\<file-ops.nb\>\""}], "]"}], "]"}], "]"}]}]}], ";"}], " ", 
    "*)"}]}]], "Input",
  CellChangeTimes->{{3.779796517594421*^9, 3.7797965283309097`*^9}, {
    3.7797966217198763`*^9, 3.779796625172078*^9}, {3.779796732085595*^9, 
    3.7797967413330793`*^9}, {3.779797138093191*^9, 3.779797139732355*^9}, {
-   3.7798003138088837`*^9, 3.779800314143165*^9}, 3.780500691626165*^9},
+   3.7798003138088837`*^9, 3.779800314143165*^9}, 3.780500691626165*^9, {
+   3.783344891459175*^9, 3.783344915480155*^9}, {3.78334502012916*^9, 
+   3.783345026241012*^9}},
  CellLabel->
-  "In[430]:=",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
+  "In[113]:=",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{"Clear", "[", 
    RowBox[{
    "nameValuePairsFromFile", ",", "getValueFromListOfPairs", ",", 
-    "tallyInfoInTriplesets", ",", " ", "subsetCt", ",", "subsetCtOfSize", ",",
-     " ", "monFilenames", ",", "  ", "allMonFilenames", ",", " ", 
-    "detFilenames", ",", " ", "allDetFilenames", ",", " ", "iterationDirName",
-     ",", " ", "countFromFiles"}], "]"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
+    "tallyInfoInTriplesets", ",", "fullTripleListNoRedun", ",", " ", 
+    "fullTripleListWithRedun", ",", " ", "subsetCt", ",", "subsetCtOfSize", 
+    ",", " ", "monFilenames", ",", "  ", "allMonFilenames", ",", " ", 
+    "detFilenames", ",", " ", "allDetFilenames", ",", "binDetFilenames", ",", 
+    " ", "allBinDetFilenames", ",", " ", "iterationDirName", ",", " ", 
+    "countFromFiles"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"returns", " ", "a", " ", "list", " ", "of", " ", "pairs", " ", 
@@ -185,11 +191,12 @@ Cell[BoxData[{
   "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"BEFORE", " ", 
-     RowBox[{"CORRECTION", ":", " ", 
-      RowBox[{"session", " ", "number"}]}]}], " ", "\[Rule]", " ", 
-    RowBox[{"data", " ", "directory", " ", "for", " ", "it"}]}], " ", "*)"}], 
-  " "}], "\[IndentingNewLine]", 
+    RowBox[{"BEFORE", " ", "CORRECTION"}], ",", " ", 
+    RowBox[{
+     RowBox[{"DEPRECATED", ":", " ", 
+      RowBox[{"session", " ", "number"}]}], " ", "\[Rule]", " ", 
+     RowBox[{"data", " ", "directory", " ", "for", " ", "it"}]}]}], " ", 
+   "*)"}], " "}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -269,7 +276,7 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
  RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"fullTripleList", "[", "seshNums_", "]"}], ":=", " ", 
+    RowBox[{"fullTripleListWithRedun", "[", "seshNums_", "]"}], ":=", " ", 
     RowBox[{"Flatten", "[", 
      RowBox[{
       RowBox[{
@@ -548,6 +555,34 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
  RowBox[{
   RowBox[{
    RowBox[{
+    RowBox[{"binDetFilenames", "[", "idtriplelist_", "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+        RowBox[{"dataDirPathForSeshNumPostCorr", "@", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"iterationDirName", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", "\"\</det\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", " ", "\"\</iter\>\"", 
+        ",", " ", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", " ", 
+        "\"\<_both_det_bin.csv\>\""}], "]"}], " ", "&"}], " ", "/@", 
+     "idtriplelist"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
     RowBox[{"allMonFilenames", "[", 
      RowBox[{"seshNums_", ",", " ", "winSize_", ",", " ", "monNum_"}], "]"}], 
     " ", ":=", " ", 
@@ -556,7 +591,7 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
       RowBox[{
        RowBox[{"monFilenames", "[", 
         RowBox[{
-         RowBox[{"fullTripleList", "[", 
+         RowBox[{"fullTripleListNoRedun", "[", 
           RowBox[{"{", "#", "}"}], "]"}], ",", " ", "winSize", ",", 
          "monNum"}], "]"}], " ", "&"}], " ", "/@", " ", "seshNums"}], "]"}]}],
     ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
@@ -571,7 +606,19 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
      RowBox[{
       RowBox[{
        RowBox[{"detFilenames", "[", 
-        RowBox[{"fullTripleList", "[", 
+        RowBox[{"fullTripleListNoRedun", "[", 
+         RowBox[{"{", "#", "}"}], "]"}], "]"}], " ", "&"}], " ", "/@", " ", 
+      "seshNums"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"allBinDetFilenames", "[", "seshNums_", "]"}], ":=", " ", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"binDetFilenames", "[", 
+        RowBox[{"fullTripleListNoRedun", "[", 
          RowBox[{"{", "#", "}"}], "]"}], "]"}], " ", "&"}], " ", "/@", " ", 
       "seshNums"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]", 
@@ -600,21 +647,17 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
       RowBox[{"(*", 
        RowBox[{"list", " ", "of", " ", "filenames"}], "*)"}], ")"}]}], 
     ")"}]}]}]}], "Input",
- CellChangeTimes->{{3.779797197687359*^9, 3.7797972112947607`*^9}, {
-  3.7797972691434107`*^9, 3.779797284839778*^9}, {3.779799957214439*^9, 
-  3.779799967431944*^9}, {3.7798006810191*^9, 3.779800700867865*^9}, {
-  3.779802818945931*^9, 3.779802833821684*^9}, {3.7798031940221357`*^9, 
-  3.7798031948972483`*^9}, {3.779803232360642*^9, 3.779803248470253*^9}, {
-  3.779803366295106*^9, 3.779803378318677*^9}, {3.779803422757595*^9, 
-  3.7798034243781424`*^9}, {3.779803972922091*^9, 3.779804068965845*^9}, {
-  3.78048868235128*^9, 3.7804887705263853`*^9}, {3.780488830026553*^9, 
-  3.780488832269253*^9}, {3.780494438378046*^9, 3.780494514247542*^9}, {
-  3.7804945553545523`*^9, 3.7804945994824257`*^9}, {3.780500921553327*^9, 
-  3.780501020899859*^9}, {3.780509468104968*^9, 3.780509586309216*^9}, {
-  3.780509642505625*^9, 3.780509740744244*^9}, {3.78051143902398*^9, 
-  3.780511445398732*^9}},
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQfePfVskUzTeO6/IypUH0pWlLlEB02f1ZKiB6/Z1l
+RalAuubS22IQXTFH4SyI7j06+zyIFnSNu5EGpG28rW6B6LCtDuzpQNppWwyY
+Tuzi5gHRATz8fCC6qfCkDIieZeQlB6It7G4og+h9kjwqIPpo49wMEG3yYl4J
+iN5g6713q9YbR7UbASdAdNvNA+dB9I65HBdA9BeJMz07gPTd1+7TQHRdRPZs
+EM1R8H4BiL69xXD7biC99PScwyD6WXTz4/1AWvKp5ycQLaIX8BNE37wwnfUA
+kC468uAmiM46tOYWiD5xbIqCiQ4wHDr7NUB0Hz+roaHBG0c9ZlcwvWr64wAQ
+vTLKLxxEAwDxvaIp
+  "],
  CellLabel->
-  "In[431]:=",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
+  "In[114]:=",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -665,8 +708,9 @@ Cell[BoxData[
    3.780501041100082*^9, 3.780501071110568*^9}, 3.780505947001453*^9, {
    3.780506205941003*^9, 3.780506255179936*^9}, {3.78050950030315*^9, 
    3.780509501790839*^9}, {3.780578111043647*^9, 3.7805781293754597`*^9}, 
-   3.780580175919327*^9},ExpressionUUID->"6670363b-e9ad-4531-a3e8-\
-3f46b12cd9dc"],
+   3.780580175919327*^9},
+ CellLabel->
+  "In[132]:=",ExpressionUUID->"6670363b-e9ad-4531-a3e8-3f46b12cd9dc"],
 
 Cell[BoxData[
  RowBox[{
@@ -720,7 +764,7 @@ Cell[BoxData[
    3.780509935552655*^9, 3.780509939221133*^9}, {3.7805108146155977`*^9, 
    3.7805108433346453`*^9}, 3.7805119263246*^9},
  CellLabel->
-  "In[472]:=",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
+  "In[133]:=",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
 
 Cell[BoxData[
  RowBox[{
@@ -870,10 +914,10 @@ Cell[BoxData[
    3.779801807724401*^9, 3.77980181528013*^9}, {3.7798019206587963`*^9, 
    3.779801939850236*^9}, 3.779801977985067*^9},
  CellLabel->
-  "In[451]:=",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
+  "In[136]:=",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
 },
-WindowSize->{651, 713},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowSize->{684, 740},
+WindowMargins->{{Automatic, -684}, {0, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -889,11 +933,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1017, 23, 207, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
-Cell[1578, 45, 23107, 571, 5163, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
-Cell[24688, 618, 2165, 50, 403, "Input",ExpressionUUID->"6670363b-e9ad-4531-a3e8-3f46b12cd9dc"],
-Cell[26856, 670, 2285, 52, 627, "Input",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
-Cell[29144, 724, 5941, 148, 1355, "Input",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
+Cell[558, 20, 1299, 28, 235, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
+Cell[1860, 50, 24286, 609, 5443, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
+Cell[26149, 661, 2191, 51, 347, "Input",ExpressionUUID->"6670363b-e9ad-4531-a3e8-3f46b12cd9dc"],
+Cell[28343, 714, 2285, 52, 571, "Input",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
+Cell[30631, 768, 5941, 148, 1243, "Input",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"]
 }
 ]
 *)
