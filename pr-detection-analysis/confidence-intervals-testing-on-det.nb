@@ -10816,7 +10816,7 @@ q9Y87uF3CFN+aPaiR/6j3VGcdrZf/9OegCTMniw57Oy3gv93+N+haqjd
 }, Open  ]]
 },
 WindowSize->{651, 711},
-WindowMargins->{{Automatic, 289}, {72, Automatic}},
+WindowMargins->{{Automatic, 289}, {42, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
