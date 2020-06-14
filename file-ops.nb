@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     49063,       1227]
-NotebookOptionsPosition[     48353,       1209]
-NotebookOutlinePosition[     48720,       1225]
-CellTagsIndexPosition[     48677,       1222]
+NotebookDataLength[     45920,       1154]
+NotebookOptionsPosition[     45216,       1136]
+NotebookOutlinePosition[     45578,       1152]
+CellTagsIndexPosition[     45535,       1149]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,8 +30,10 @@ Cell[BoxData[
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"TO", " ", "INCLUDE", " ", "IN", " ", "OTHER", " ", 
-     RowBox[{"PLACES", ":", " ", 
+    RowBox[{
+    "TO", " ", "AUTOMATICALLY", " ", "INCLUDE", " ", "IN", " ", "OTHER", " ", 
+     
+     RowBox[{"NOTEBOOKS", ":", " ", 
       RowBox[{"NotebookEvaluate", "[", 
        RowBox[{"NotebookOpen", "[", 
         RowBox[{"StringJoin", "[", 
@@ -44,8 +46,9 @@ Cell[BoxData[
    3.7797967413330793`*^9}, {3.779797138093191*^9, 3.779797139732355*^9}, {
    3.7798003138088837`*^9, 3.779800314143165*^9}, 3.780500691626165*^9, {
    3.783344891459175*^9, 3.783344915480155*^9}, {3.78334502012916*^9, 
-   3.783345026241012*^9}},
- CellLabel->"In[31]:=",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
+   3.783345026241012*^9}, {3.8011591733426323`*^9, 
+   3.801159191451456*^9}},ExpressionUUID->"8aeb13c7-0371-42f5-b096-\
+7bfbd1422600"],
 
 Cell[BoxData[{
  RowBox[{
@@ -63,6 +66,11 @@ Cell[BoxData[{
     "binMonFilenames", ",", " ", "allStatelessBinMonFilenames", ",", " ", 
     "iterationDirName", ",", " ", "countFromFiles", ",", " ", 
     "getMonValues"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"**", " ", "General"}], " ", "file", " ", "operations"}], " ", 
+   "***)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"returns", " ", "a", " ", "list", " ", "of", " ", "pairs", " ", 
@@ -208,41 +216,25 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"**", " ", "Monitoring"}], " ", "pipeline", " ", "dataset"}], 
     "-", 
-    RowBox[{"specific", " ", "operations"}]}], " ", "***)"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+    "specific", " ", "operations", " ", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "Monitor", " ", 
+     RowBox[{"IDs", ":", " ", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"-", " ", "pipeline"}], " ", "recovery", " ", 
+       RowBox[{"(", "PR", ")"}]}], ":", " ", 
+      RowBox[{"1", "\[IndentingNewLine]", "-", " ", 
+       RowBox[{"reliable", " ", "following", " ", 
+        RowBox[{"(", "RF", ")"}]}]}], ":", " ", "11"}]}]}], 
+   "\[IndentingNewLine]", "***)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"BEFORE", " ", "CORRECTION"}], ",", " ", 
     RowBox[{
-     RowBox[{"DEPRECATED", ":", " ", 
-      RowBox[{"session", " ", "number"}]}], " ", "\[Rule]", " ", 
-     RowBox[{"data", " ", "directory", " ", "for", " ", "it"}]}]}], " ", 
-   "*)"}], " ", "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dataDirPathForSeshNumPreCorr", "[", "seshNum_", "]"}], ":=", 
-     " ", 
-     RowBox[{"Switch", "[", 
-      RowBox[{
-      "seshNum", ",", " ", "All", ",", 
-       "\"\</home/ivan/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", 
-       ",", " ", "4", ",", " ", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_4_Sonar_\
-Nocontroller_8Aug2019/\>\"", ",", " ", "5", ",", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_5_Sonar_\
-Nocontroller_9Sept_2019/\>\"", ",", "6", ",", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_6_Sonar_\
-Nocontroller_23Sept_2019/\>\"", ",", "7", ",", " ", 
-       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_7_Sonar_\
-Nocontroller_3Oct_2019/\>\"", ",", "\[IndentingNewLine]", " ", "_", " ", ",", 
-       " ", 
-       RowBox[{"Throw", "[", 
-        RowBox[{"StringJoin", "[", 
-         RowBox[{"\"\<Unknown session number: \>\"", ",", " ", 
-          RowBox[{"ToString", "[", "seshNum", "]"}]}], "]"}], " ", "]"}]}], 
-      "]"}]}], ";"}], "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
-
+    "HARDCODED", " ", "directories", " ", "for", " ", "UUV", " ", "data"}], 
+    ";", " ", 
+    RowBox[{"change", " ", "for", " ", "your", " ", "machine"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -251,8 +243,8 @@ Nocontroller_3Oct_2019/\>\"", ",", "\[IndentingNewLine]", " ", "_", " ", ",",
     RowBox[{"Switch", "[", 
      RowBox[{
      "seshNum", ",", " ", "All", ",", 
-      "\"\</home/ivan/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", 
-      ",", " ", "4", ",", " ", 
+      "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/\>\"", ",", " ", 
+      "4", ",", " ", 
       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_4_Sonar_\
 Nocontroller_8Aug2019/\>\"", ",", " ", "5", ",", 
       "\"\<~/Dropbox/upenn/research/aa/monitoring_data/data/Session_5_Sonar_\
@@ -310,8 +302,10 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
      "spellings", " ", "of", " ", "Iteration_", "1", " ", "or", " ", 
      "Iteration1"}], ",", " ", 
     RowBox[{"given", " ", "session", " ", 
-     RowBox[{"info", " ", "--"}], " ", "not", " ", "useful", " ", "anymore"}],
-     ",", " ", "disabled"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+     RowBox[{"info", " ", "\[IndentingNewLine]", "--"}], " ", "not", " ", 
+     "useful", " ", "anymore"}], ",", " ", 
+    RowBox[{"disabled", " ", "the", " ", "hack"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -326,101 +320,27 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{
-    "this", " ", "determines", " ", "complete", " ", "pairlists", " ", "for", 
-     " ", "each", " ", "session"}], ";", " ", 
-    RowBox[{"the", " ", "triples", " ", "are", " ", 
-     RowBox[{"(", 
-      RowBox[{"seshnum", ",", " ", "iternum", ",", " ", "detnum"}], ")"}], 
-     "\[IndentingNewLine]", "NOT", " ", "INDICATING", " ", "MONITOR", " ", 
-     "NUMBER", " ", "HERE"}]}], " ", "*)"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"DEPRECATED", " ", "-", " ", 
-    RowBox[{
-    "this", " ", "is", " ", "a", " ", "triple", " ", "list", " ", "with", " ",
-      "redundancies"}]}], " ", "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"fullTripleListWithRedun", "[", "seshNums_", "]"}], ":=", " ", 
-     RowBox[{"Flatten", "[", 
+     RowBox[{
+     "this", " ", "determines", " ", "complete", " ", "pairlists", " ", "for",
+       " ", "each", " ", "session"}], ";", " ", 
+     RowBox[{"the", " ", "triples", " ", "are", " ", 
       RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"Switch", "[", 
-          RowBox[{"#", ",", " ", "4", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "4"}], " ", "*)"}], " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "4", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}]}], "]"}], ",", " ", "1"}], 
-             "]"}]}], ",", " ", "5", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "5"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "5", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "5"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "6", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "6"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "6", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "24"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "\[IndentingNewLine]", "7", ",", 
-           RowBox[{"(*", " ", 
-            RowBox[{"for", " ", "session", " ", "7"}], " ", "*)"}], 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Join", "[", 
-              RowBox[{
-               RowBox[{"{", "7", "}"}], ",", " ", "#"}], "]"}], "&"}], " ", "/@",
-             " ", 
-            RowBox[{"Flatten", "[", 
-             RowBox[{
-              RowBox[{"Outer", "[", 
-               RowBox[{"List", ",", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{"1", ",", "39"}], "]"}], ",", 
-                RowBox[{"{", "1", "}"}]}], "]"}], ",", " ", "1"}], "]"}]}], 
-           ",", "\[IndentingNewLine]", " ", "_", ",", " ", 
-           RowBox[{"{", "}"}]}], "]"}], "&"}], " ", "/@", " ", "seshNums"}], 
-       ",", " ", "1"}], "]"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
+       RowBox[{"(", 
+        RowBox[{"seshnum", ",", " ", "iternum", ",", " ", "detnum"}], ")"}], 
+       ".", " ", "This"}], " ", "is", " ", "a", " ", "basic", " ", 
+      "datastructure", " ", "to", " ", "refer", " ", "to", " ", "a", " ", 
+      "trace", " ", "of", " ", "values"}], ";", " ", "\[IndentingNewLine]", 
+     RowBox[{
+     "NOT", " ", "INDICATING", " ", "MONITOR", " ", "NUMBER", " ", "HERE"}]}],
+     ",", " ", 
+    RowBox[{"it", " ", "is", " ", "input", " ", "separately"}]}], " ", "*)"}],
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
    "This", " ", "is", " ", "a", " ", "triple", " ", "list", " ", "without", 
-    " ", "redundancies", " ", "\[IndentingNewLine]", "NOT", " ", "INDICATING",
-     " ", "MONITOR", " ", "NUMBER"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+    " ", "data", " ", "redundancies", " ", "\[IndentingNewLine]", "NOT", " ", 
+    "INDICATING", " ", "MONITOR", " ", "NUMBER"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -625,8 +545,7 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
   RowBox[{"(*", 
    RowBox[{
    "*", " ", "monitor", " ", "and", " ", "detector", " ", "file", " ", 
-    "manipulations"}], " ", "***)"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    "manipulations"}], " ", "***)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -772,10 +691,12 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
        "&"}], " ", "/@", " ", "seshNums"}], "]"}]}], ";"}], 
   "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
-   RowBox[{"filenames", " ", "with", " ", "CSVs", " ", 
-    RowBox[{"(", 
-     RowBox[{"or", ",", " ", "binary"}], ")"}]}], " ", "*)"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"filenames", " ", "with", " ", "CSVs", " ", 
+     RowBox[{"(", 
+      RowBox[{"or", ",", " ", "binary"}], ")"}]}], ",", " ", 
+    RowBox[{"for", " ", "exporting", " ", "the", " ", "data"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -977,19 +898,20 @@ Nocontroller_3Oct_2019_corrected/\>\"", ",", "\[IndentingNewLine]", " ", "_",
                "monID"}], "  ", "]"}]}], "]"}]}], "]"}]}], ")"}]}], " ", 
       ")"}]}], ")"}]}], ";"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJwd0GtIU2EAxvFhUw+0tqLQhiWrRq5ho4WFdHWiiZfsJLRMh5SpXRRzK2vQ
-RSoxb6VEeJ1rkAoNccqaCbo5zMmiwmElZ6au8FLplmELScJ6n/Ph4cfz9b8t
-+0pabgCHw5GTQWbVIszZ5VV0Fl4Kg6N1rdvhdU+TGJom2jW5xFujvqtQqxO9
-gw8dzSNwQ3wWk0c8lHxgHCotMcEXiLE9KtZzlWt5kOYJ+PCe+vUW2LQ3KRxG
-H2F2QJuQJ4aOuy0XYdQ3/TXYdTjZapF6FTsZ2gnL3PYR2NtCuaB/89vqXuLk
-QkIdvJOe3wypokUD/PRC/rKP2PZG9wrOZd6fHiAKZxOX4CYZ/Qe6XfWBdqJm
-6LMbXh7sGIfO4SeiqEjSoaJGAh8JAuXyPV6FbE08q7F+mobPM1JPwxWXXkQT
-Q1Z2S+D7Uu5+6DyWGg37Xd9lJ4kL8V5WKqbNV5bgVbT72xch92ztLxjEP+6H
-0o+G4AdEfko/BbmN/IMwO2TjUchJF8bBifnkRNiqb6BhHpWZBqOd9gyorDGc
-h7e7SvKhZNZTAAvMiSYY10B1w8i/ATOwblAzB2sn7fPQH2QNLif+s39dB7OM
-OgGM+6ENhb4SQTikc5kceOKxWA3LP/w2w/CIpR6YtHyjj/1Ssw2OcW0OqPQM
-sxaVVjFwtbNpCv5U6bQVRFlE8U2oEHDK4D5LaAWMnQqrgVY19RSqUjqM8Ez5
-1m44VnVKV4Uu62eewUJz5QAcKrayLpvc4mqi80ujBP4Hmbt/QQ==
+1:eJwd0nlI03EABfBh0/0g24pCG5aYjVxiI8tCOp1sic7sl+EyFSlzdijmLGuQ
+JZWseaVEzGPTBA9oiAdrKuh0mMqkwmElm3d4VPozwxaWhPV9++Px4f37eHtS
+bsUq3Fgs1mESaN8w8VP3M+LmzBs+cERb7w/vTlcJYMtEY7aCmDuyfBuq9H7v
+YcmAbhhukybb04gnZMfGoNwUxrlGDG9PcnmlcLMnpD15XPhYObQLVh2K8oWh
+p+x7YQ/fUwAHHlVfhyFfa+7A1pMysymQEe+z01aodliGYWc1ZYPOne+KO4mT
+SxFa+DA+XQeprJVaOP46uKOL2PBW/wYuJD6Z7SXy5yNX4Q4R/Qc6bOXuFmJ2
+/4wD3uxrGoPWwRd+IUFkh4JSIXzGcw8OPsiIRZukLg3lszR8lRBzEa7bavxo
+otf6ASH8kM8+Cq1nYkJht+2b6DxxScq4pMIaltURjLjR2bgC2ZfLfkIP7lkn
+DPxUy3lK5EZ3U5BdyT0OU7y2n4aseL4ETizKImF9TQUN06jEWBhqtSRAeWnt
+VfigNS8dCuenM2CGMbIFSiqoNhj0120OavuyF2DZpGUROj3MHA3xn+XLFphs
+0POg5LvKGy7n8XwhrbCnwnPPBUqo+fjLCH0DVtth1Nq9LlcPNPbAUXbPAJRP
+D7rMyi+yw43mqin4I0mvKiCKAnLuQzGPpYZHTN4FMHzKpxSaldRLmBTdZICX
+NLvb4GhRnL4Iu2ydq4OZxsJe2J9jdrnW4hAUE62fK4VQm1sy5B9L/hZXOA5/
+9+lm4IW6Dgb+B5aWj90=
   
   "],ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
 
@@ -997,8 +919,13 @@ Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
-    RowBox[{"**", " ", "PREDICTION"}], "-", "RELATED"}], " ", "***)"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"**", " ", "PREDICTION"}], "-", 
+    RowBox[{"RELATED", " ", "FUNCTIONS", " ", "\[IndentingNewLine]", 
+     RowBox[{"(", 
+      RowBox[{
+      "not", " ", "part", " ", "of", " ", "the", " ", "error", " ", "rate", 
+       " ", "analysis"}], ")"}]}]}], " ", "***)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"Clear", "[", 
@@ -1044,12 +971,12 @@ Cell[BoxData[
  CellChangeTimes->{{3.780509835994439*^9, 3.7805098522289762`*^9}, {
    3.780509935552655*^9, 3.780509939221133*^9}, {3.7805108146155977`*^9, 
    3.7805108433346453`*^9}, 3.7805119263246*^9, {3.795600988522723*^9, 
-   3.7956009969563227`*^9}, 
-   3.795602400889242*^9},ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-\
+   3.7956009969563227`*^9}, 3.795602400889242*^9, {3.8011595391074257`*^9, 
+   3.8011595499728928`*^9}},ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-\
 e157e470f2de"],
 
 Cell[BoxData[
- RowBox[{
+ RowBox[{"\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{"**", " ", 
     RowBox[{"SAMPLING", ":", " ", 
@@ -1198,17 +1125,17 @@ Cell[BoxData[
    3.779801807724401*^9, 3.77980181528013*^9}, {3.7798019206587963`*^9, 
    3.779801939850236*^9}, 3.779801977985067*^9, 3.7955980025465593`*^9, {
    3.795598135222589*^9, 3.795598161341852*^9}, {3.795598199152482*^9, 
-   3.795598217185624*^9}},
- CellLabel->
-  "In[141]:=",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"],
+   3.795598217185624*^9}, 
+   3.801160417774809*^9},ExpressionUUID->"d60d8af6-8d61-462d-863e-\
+84d9c70163ac"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.783428403251977*^9, 3.783428450752022*^9}, 
    3.7955981633022137`*^9},ExpressionUUID->"b6f90a44-5171-4ae0-912d-\
 bdaad167096b"]
 },
-WindowSize->{640, 690},
-WindowMargins->{{-1280, Automatic}, {Automatic, 30}},
+WindowSize->{767, 845},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -1224,11 +1151,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1295, 27, 235, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
-Cell[1856, 49, 37769, 944, 8747, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
-Cell[39628, 995, 2354, 53, 655, "Input",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
-Cell[41985, 1050, 6184, 152, 1467, "Input",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"],
-Cell[48172, 1204, 177, 3, 38, "Input",ExpressionUUID->"b6f90a44-5171-4ae0-912d-bdaad167096b"]
+Cell[558, 20, 1361, 30, 235, "Input",ExpressionUUID->"8aeb13c7-0371-42f5-b096-7bfbd1422600"],
+Cell[1922, 52, 34287, 863, 6591, "Input",ExpressionUUID->"33d198df-caee-4fb1-a933-723c9412c073"],
+Cell[36212, 917, 2610, 58, 571, "Input",ExpressionUUID->"29bb70bd-aa5f-4fae-a06a-e157e470f2de"],
+Cell[38825, 977, 6207, 152, 1243, "Input",ExpressionUUID->"d60d8af6-8d61-462d-863e-84d9c70163ac"],
+Cell[45035, 1131, 177, 3, 38, "Input",ExpressionUUID->"b6f90a44-5171-4ae0-912d-bdaad167096b"]
 }
 ]
 *)

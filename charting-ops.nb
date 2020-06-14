@@ -10,16 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13596,        358]
-NotebookOptionsPosition[     13273,        344]
-NotebookOutlinePosition[     13640,        360]
-CellTagsIndexPosition[     13597,        357]
+NotebookDataLength[     15708,        402]
+NotebookOptionsPosition[     15389,        388]
+NotebookOutlinePosition[     15752,        404]
+CellTagsIndexPosition[     15709,        401]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "notebook", " ", "contains", " ", "functions", " ", "that", 
+     " ", "support", " ", "analysis", " ", "of", " ", "data", " ", "and", " ",
+      "visualization", " ", "of", " ", "results"}], ",", " ", 
+    RowBox[{
+    "in", " ", "particular", " ", "the", " ", "error", " ", "rate", " ", 
+     "analysis"}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"Clear", "[", 
@@ -29,13 +39,17 @@ Cell[BoxData[
     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
-    "extracting", " ", "the", " ", "markers", " ", "from", " ", "the", " ", 
-     "\"\<OpenMarkers\>\"", " ", "set"}], "*)"}], " ", "\[IndentingNewLine]", 
-   
+    "extracting", " ", "the", " ", "charting", " ", "markers", " ", "from", 
+     " ", "the", " ", "\"\<OpenMarkers\>\"", " ", "set"}], " ", "*)"}], " ", 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"openMarkers", "  ", "=", " ", 
      RowBox[{"Charting`CommonDump`GraphicsOpenPlotMarkers", "[", "]"}]}], 
     ";"}], " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "charting", " ", "a", " ", "horizontal", " ", "line", " ", "at", " ", "a",
+      " ", "given", " ", "value"}], " ", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"chartHorLine", "[", 
@@ -69,6 +83,10 @@ Cell[BoxData[
           RowBox[{"{", "color", "}"}], ",", " ", "extraStyle"}], "]"}]}], ",",
         "extraCommands"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "charting", " ", "a", " ", "vertical", " ", "line", " ", "at", " ", "a", 
+     " ", "given", " ", "value"}], " ", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"chartVertLine", "[", 
@@ -92,8 +110,20 @@ Cell[BoxData[
    "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
-    "redefining", " ", "Wald", " ", "CI", " ", "for", " ", "convenience"}], 
-    " ", "*)"}], " ", "\[IndentingNewLine]", 
+     RowBox[{"Wald", " ", "confidence", " ", "interval", " ", 
+      RowBox[{"(", "CI", ")"}], " ", "for", " ", "the", " ", "Binomial", " ", 
+      "distribution", " ", "parameter"}], "\[IndentingNewLine]", "-", " ", 
+     RowBox[{"jj", ":", " ", 
+      RowBox[{
+       RowBox[{"count", " ", "of", " ", "successes"}], "\[IndentingNewLine]", 
+       "-", " ", "nn"}], ":", " ", 
+      RowBox[{
+       RowBox[{"count", " ", "of", " ", "attempts"}], "\[IndentingNewLine]", 
+       "-", " ", 
+       RowBox[{"confLvl", ":", " ", 
+        RowBox[{
+        "confidence", " ", "level", " ", "for", " ", "the", " ", 
+         "CI"}]}]}]}]}], " ", "*)"}], " ", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"interWald", "[", 
@@ -140,9 +170,22 @@ Cell[BoxData[
           "}"}]}], "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
-    RowBox[{
-    "redefining", " ", "Wilson", " ", "CI", " ", "for", " ", "convenience"}], 
-    " ", "*)"}], " ", "\[IndentingNewLine]", 
+    RowBox[{"Wilson", " ", "confidence", " ", "interval", " ", 
+     RowBox[{"(", "CI", ")"}], " ", "for", " ", "the", " ", "Binomial", " ", 
+     "distribution", " ", 
+     RowBox[{"parameter", ".", " ", "\[IndentingNewLine]", 
+      RowBox[{"-", " ", 
+       RowBox[{"jj", ":", " ", 
+        RowBox[{
+         RowBox[{"count", " ", "of", " ", "successes"}], 
+         "\[IndentingNewLine]", "-", " ", "nn"}], ":", " ", 
+        RowBox[{
+         RowBox[{"count", " ", "of", " ", "attempts"}], "\[IndentingNewLine]",
+          "-", " ", 
+         RowBox[{"confLvl", ":", " ", 
+          RowBox[{
+          "confidence", " ", "level", " ", "for", " ", "the", " ", 
+           "CI"}]}]}]}]}]}]}], " ", "*)"}], " ", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"interWilson", "[", 
@@ -216,14 +259,14 @@ Cell[BoxData[
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{
-     "bins", " ", "lists", " ", "by", " ", "a", " ", "function", " ", "and", 
-      " ", "constraints"}], ",", " ", 
+     "bins", " ", "multidimensional", " ", "lists", " ", "by", " ", "a", " ", 
+      "function", " ", "and", " ", "constraints"}], ",", " ", 
      RowBox[{
       RowBox[{
       "allowing", " ", "to", " ", "isolate", " ", "the", " ", "dimensions"}], 
       ";", "  ", 
       RowBox[{
-       RowBox[{"taken", " ", "from", " ", 
+       RowBox[{"credit", " ", "goes", " ", "to", " ", 
         RowBox[{"https", ":"}]}], "//", 
        RowBox[{
         RowBox[{
@@ -338,12 +381,13 @@ wEBvbZm\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
    3.788699577925214*^9}, {3.7887009765917873`*^9, 3.7887009889273148`*^9}, {
    3.795604952784226*^9, 3.795604955370248*^9}, {3.7956050237223053`*^9, 
    3.795605038119505*^9}, {3.7956050876607237`*^9, 3.795605111717585*^9}, {
-   3.796051823549262*^9, 
-   3.7960518550877123`*^9}},ExpressionUUID->"7f0a5505-5452-4953-b962-\
+   3.796051823549262*^9, 3.7960518550877123`*^9}, {3.801161740366454*^9, 
+   3.8011618956638193`*^9}, {3.801162234071069*^9, 
+   3.80116228572631*^9}},ExpressionUUID->"7f0a5505-5452-4953-b962-\
 bab1f8893ec8"]
 },
 WindowSize->{651, 690},
-WindowMargins->{{-882, Automatic}, {104, Automatic}},
+WindowMargins->{{0, Automatic}, {74, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -359,7 +403,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12711, 322, 2925, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+Cell[558, 20, 14827, 366, 3373, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
 }
 ]
 *)
