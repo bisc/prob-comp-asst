@@ -24,7 +24,7 @@ Guide to the notebooks:
   * **pr-fnr-automatic.nb**: a universal set of inference rules for formulas of the FNR of the PR monitor. 
   * **pr-fpr-automatic.nb**: a universal set of inference rules for formulas of the FPR of the PR monitor. 
   * **pr-fpr-manual.nb**:  specialized sets of inference rules for formulas of the FPR of the PR monitor. 
-* **tests** foler: materials to test and debug the functionality of the computational assistant on simple examples:
+* **tests** folder: materials to test and debug the functionality of the computational assistant on simple examples:
   * **fnr-of-conjunction-inference.nb**: lists for inference rules for the FNR of a conjunction of two independent detectors.
   * **fpr-of-conjunction-inference.nb**: lists for inference rules for the FPR of a conjunction of two independent detectors.
   * **umbrella-rain.nb**: a simple probability space with different inference scenarios and lists of rules. 
