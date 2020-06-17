@@ -5,8 +5,8 @@ To start, install Mathematica, load the functions from the top-level notebooks, 
 
 
 Guide to the notebooks: 
-* **prob-rules.nb**: the full set of inference rules for algebraic probability and independence statements. 
-* **detector-ops.nb**: the definitions of detector and the 3-value linear temporal logic over detectors. 
+* **prob-rules.nb**: the full set of inference rules for algebraic probability and independence statements. Run this before any other notebook. Re-run all of this notebook to reset the probability values and independence assumptions.
+* **detector-ops.nb**: the definitions of detector and the 3-value linear temporal logic over detectors. Run this before any other notebook. Re-run all of this notebook to reset the detector values such as FNR and FPR. 
 * **file-ops.nb**: miscellaneous operations over data files, particularly to read monitor statistics and sample monitor traces. 
 * **charting-ops.nb**: miscellaneous analysis and visualization functions, including automated binning and confidence intervals. 
 * **pr-monitor-analysis** folder: materials for error rate estimation of the PR monitor:
