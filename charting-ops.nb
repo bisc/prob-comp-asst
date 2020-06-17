@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15708,        402]
-NotebookOptionsPosition[     15389,        388]
-NotebookOutlinePosition[     15752,        404]
-CellTagsIndexPosition[     15709,        401]
+NotebookDataLength[     15995,        409]
+NotebookOptionsPosition[     15675,        395]
+NotebookOutlinePosition[     16039,        411]
+CellTagsIndexPosition[     15996,        408]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,9 +34,10 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Clear", "[", 
      RowBox[{
-     "openMarkers", ",", " ", "chartHorLine", ",", " ", "chartVertLine", ",", 
-      "interWald", ",", "interWilson", ",", "  ", "binListsBy"}], "]"}], 
-    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "openMarkers", ",", "standardColors", ",", " ", "chartHorLine", ",", " ",
+       "chartVertLine", ",", "interWald", ",", "interWilson", ",", "  ", 
+      "binListsBy"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
     "extracting", " ", "the", " ", "charting", " ", "markers", " ", "from", 
@@ -46,6 +47,11 @@ Cell[BoxData[
     RowBox[{"openMarkers", "  ", "=", " ", 
      RowBox[{"Charting`CommonDump`GraphicsOpenPlotMarkers", "[", "]"}]}], 
     ";"}], " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"standardColors", " ", "=", " ", 
+     RowBox[{"ColorData", "[", 
+      RowBox[{"97", ",", "\"\<ColorList\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
     "charting", " ", "a", " ", "horizontal", " ", "line", " ", "at", " ", "a",
@@ -354,8 +360,8 @@ Cell[BoxData[
           RowBox[{
            RowBox[{
            "Print", "[", "\"\<Your specification is incorrect\[Ellipsis]\>\"",
-             "]"}], ";"}]}], "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]",
-    "\n", 
+             "]"}], ";"}]}], "]"}]}]}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"BinListsBy", "::", "usage"}], "=", 
@@ -382,12 +388,13 @@ wEBvbZm\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
    3.795604952784226*^9, 3.795604955370248*^9}, {3.7956050237223053`*^9, 
    3.795605038119505*^9}, {3.7956050876607237`*^9, 3.795605111717585*^9}, {
    3.796051823549262*^9, 3.7960518550877123`*^9}, {3.801161740366454*^9, 
-   3.8011618956638193`*^9}, {3.801162234071069*^9, 
-   3.80116228572631*^9}},ExpressionUUID->"7f0a5505-5452-4953-b962-\
+   3.8011618956638193`*^9}, {3.801162234071069*^9, 3.80116228572631*^9}, {
+   3.8013531155920153`*^9, 
+   3.801353128827306*^9}},ExpressionUUID->"7f0a5505-5452-4953-b962-\
 bab1f8893ec8"]
 },
 WindowSize->{651, 690},
-WindowMargins->{{0, Automatic}, {74, Automatic}},
+WindowMargins->{{40, Automatic}, {55, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -403,7 +410,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14827, 366, 3373, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
+Cell[558, 20, 15113, 373, 3457, "Input",ExpressionUUID->"7f0a5505-5452-4953-b962-bab1f8893ec8"]
 }
 ]
 *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    397513,       8278]
+NotebookDataLength[    397512,       8278]
 NotebookOptionsPosition[    395643,       8240]
-NotebookOutlinePosition[    396008,       8256]
-CellTagsIndexPosition[    395965,       8253]
+NotebookOutlinePosition[    396007,       8256]
+CellTagsIndexPosition[    395964,       8253]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -8239,7 +8239,7 @@ Rule[StripOnInput, False]]\)", "RMSE of error rate predictions"}, ImageSize ->
 }, Open  ]]
 },
 WindowSize->{651, 713},
-WindowMargins->{{104, Automatic}, {-1, Automatic}},
+WindowMargins->{{104, Automatic}, {0, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
