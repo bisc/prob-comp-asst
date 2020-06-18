@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     58286,       1366]
-NotebookOptionsPosition[     55475,       1318]
-NotebookOutlinePosition[     55840,       1334]
-CellTagsIndexPosition[     55797,       1331]
+NotebookDataLength[     58468,       1369]
+NotebookOptionsPosition[     55657,       1321]
+NotebookOutlinePosition[     56022,       1337]
+CellTagsIndexPosition[     55979,       1334]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -699,9 +699,9 @@ FNR(\!\(\*StyleBox[FormBox[SubscriptBox[\"M\", \
           "StringJoin", "[", 
            "\"\<Steps 1, 2, 3, 5 for FPR(\!\(\*StyleBox[FormBox[SubscriptBox[\
 \"M\", \"rf\"],TraditionalForm],FontSlant->\"Italic\"]\))\>\"", "]"}], ",", 
-          "\"\<Step 4 \
-(\!\(\*FormBox[OverscriptBox[StyleBox[\"Pr\",FontFamily->\"Arial\",FontWeight-\
->\"Plain\"], \"^\"],TraditionalForm]\))\>\""}], " ", "}"}], ",", 
+          "\"\<Step 4 (estimating \
+\!\(\*FormBox[OverscriptBox[StyleBox[\"Pr\",FontFamily->\"Arial\",FontWeight->\
+\"Plain\"], \"^\"],TraditionalForm]\))\>\""}], " ", "}"}], ",", 
         "\[IndentingNewLine]", 
         RowBox[{"LegendMarkerSize", "\[Rule]", "40"}], ",", 
         RowBox[{"LegendMarkers", "\[Rule]", 
@@ -734,7 +734,7 @@ FNR(\!\(\*StyleBox[FormBox[SubscriptBox[\"M\", \
                RowBox[{"1", ",", "1", ",", "1"}], "]"}]}], "}"}], "]"}], 
            "*)"}], "}"}]}]}], "]"}], ",", 
       RowBox[{"{", 
-       RowBox[{"0.35", ",", "0.75"}], "}"}]}], "]"}]}], "]"}], 
+       RowBox[{"0.27", ",", "0.8"}], "}"}]}], "]"}]}], "]"}], 
   RowBox[{"(*", 
    RowBox[{
     RowBox[{",", " ", 
@@ -753,15 +753,16 @@ FNR(\!\(\*StyleBox[FormBox[SubscriptBox[\"M\", \
            RowBox[{"FontSize", "\[Rule]", "63"}]}], "]"}]}]}], " ", " ", 
        "}"}]}]}], "]"}], "*)"}]}]], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQB2IQfW8Oh0lN0BvHCc1/TUH0gQV5ASB6l1JoEIjebKrj
+1:eJxTTMoPSmViYGCQAmIQfW8Oh0lN0BvHCc1/TUH0gQV5ASB6l1JoEIjebKrj
 1gikxR6s8AfRhwyfRoLonIcG0SCae4Z1PIjulvBLBtE858wyQLReq00OiFZb
 oVcAop2qvMB0x47pZSA6bFZ3OYh+JrahGkTrfDkDpmvCre2bgXSa/HwwHRF8
 NAxE13BlZ4Fo1k1T80A0U+TbfBBd3ChWAqLn5GqCafE1k+tBtEYhaxOITjJ+
 PgdEd0xYOQ/Mz5i0BES7bY5dC6LtXp3cBKL3bnu4E0S/Kn6xF0QHLau/D6Ib
 ZjU/A9EPPHNeguhPG/Xeg+gQXrmfIJo334erBUifiNsuCKI3nPaXB9F9VZNV
-QXQ2n4wZiJ7wZjeYBgCPBbOl
+QXQ2n4wZiJ7wZjeY3jbpW1U/yN4m2RoQLX6CvQVEC1TsbQXRPGt8dSYAaY6v
+UWAaAHs1yfc=
   "],
- CellLabel->"In[60]:=",ExpressionUUID->"d4f7369b-90a3-4831-801d-e6c3f044b6c6"],
+ CellLabel->"In[65]:=",ExpressionUUID->"d4f7369b-90a3-4831-801d-e6c3f044b6c6"],
 
 Cell[BoxData[
  TagBox[
@@ -853,9 +854,9 @@ FNR(\\!\\(\\*StyleBox[FormBox[SubscriptBox[\\\"M\\\", \
        "\"Steps 1, 2, 3, 5 for \
 FPR(\\!\\(\\*StyleBox[FormBox[SubscriptBox[\\\"M\\\", \
 \\\"rf\\\"],TraditionalForm],FontSlant->\\\"Italic\\\"]\\))\"",
-       "\"Step 4 \
-(\\!\\(\\*FormBox[OverscriptBox[StyleBox[\\\"Pr\\\",FontFamily->\\\"Arial\\\",\
-FontWeight->\\\"Plain\\\"], \\\"^\\\"],TraditionalForm]\\))\""},
+       "\"Step 4 (estimating \\!\\(\\*FormBox[OverscriptBox[StyleBox[\\\"Pr\\\
+\",FontFamily->\\\"Arial\\\",FontWeight->\\\"Plain\\\"], \
+\\\"^\\\"],TraditionalForm]\\))\""},
       "PointLegend",
       DisplayFunction->(FormBox[
         StyleBox[
@@ -1118,7 +1119,7 @@ FontWeight->\\\"Plain\\\"], \\\"^\\\"],TraditionalForm]\\))\""},
                   False], ",", 
                  GraphicsBox[{
                    LineBox[{{-10, 0}, {10, 0}}]}]}], "}"}]}]}], "]"}]& )], 
-     Scaled[{0.35, 0.75}], ImageScaled[{0.5, 0.5}],
+     Scaled[{0.27, 0.8}], ImageScaled[{0.5, 0.5}],
      BaseStyle->{FontSize -> Larger},
      FormatType->StandardForm]},
    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
@@ -1292,23 +1293,25 @@ Rule[StripOnInput, False]]\)", "Time to compute (seconds)"}, DisplayFunction ->
 \"pr\"],TraditionalForm],FontSlant->\"Italic\"]\))", 
         "Steps 1, 2, 3, 5 for FPR(\!\(\*StyleBox[FormBox[SubscriptBox[\"M\", \
 \"rf\"],TraditionalForm],FontSlant->\"Italic\"]\))", 
-        "Step 4 (\!\(\*FormBox[OverscriptBox[StyleBox[\"Pr\",FontFamily->\"\
-Arial\",FontWeight->\"Plain\"], \"^\"],TraditionalForm]\))"}, 
-       LegendMarkerSize -> 40, LegendMarkers -> {
+        "Step 4 (estimating \
+\!\(\*FormBox[OverscriptBox[StyleBox[\"Pr\",FontFamily->\"Arial\",FontWeight->\
+\"Plain\"], \"^\"],TraditionalForm]\))"}, LegendMarkerSize -> 40, 
+       LegendMarkers -> {
          Style[$CellContext`\[EmptyCircle], Bold, FontSize -> 35], 
          Style[$CellContext`\[FilledSmallCircle], Bold, FontSize -> 50, 
           RGBColor[0.368417, 0.506779, 0.709798]], 
          Graphics[{
-           Line[{{-10, 0}, {10, 0}}]}]}]], {0.35, 0.75}, Identity]]& ],
+           Line[{{-10, 0}, {10, 0}}]}]}]], {0.27, 0.8}, Identity]]& ],
   AutoDelete->True,
   Editable->True,
   SelectWithContents->False,
   Selectable->True]], "Output",
  CellChangeTimes->{{3.8013579796693287`*^9, 3.801358082326527*^9}, {
-  3.801358252053824*^9, 3.8013582825244093`*^9}, {3.801358529214628*^9, 
-  3.801358541887376*^9}, {3.8013585882209883`*^9, 3.801358604854055*^9}, {
-  3.801358764847555*^9, 3.801358775080388*^9}},
- CellLabel->"Out[60]=",ExpressionUUID->"61d32efe-8be5-48df-b19f-ab8ac1db434f"]
+   3.801358252053824*^9, 3.8013582825244093`*^9}, {3.801358529214628*^9, 
+   3.801358541887376*^9}, {3.8013585882209883`*^9, 3.801358604854055*^9}, {
+   3.801358764847555*^9, 3.801358775080388*^9}, {3.8013818483133173`*^9, 
+   3.801381857366249*^9}, 3.8013819386989803`*^9, 3.801383267224625*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"8995cc14-72cb-4a1d-89c7-fa5d9220d893"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -1364,10 +1367,10 @@ Cell[19437, 524, 2967, 68, 882, "Input",ExpressionUUID->"d7874e90-2a3a-4ed2-8cc2
 Cell[22407, 594, 775, 13, 163, "Output",ExpressionUUID->"63f72695-c329-4f82-9fae-66f8db7b67ee"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23219, 612, 6365, 151, 1079, "Input",ExpressionUUID->"d4f7369b-90a3-4831-801d-e6c3f044b6c6"],
-Cell[29587, 765, 25717, 545, 1253, "Output",ExpressionUUID->"61d32efe-8be5-48df-b19f-ab8ac1db434f"]
+Cell[23219, 612, 6424, 152, 1079, "Input",ExpressionUUID->"d4f7369b-90a3-4831-801d-e6c3f044b6c6"],
+Cell[29646, 766, 25840, 547, 1253, "Output",ExpressionUUID->"8995cc14-72cb-4a1d-89c7-fa5d9220d893"]
 }, Open  ]],
-Cell[55319, 1313, 152, 3, 40, "Input",ExpressionUUID->"80263562-1db0-4e04-9dab-f834db2a858a"]
+Cell[55501, 1316, 152, 3, 40, "Input",ExpressionUUID->"80263562-1db0-4e04-9dab-f834db2a858a"]
 }
 ]
 *)
